@@ -1,3 +1,6 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia
 {
     public class Program
@@ -5,6 +8,13 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+                        var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
+
+                                    builder.Services.AddDbContext<DbContext>(options =>
+                options.UseSqlServer(connectionString));
+
+                                                builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<DbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -23,6 +33,7 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
+                        app.UseAuthentication();;
 
             app.UseAuthorization();
 
