@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
-public class DbContext : IdentityDbContext<IdentityUser>
+public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
 {
-    public DbContext(DbContextOptions<DbContext> options)
+    public SightDbContext(DbContextOptions<SightDbContext> options)
         : base(options)
     {
     }

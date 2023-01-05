@@ -10,11 +10,11 @@ namespace supernaturalsightings_olivia
             var builder = WebApplication.CreateBuilder(args);
                         var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
 
-                                    builder.Services.AddDbContext<DbContext>(options =>
+                                    builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
                                                 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<DbContext>();
+                .AddEntityFrameworkStores<SightDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
