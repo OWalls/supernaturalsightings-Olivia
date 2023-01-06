@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{FED136DB-3C10-4BB2-9791-F998F21ECAEC}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs">
+    <Files>
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" Line="131" Column="18" />
+      <File FileName="supernaturalsightings-olivia/Models/Entity.cs" Line="40" Column="6" />
+      <File FileName="supernaturalsightings-olivia/Models/Location.cs" Line="16" Column="1" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/entities.csv" Line="1" Column="1" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="32" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="supernaturalsightings-olivia" expanded="True">
+            <Node name="supernaturalsightings-olivia" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Data" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
