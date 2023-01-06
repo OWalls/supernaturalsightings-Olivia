@@ -17,7 +17,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
         static List<Entity> AllEntities;
         static private List<Entity> AllNames = new List<Entity>();
         static private List<Entity> AllLocations = new List<Entity>();
-        static private List<Entity> AllStates = new List<Entity>();
+        //static private List<Entity> AllStates = new List<Entity>(); - still figuring this out
         static private List<Entity> AllDescriptions = new List<Entity>();
         static private List<Entity> AllTypes = new List<Entity>();
 
@@ -61,7 +61,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return entities;
         }
 
-        //lets you search by property
+        //lets you search by property - used in the FindByColumnAndValue function above.
         static public string GetValue(Entity entity, string category)
         {
             string theValue;
@@ -86,7 +86,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return theValue;
         }
 
-        //loops through each entity to look for a search term. used in the FindByColumnAndValue function.
+        //loops through each entity to look for a search term - used in the FindByColumnAndValue function.
         static public List<Entity> FindByValue(string value)
         {
 
@@ -119,12 +119,13 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return entities;
         }
 
-        //used in LoadData to create a new Location object
+        //used in LoadData below to create a new Location object
         static private object FindExistingObject(List<Entity> objectList, string value1, string value2)
         {
             for (int i = 0; i < objectList.Count; i++)
             {
                 object item = objectList[i];
+
                 if (item.ToString().ToLower().Equals(value1.ToLower()))
                 {
                     return item;
@@ -169,7 +170,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
 
             AllEntities = new List<Entity>();
 
-            //loop through the rows of data, transforming them into Entities and pushing them to a list
+            //loop through the rows of data, transforming them into Entities and add them to a list
             for (int i = 0; i < rows.Count; i++)
             {
                 string[] row = rows[i];
@@ -189,7 +190,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             IsDataLoaded = true;
         }
 
-        //transforms the rows in the csv into an array of strings
+        //transforms the rows in the csv into an array of strings - used in the LoadData function
         private static string[] CSVRowToStringArray(string row, char fieldSeparator = ',', char stringSeparator = '\"')
         {
             bool isBetweenQuotes = false;
@@ -225,7 +226,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return rowValues.ToArray();
         }
 
-        //displays all the Entities
+        //use this to display all the Entities
         static public List<Entity> GetAllEntities()
         {
             LoadData();
@@ -233,7 +234,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllEntities;
         }
 
-        //displays all Name values (not sure if we need this, really, but I made it in case)
+        //use this to display all Name values (not sure if we need this, really, but I made it in case)
         static public List<Entity> GetAllNames()
         {
             LoadData();
@@ -241,7 +242,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllNames;
         }
 
-        //display all Locations
+        //use this to display all Locations
         static public List<Entity> GetAllLocations()
         {
             LoadData();
@@ -249,14 +250,15 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllLocations;
         }
 
+        //still trying to figure out how to make it so we can search by state.
         static public List<Entity> GetAllStates()
         {
             LoadData();
-            AllLocations.Sort(new DataSorter());
-            return AllLocations;
+            AllStates.Sort(new DataSorter());
+            return AllStates;
         }
 
-        //displays all Types... all 3 of them!
+        //use this to display all Types... all 3 of them!
         static public List<Entity> GetAllTypes()
         {
             LoadData();

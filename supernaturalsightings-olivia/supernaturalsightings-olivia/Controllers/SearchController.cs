@@ -30,7 +30,7 @@ namespace supernaturalsightings_olivia.Controllers
                 entityList = EntityData.FindAll();
             }
 
-            ViewBag.jobsList = entityList;
+            ViewBag.entityList = entityList;
             ViewBag.columns = ResultsController.ColumnChoices;
             return View("Index");
         }

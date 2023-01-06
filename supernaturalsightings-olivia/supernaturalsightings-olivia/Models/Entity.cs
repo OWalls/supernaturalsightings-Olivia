@@ -5,6 +5,7 @@ namespace supernaturalsightings_olivia.Models
 {
 	public class Entity
 	{
+        //I'm not sure if we NEED an I.D. field for each entity, but I made one just in case.
         public int Id { get; }
         static private int nextId = 1;
 
@@ -27,6 +28,7 @@ namespace supernaturalsightings_olivia.Models
             Type = type;
         }
 
+        //Not sure if we really need these either, but I made them for good measure.
         public override bool Equals(object obj)
         {
             return obj is Entity entity &&

@@ -6,6 +6,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
     public class DataSorter : IComparer<object>
     {
+        //this is used in the Sort function for the GetAllNames, GetAllTypes, etc.
         //if the items are the same, it returns a 0. if a>b it returns 1. if a<b it returns -1
         public int Compare([AllowNull] object a, [AllowNull] object b)
         {
