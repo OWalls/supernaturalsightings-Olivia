@@ -14,7 +14,6 @@ namespace supernaturalsightings_olivia.Controllers
 
         public IActionResult Index()
         {
-            //this controller does not yet exist, so I just made something up as a placeholder
             ViewBag.columns = ResultsController.ColumnChoices;
             return View();
         }

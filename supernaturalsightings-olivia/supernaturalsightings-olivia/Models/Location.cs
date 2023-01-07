@@ -5,8 +5,8 @@ namespace supernaturalsightings_olivia.Models
 {
 	public class Location
 	{
-		string City { get; set; }
-		string State { get; set; }
+		public string City { get; set; }
+		public string State { get; set; }
 
 		public Location(string city, string state)
 		{

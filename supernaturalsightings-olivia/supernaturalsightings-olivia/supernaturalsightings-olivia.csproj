@@ -18,4 +18,10 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Search\" />
+  </ItemGroup>
 </Project>

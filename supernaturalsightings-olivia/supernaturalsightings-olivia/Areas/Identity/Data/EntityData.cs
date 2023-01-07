@@ -17,7 +17,6 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
         static List<Entity> AllEntities;
         static private List<Entity> AllNames = new List<Entity>();
         static private List<Entity> AllLocations = new List<Entity>();
-        //static private List<Entity> AllStates = new List<Entity>(); - still figuring this out
         static private List<Entity> AllDescriptions = new List<Entity>();
         static private List<Entity> AllTypes = new List<Entity>();
 
@@ -242,7 +241,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllNames;
         }
 
-        //use this to display all Locations
+        //use this to display all Locations. the value passed through can be a drop down of state codes.
         static public List<Entity> GetAllLocations()
         {
             LoadData();
@@ -250,12 +249,12 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllLocations;
         }
 
-        //still trying to figure out how to make it so we can search by state.
-        static public List<Entity> GetAllStates()
+        //use this to display all descriptions.
+        static public List<Entity> GetAllDescriptions()
         {
             LoadData();
-            AllStates.Sort(new DataSorter());
-            return AllStates;
+            AllDescriptions.Sort(new DataSorter());
+            return AllDescriptions;
         }
 
         //use this to display all Types... all 3 of them!

@@ -1,0 +1,60 @@
+﻿<div class="container body-content">
+
+    <h1>@ViewBag.title</h1>
+
+    <form action="/search/results" method="post">
+        <h2>Search by:</h2>
+
+        <p>
+            @foreach (var column in ViewBag.columns)
+            {
+                <span>
+                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
+                    <label for="@column.Key">@column.Value</label>
+                </span>
+            }
+        </p>
+
+        <p>
+            <label for="searchTerm">Keyword:</label>
+            <input type="text" name="searchTerm" id="searchTerm" />
+        </p>
+
+        <input type="submit" value="Search" />
+    </form>
+
+    <hr />
+
+    <p>
+        @if (ViewBag.entityList != null)
+        {
+            foreach (var entity in ViewBag.entityList)
+            {
+                <table class="listOfEntities">
+                    <tr>
+                        <th>Name</th>
+                        <td>@entity.Name</td>
+                    </tr>
+                    <tr>
+                        <th>Location</th>
+                        <td>@entity.Location</td>
+                    </tr>
+                    <tr>
+                        <th>Description</th>
+                        <td>@entity.Description</td>
+                    </tr>
+                    <tr>
+                        <th>Type</th>
+                        <td>@entity.Type</td>
+                    </tr>
+                </table>
+            }
+        }
+        else
+        {
+            <div>No weirdness here!</div>
+        }
+    </p>
+
+
+</div>
