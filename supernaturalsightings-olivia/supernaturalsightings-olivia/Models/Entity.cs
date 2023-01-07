@@ -10,7 +10,8 @@ namespace supernaturalsightings_olivia.Models
         static private int nextId = 1;
 
         public string Name { get; set; }
-        public Location Location { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
         public string Description { get; set; }
         public string Type { get; set; }
 
@@ -20,10 +21,11 @@ namespace supernaturalsightings_olivia.Models
             nextId++;
         }
 
-        public Entity(string name, Location location, string description, string type) : this()
+        public Entity(string name, string city, string state, string description, string type) : this()
         {
             Name = name;
-            Location= location;
+            City = city;
+            State = state;
             Description = description;
             Type = type;
         }

@@ -15,32 +15,41 @@ namespace supernaturalsightings_olivia.Controllers
         {
             {"all", "All"},
             {"name", "Name"},
-            {"location", "Location"},
+            {"city", "City"},
+            {"state", "State"},
             {"description", "Description"},
             {"type", "Type"}
         };
 
+        //internal static Dictionary<string, string> StateChoices = new Dictionary<string, string>()
+        //{
+        //    {"state", "State"},
+        //};
+
         internal static Dictionary<string, List<Entity>> TableChoices = new Dictionary<string, List<Entity>>()
         {
             {"name", EntityData.GetAllNames()},
-            {"location", EntityData.GetAllLocations()},
+            {"city", EntityData.GetAllCities()},
+            {"state", EntityData.GetAllStates()},
             {"description", EntityData.GetAllDescriptions()},
             {"type", EntityData.GetAllTypes()}
         };
 
         public List<Entity> entities = new List<Entity>();
 
-        //public IActionResult Index()
-        //{
-        //    ViewBag.columns = ColumnChoices;
-        //    ViewBag.tableChoices = TableChoices;
-        //    ViewBag.names = EntityData.GetAllNames();
-        //    ViewBag.locations = EntityData.GetAllLocations();
-        //    ViewBag.descriptions = EntityData.GetAllDescriptions();
-        //    ViewBag.types = EntityData.GetAllTypes();
+        public IActionResult Index()
+        {
+            ViewBag.columns = ColumnChoices;
+            //ViewBag.stateChoices = StateChoices;
+            ViewBag.tableChoices = TableChoices;
+            ViewBag.names = EntityData.GetAllNames();
+            ViewBag.cities = EntityData.GetAllCities();
+            ViewBag.states = EntityData.GetAllStates();
+            ViewBag.descriptions = EntityData.GetAllDescriptions();
+            ViewBag.types = EntityData.GetAllTypes();
 
-        //    return View();
-        //}
+            return View();
+        }
 
         public IActionResult Entities(string column, string value)
         {

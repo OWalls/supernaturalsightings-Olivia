@@ -1,12 +1,13 @@
 ﻿<Properties StartupConfiguration="{FED136DB-3C10-4BB2-9791-F998F21ECAEC}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Views/Search/Index.cshtml">
     <Files>
-      <File FileName="supernaturalsightings-olivia/Models/Entity.cs" Line="31" Column="85" />
-      <File FileName="supernaturalsightings-olivia/Models/Location.cs" Line="7" Column="3" />
-      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="19" Column="27" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataSorter.cs" Line="10" Column="95" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" Line="19" Column="71" />
-      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="17" Column="1" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" />
+      <File FileName="supernaturalsightings-olivia/Models/Entity.cs" />
+      <File FileName="supernaturalsightings-olivia/Models/Location.cs" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" />
+      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="39" Column="29" />
+      <File FileName="supernaturalsightings-olivia/Controllers/ResultsController.cs" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataSorter.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -21,9 +22,7 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Search" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
-                </Node>
+                <Node name="Search" expanded="True" />
               </Node>
             </Node>
           </Node>

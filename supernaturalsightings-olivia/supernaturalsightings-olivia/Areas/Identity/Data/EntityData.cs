@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using supernaturalsightings_olivia.Models;
-using Location = supernaturalsightings_olivia.Models.Location;
+//using Location = supernaturalsightings_olivia.Models.Location;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
@@ -16,7 +16,8 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
 
         static List<Entity> AllEntities;
         static private List<Entity> AllNames = new List<Entity>();
-        static private List<Entity> AllLocations = new List<Entity>();
+        static private List<Entity> AllCities = new List<Entity>();
+        static private List<Entity> AllStates = new List<Entity>();
         static private List<Entity> AllDescriptions = new List<Entity>();
         static private List<Entity> AllTypes = new List<Entity>();
 
@@ -69,9 +70,13 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             {
                 theValue = entity.Name;
             }
-            else if (category.Equals("location"))
+            else if (category.Equals("city"))
             {
-                theValue = entity.Location.ToString();
+                theValue = entity.City;
+            }
+            else if (category.Equals("state"))
+            {
+                theValue = entity.State;
             }
             else if (category.Equals("description"))
             {
@@ -100,15 +105,19 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
                 {
                     entities.Add(AllEntities[i]);
                 }
-                else if (AllEntities[i].Location.ToString().ToLower().Contains(value.ToLower()))
+                else if (AllEntities[i].City.ToLower().Contains(value.ToLower()))
                 {
                     entities.Add(AllEntities[i]);
                 }
-                else if (AllEntities[i].Description.ToString().ToLower().Contains(value.ToLower()))
+                else if (AllEntities[i].State.ToLower().Contains(value.ToLower()))
                 {
                     entities.Add(AllEntities[i]);
                 }
-                else if (AllEntities[i].Type.ToString().ToLower().Contains(value.ToLower()))
+                else if (AllEntities[i].Description.ToLower().Contains(value.ToLower()))
+                {
+                    entities.Add(AllEntities[i]);
+                }
+                else if (AllEntities[i].Type.ToLower().Contains(value.ToLower()))
                 {
                     entities.Add(AllEntities[i]);
                 }
@@ -119,19 +128,19 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
         }
 
         //used in LoadData below to create a new Location object
-        static private object FindExistingObject(List<Entity> objectList, string value1, string value2)
-        {
-            for (int i = 0; i < objectList.Count; i++)
-            {
-                object item = objectList[i];
+        //static private object FindExistingObject(List<Entity> objectList, string value1, string value2)
+        //{
+        //    for (int i = 0; i < objectList.Count; i++)
+        //    {
+        //        object item = objectList[i];
 
-                if (item.ToString().ToLower().Equals(value1.ToLower()))
-                {
-                    return item;
-                }
-            }
-            return null;
-        }
+        //        if (item.ToString().ToLower().Equals(value1.ToLower()))
+        //        {
+        //            return item;
+        //        }
+        //    }
+        //    return null;
+        //}
 
         //loads data from the csv file
         static private void LoadData()
@@ -179,9 +188,9 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
                 string aDescription = row[3];
                 string aType = row[4];
 
-                Location newLocation = (Location)FindExistingObject(AllLocations, aCity, aState);
+                //Location newLocation = (Location)FindExistingObject(AllLocations, aCity, aState);
 
-                Entity newEntity = new Entity(aName, newLocation, aDescription, aType);
+                Entity newEntity = new Entity(aName, aCity, aState, aDescription, aType);
 
                 AllEntities.Add(newEntity);
             }
@@ -241,12 +250,19 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return AllNames;
         }
 
-        //use this to display all Locations. the value passed through can be a drop down of state codes.
-        static public List<Entity> GetAllLocations()
+        //formerly the GetAllLocations method
+        static public List<Entity> GetAllCities()
         {
             LoadData();
-            AllLocations.Sort(new DataSorter());
-            return AllLocations;
+            AllCities.Sort(new DataSorter());
+            return AllCities;
+        }
+
+        static public List<Entity> GetAllStates()
+        {
+            LoadData();
+            AllStates.Sort(new DataSorter());
+            return AllStates;
         }
 
         //use this to display all descriptions.
