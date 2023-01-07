@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\owall\\source\\repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
+    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-project\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\owall\\source\\repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
+    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-project\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\owall\\source\\repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "projectUniqueName": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-project\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
         "projectName": "supernaturalsightings-olivia",
-        "projectPath": "C:\\Users\\owall\\source\\repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
-        "packagesPath": "C:\\Users\\owall\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\owall\\source\\repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
+        "projectPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-project\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "packagesPath": "C:\\Users\\tanya\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-project\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\owall\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -61,6 +61,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[6.0.11, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [

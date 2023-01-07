@@ -8,7 +8,7 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-                        var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
+            var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
 
                                     builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseSqlServer(connectionString));
