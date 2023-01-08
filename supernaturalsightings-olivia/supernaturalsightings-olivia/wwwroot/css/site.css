@@ -12,7 +12,76 @@ html {
   position: relative;
   min-height: 100%;
 }
-
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url(https://media.cntraveler.com/photos/59d690455d63061cb02575bf/master/w_1280%2Cc_limit/Hoia-Baciu-GRNWYM.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/*Navigation Bar*/
+.navbar .navbar-nav .nav-link {
+    border: solid #fff 1px;
+    border-radius: 10px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    background-color: #aaaaaa;
+    color: #fff;
+    border: solid #000000 1px;
+}
+
+/*background-image: linear-gradient(to right, #2bbf13, #0BAFC9); */
+
+.navbar .navbar-nav .nav-link {
+    padding: 0.6em;
+    font-size: 1em;
+    transition: all 1s;
+}
+
+.navbar .navbar-nav .nav-link:active {
+    font-weight: bold;
+}
+
+/*Home page*/
+#homepagecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+}
+
+#homepagecard2 {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+}
+
+#homepagecardtop {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 60%;
+    min-width: 300px;
+}
+
+p.indent {
+    text-indent: 30px;
+}
+
+.blink {
+    animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
