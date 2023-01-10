@@ -86,6 +86,7 @@ namespace supernaturalsightings_olivia.Controllers
             return View(user);
         }
 
+        // optional logout feature
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
