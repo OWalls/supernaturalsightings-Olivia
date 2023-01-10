@@ -10424,19 +10424,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\owall\\.nuget\\packages\\": {}
+    "C:\\Users\\EmmaJ\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\owall\\Source\\Repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+      "projectUniqueName": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
       "projectName": "supernaturalsightings-olivia",
-      "projectPath": "C:\\Users\\owall\\Source\\Repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
-      "packagesPath": "C:\\Users\\owall\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\owall\\Source\\Repos\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
+      "projectPath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+      "packagesPath": "C:\\Users\\EmmaJ\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\owall\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\EmmaJ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10504,7 +10509,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
+    "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings_olivia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
+    "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings_olivia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
-        "projectName": "supernaturalsightings-olivia",
-        "projectPath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "projectUniqueName": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings_olivia.csproj",
+        "projectName": "supernaturalsightings_olivia",
+        "projectPath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings_olivia.csproj",
         "packagesPath": "C:\\Users\\EmmaJ\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
         "projectStyle": "PackageReference",

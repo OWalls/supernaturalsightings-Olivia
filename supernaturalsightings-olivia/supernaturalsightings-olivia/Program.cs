@@ -32,12 +32,12 @@ namespace supernaturalsightings_olivia
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            app.UseRouting();
-                        app.UseAuthentication();;
+            IApplicationBuilder applicationBuilder = app.UseRouting(); //added  
+                        app.UseAuthentication();;   //added
 
             app.UseAuthorization();
 
-            app.MapControllerRoute(
+            ControllerActionEndpointConventionBuilder controllerActionEndpointConventionBuilder = app.MapControllerRoute( //added
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
