@@ -1,5 +1,15 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia
 {
@@ -8,10 +18,10 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-                        var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
-
-                                    builder.Services.AddDbContext<SightDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
+           
+            builder.Services.AddDbContext<SightDbContext>(options =>
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0, 29))));
 
                                                 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<SightDbContext>();
@@ -33,13 +43,14 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
-                        app.UseAuthentication();;
+            app.UseAuthentication();;
 
             app.UseAuthorization();
 
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages();
 
             app.Run();
         }
