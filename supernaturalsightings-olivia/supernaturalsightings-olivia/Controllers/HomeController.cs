@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using System.Diagnostics;
 
@@ -8,6 +9,7 @@ namespace supernaturalsightings_olivia.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
+
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -15,6 +17,7 @@ namespace supernaturalsightings_olivia.Controllers
 
         public IActionResult Index()
         {
+           
             return View();
         }
 

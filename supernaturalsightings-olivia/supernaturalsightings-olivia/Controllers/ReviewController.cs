@@ -1,39 +1,56 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
 
 namespace supernaturalsightings_olivia.Controllers
 {
+    [Authorize]
     public class ReviewController : Controller
     {
-        private ReviewDbContext context;
+        private Data.SightDbContext _context;
 
-        public ReviewController(ReviewDbContext context)
+        public ReviewController(Data.SightDbContext dbContext)
         {
-            this.context = context;
+            _context = dbContext;
         }
-        
-        //GET: /<controller>/
-       
 
         public IActionResult Index()
         {
-            List<Review> reviews = context.Reviews.ToList();
-            
+            List<Review> reviews = new List<Review>();
             return View(reviews);
+            
         }
 
-        public IActionResult Review()
+        [HttpGet("/Add")]
+        public IActionResult Add()
         {
-            List<ReviewCategory> categories = context.Categories.ToList();
-            AddReviewViewModel addReviewViewModel = new AddReviewViewModel(categories);
+            AddReviewViewModel addReviewViewModel = new AddReviewViewModel();
 
             return View(addReviewViewModel);
         }
 
-        
+        public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                Review newReview = new Review
+                {
+                    UserName = addReviewViewModel.Username,
+                    Description = addReviewViewModel.Description,
+                    ReviewId = addReviewViewModel.CategoryId
+
+                };
+
+                _context.Review.Add(newReview);
+                _context.SaveChanges();
+
+                return Redirect("Index");
+            }
+
+            return View("Add", addReviewViewModel);
+        }
     }
-
 }
-

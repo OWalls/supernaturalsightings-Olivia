@@ -47,8 +47,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/EmmaJ/OneDrive/Desktop/WebDev/LC Liftoff Supernatural Sightings-Cloned/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Reviews/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3c1xJbmRleC5jc2h0bWw=
+[C:/Users/EmmaJ/OneDrive/Desktop/WebDev/LC Liftoff Supernatural Sightings-Cloned/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/ReviewCategory/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3Q2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/EmmaJ/OneDrive/Desktop/WebDev/LC Liftoff Supernatural Sightings-Cloned/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/ReviewCategory/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3Q2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/EmmaJ/OneDrive/Desktop/WebDev/LC Liftoff Supernatural Sightings-Cloned/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Shared/Error.cshtml]

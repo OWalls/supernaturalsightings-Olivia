@@ -827,3 +827,5 @@ C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\supernaturalsightings-olivia.pdb
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\supernaturalsightings-olivia.genruntimeconfig.cache
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\ref\supernaturalsightings-olivia.dll
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
