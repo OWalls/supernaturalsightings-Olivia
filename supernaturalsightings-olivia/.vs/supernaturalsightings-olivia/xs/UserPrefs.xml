@@ -1,13 +1,16 @@
 ﻿<Properties StartupConfiguration="{FED136DB-3C10-4BB2-9791-F998F21ECAEC}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Views/Search/Index.cshtml">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Controllers/SearchController.cs">
     <Files>
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" />
-      <File FileName="supernaturalsightings-olivia/Models/Entity.cs" />
-      <File FileName="supernaturalsightings-olivia/Models/Location.cs" />
-      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" />
-      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="39" Column="29" />
+      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="34" Column="32" />
       <File FileName="supernaturalsightings-olivia/Controllers/ResultsController.cs" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataSorter.cs" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/States.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -30,11 +33,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
 </Properties>

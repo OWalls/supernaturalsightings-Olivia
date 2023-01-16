@@ -21,11 +21,6 @@ namespace supernaturalsightings_olivia.Controllers
             {"type", "Type"}
         };
 
-        //internal static Dictionary<string, string> StateChoices = new Dictionary<string, string>()
-        //{
-        //    {"state", "State"},
-        //};
-
         internal static Dictionary<string, List<Entity>> TableChoices = new Dictionary<string, List<Entity>>()
         {
             {"name", EntityData.GetAllNames()},
@@ -40,7 +35,6 @@ namespace supernaturalsightings_olivia.Controllers
         public IActionResult Index()
         {
             ViewBag.columns = ColumnChoices;
-            //ViewBag.stateChoices = StateChoices;
             ViewBag.tableChoices = TableChoices;
             ViewBag.names = EntityData.GetAllNames();
             ViewBag.cities = EntityData.GetAllCities();

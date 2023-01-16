@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json.Linq;
 using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
+
 
 namespace supernaturalsightings_olivia.Controllers
 {
@@ -20,7 +23,15 @@ namespace supernaturalsightings_olivia.Controllers
 
         public IActionResult Results(string searchType, string searchTerm)
         {
-            if (searchTerm != null && searchTerm != "")
+            var value = "";
+
+            if (searchType.ToLower() == "state")
+            {
+                value = States.GetStateByName(searchTerm);
+
+                entityList = EntityData.FindByColumnAndValue(searchType, value);
+            }
+            else if (searchTerm != null && searchTerm != "")
             {
                 entityList = EntityData.FindByColumnAndValue(searchType, searchTerm);
             }

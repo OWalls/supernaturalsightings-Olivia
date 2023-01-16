@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using supernaturalsightings_olivia.Models;
-//using Location = supernaturalsightings_olivia.Models.Location;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
@@ -62,23 +62,23 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
         }
 
         //lets you search by property - used in the FindByColumnAndValue function above.
-        static public string GetValue(Entity entity, string category)
+        static public string GetValue(Entity entity, string column)
         {
             string theValue;
 
-            if (category.Equals("name"))
+            if (column.Equals("name"))
             {
                 theValue = entity.Name;
             }
-            else if (category.Equals("city"))
+            else if (column.Equals("city"))
             {
                 theValue = entity.City;
             }
-            else if (category.Equals("state"))
+            else if (column.Equals("state"))
             {
                 theValue = entity.State;
             }
-            else if (category.Equals("description"))
+            else if (column.Equals("description"))
             {
                 theValue = entity.Description;
             }
@@ -126,21 +126,6 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
 
             return entities;
         }
-
-        //used in LoadData below to create a new Location object
-        //static private object FindExistingObject(List<Entity> objectList, string value1, string value2)
-        //{
-        //    for (int i = 0; i < objectList.Count; i++)
-        //    {
-        //        object item = objectList[i];
-
-        //        if (item.ToString().ToLower().Equals(value1.ToLower()))
-        //        {
-        //            return item;
-        //        }
-        //    }
-        //    return null;
-        //}
 
         //loads data from the csv file
         static private void LoadData()
