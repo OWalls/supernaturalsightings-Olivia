@@ -23,8 +23,8 @@ namespace supernaturalsightings_olivia
             builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0, 29))));
 
-            //Changed RequireConfirmEmail from true to false - Tanya
-                                                builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            //Changed RequireConfirmedEmail from true to false - Tanya
+                                                builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedEmail = false)
                 .AddEntityFrameworkStores<SightDbContext>();
 
             // Add services to the container.

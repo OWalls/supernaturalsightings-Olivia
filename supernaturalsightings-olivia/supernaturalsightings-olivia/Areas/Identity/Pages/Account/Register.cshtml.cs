@@ -71,11 +71,6 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
-            //Add Username - Tanya
-            [Required]
-            [StringLength(15, ErrorMessage = "The Username must be at least 5 and at max 15 characters long.", MinimumLength = 5)]
-            [Display(Name = "Username")]
-            public string Username { get; set; }
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
             ///     directly from your code. This API may change or be removed in future releases.
@@ -119,9 +114,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 var user = CreateUser();
-
-                //Changed SetUserNameAsync to Input.Username - Tanya
-                await _userStore.SetUserNameAsync(user, Input.Username, CancellationToken.None);
+                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
                 var result = await _userManager.CreateAsync(user, Input.Password);
 

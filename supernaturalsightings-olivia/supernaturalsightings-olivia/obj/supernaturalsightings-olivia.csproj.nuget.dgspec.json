@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanya\\Source\\Repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
+    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanya\\Source\\Repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
+    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanya\\Source\\Repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "projectUniqueName": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
         "projectName": "supernaturalsightings-olivia",
-        "projectPath": "C:\\Users\\tanya\\Source\\Repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "projectPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
         "packagesPath": "C:\\Users\\tanya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanya\\Source\\Repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
+        "outputPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\tanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
