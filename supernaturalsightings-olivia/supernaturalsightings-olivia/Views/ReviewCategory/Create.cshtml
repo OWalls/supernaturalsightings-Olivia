@@ -1,17 +1,1 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-@model supernaturalsightings_olivia.ViewModels.AddReviewCategoryViewModel
-
-<h1>Add Creepy Category</h1> @* drop down options for alien/big foot/ghost*@
-
-<form asp-controller="ReviewCategory" asp-action="ProcessCreateReviewCategoryForm" method="post">
-    <div class="form-group">
-        <label asp-for="Category"></label>
-        <input asp-for="Category" />
-        <span asp-validation-for="Category"></span>
-    </div>
-    <input type="submit" value="Add Category" />
-</form>
+﻿

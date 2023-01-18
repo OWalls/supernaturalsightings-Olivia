@@ -5,7 +5,7 @@ namespace supernaturalsightings_olivia.ViewModels
     public class ReviewDetailViewModel
     {
         public int ReviewId { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Description { get; set; }
         public string ReviewCategory { get; set; }
         public string TagText { get; set; }
@@ -13,7 +13,7 @@ namespace supernaturalsightings_olivia.ViewModels
         public ReviewDetailViewModel(Review theReview, List<ReviewTag> reviewTags)
         {
             ReviewId = theReview.ReviewId;
-            UserName = theReview.UserName;
+            Username = theReview.Username;
             Description = theReview.Description;
             ReviewCategory = theReview.Category.ReviewType;
 

@@ -2,10 +2,14 @@
 {
     public class Tag
     {
+
+        public int TagId { get; set; }
         public Tag()
         {
-            //IApplicationBuilder applicationBuilder = null;
-        }
+    
+
+        //IApplicationBuilder applicationBuilder = null;
+    }
        
     }
 }

@@ -14,17 +14,14 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = builder.Configuration.GetConnectionString("DbContextConnection") ?? throw new InvalidOperationException("Connection string 'DbContextConnection' not found.");
-  
+            var connectionString = "server=localhost;userid=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
 
             builder.Services.AddDbContext<SightDbContext>(options =>
-                options.UseSqlServer(connectionString));
-
-           // builder.Services.AddDbContext<ReviewDbContext>(options =>
-             //   options.UseSqlServer(connectionString));
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                .AddEntityFrameworkStores<SightDbContext>();
+
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -52,6 +49,7 @@ namespace supernaturalsightings_olivia
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.MapRazorPages(); //added Identity register/login
 
             app.Run();
         }

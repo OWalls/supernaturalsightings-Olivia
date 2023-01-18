@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+using Microsoft.AspNetCore.Mvc.Rendering;
 using supernaturalsightings_olivia.Models;
 using System.ComponentModel.DataAnnotations;
 
@@ -20,21 +22,21 @@ namespace supernaturalsightings_olivia.ViewModels
 
         public List<SelectListItem> Categories { get; set; }
 
-        public AddReviewViewModel(List<ReviewCategory> categories)
-        {
-            Categories = new List<SelectListItem>();
+        //public AddReviewViewModel(List<ReviewCategory> categories)
+        //{
+        //    Categories = new List<SelectListItem>();
 
-            foreach (var category in categories)
-            {
-                Categories.Add(
-                    new SelectListItem
-                    {
-                        Value = category.ReviewId.ToString(),
-                        Text = category.UserName
-                    }
-                    ); 
-            }
-        }
+        //    foreach (var category in categories)
+        //    {
+        //        Categories.Add(
+        //            new SelectListItem
+        //            {
+        //                Value = category.ReviewId.ToString(),
+        //                Text = category.Username
+        //            }
+        //            ); 
+        //    }
+        //}
 
         public AddReviewViewModel() { }
     }

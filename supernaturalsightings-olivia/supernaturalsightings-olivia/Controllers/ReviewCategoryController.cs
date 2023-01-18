@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using supernaturalsightings_olivia.Data;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
 
@@ -18,7 +18,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         //GET: /<controller>/
-        
+
         public IActionResult Index()
         {
             List<ReviewCategory> categories = _dbContext.Categories.ToList();
@@ -43,7 +43,7 @@ namespace supernaturalsightings_olivia.Controllers
             {
                 ReviewCategory newCategory = new ReviewCategory
                 {
-                    UserName = addReviewCategoryViewModel.UserName
+                    Username = addReviewCategoryViewModel.Username
                 };
 
                 _dbContext.Categories.Add(newCategory);

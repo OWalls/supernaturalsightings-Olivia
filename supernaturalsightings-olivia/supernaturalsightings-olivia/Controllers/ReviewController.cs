@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using supernaturalsightings_olivia.Areas.Identity.Data;
-using supernaturalsightings_olivia.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
 
@@ -10,9 +9,9 @@ namespace supernaturalsightings_olivia.Controllers
     [Authorize]
     public class ReviewController : Controller
     {
-        private Data.SightDbContext _context;
+        private SightDbContext _context;
 
-        public ReviewController(Data.SightDbContext dbContext)
+        public ReviewController(SightDbContext dbContext)
         {
             _context = dbContext;
         }
@@ -38,7 +37,7 @@ namespace supernaturalsightings_olivia.Controllers
             {
                 Review newReview = new Review
                 {
-                    UserName = addReviewViewModel.Username,
+                    Username = addReviewViewModel.Username,
                     Description = addReviewViewModel.Description,
                     ReviewId = addReviewViewModel.CategoryId
 
@@ -46,6 +45,7 @@ namespace supernaturalsightings_olivia.Controllers
 
                 _context.Review.Add(newReview);
                 _context.SaveChanges();
+               
 
                 return Redirect("Index");
             }

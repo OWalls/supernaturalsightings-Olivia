@@ -5,8 +5,9 @@ namespace supernaturalsightings_olivia.ViewModels
     public class AddReviewCategoryViewModel
     {
         [Required(ErrorMessage = "Username is required!")]
-        [StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 20 characters long")]
-        public string UserName { get; set; }
+        [StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 15 characters long")]
+        [Display(Name = "Username")]
+        public string Username { get; set; }
 
         [Required(ErrorMessage = "Tell us your weird experience!")]
         [StringLength(1000, MinimumLength = 3, ErrorMessage = "Description must be longer than that")]
@@ -14,6 +15,7 @@ namespace supernaturalsightings_olivia.ViewModels
 
         [Required(ErrorMessage = "Category is required!")]
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Pick a category")]
+        [Display(Name = "Category")]
         public string Category { get; set; }
     }
 

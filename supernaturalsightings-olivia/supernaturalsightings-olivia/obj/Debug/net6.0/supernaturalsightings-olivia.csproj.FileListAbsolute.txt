@@ -829,3 +829,11 @@ C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\ref\supernaturalsightings-olivia.dll
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\global.json
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.Design.dll
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\staticwebassets\msbuild.supernaturalsightings-olivia.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\staticwebassets\msbuild.build.supernaturalsightings-olivia.props
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.supernaturalsightings-olivia.props
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.supernaturalsightings-olivia.props
+C:\Users\EmmaJ\OneDrive\Desktop\WebDev\LC Liftoff Supernatural Sightings-Cloned\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\staticwebassets.pack.json
