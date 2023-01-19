@@ -5,6 +5,46 @@
       "PackagePath": "staticwebassets\\supernaturalsightings-olivia.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\alien.png",
+      "PackagePath": "staticwebassets\\Images\\alien.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\foot.png",
+      "PackagePath": "staticwebassets\\Images\\foot.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\ghost.png",
+      "PackagePath": "staticwebassets\\Images\\ghost.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\github.png",
+      "PackagePath": "staticwebassets\\Images\\github.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linkedin.png",
+      "PackagePath": "staticwebassets\\Images\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linkemily.jpg",
+      "PackagePath": "staticwebassets\\Images\\linkemily.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linkjac.png",
+      "PackagePath": "staticwebassets\\Images\\linkjac.png"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linkleslie.jpg",
+      "PackagePath": "staticwebassets\\Images\\linkleslie.jpg"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linkmeg.jpeg",
+      "PackagePath": "staticwebassets\\Images\\linkmeg.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\Images\\linktanya.png",
+      "PackagePath": "staticwebassets\\Images\\linktanya.png"
+    },
+    {
       "Id": "C:\\Users\\jacqu\\Desktop\\GetW\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

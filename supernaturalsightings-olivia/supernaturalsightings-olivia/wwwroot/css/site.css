@@ -1,5 +1,7 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -14,50 +16,40 @@ html {
 }
 body {
     margin-bottom: 60px;
-    background-image: url(https://media.cntraveler.com/photos/59d690455d63061cb02575bf/master/w_1280%2Cc_limit/Hoia-Baciu-GRNWYM.jpg);
+    background-image: url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
 }
 
-/*Navigation Bar*/
-.navbar .navbar-nav .nav-link {
-    border: solid #fff 1px;
-    border-radius: 10px;
-}
-
+/*Navigation Bar --------------------*/
 .navbar .navbar-nav .nav-link:hover {
-    background-color: #aaaaaa;
-    color: #fff;
-    border: solid #000000 1px;
+    background-color: #d5d5d5;
+    border: solid #9d9999 1px;
 }
-
-/*background-image: linear-gradient(to right, #2bbf13, #0BAFC9); */
 
 .navbar .navbar-nav .nav-link {
     padding: 0.6em;
     font-size: 1em;
     transition: all 1s;
+    border: solid #fff 1px;
+    border-radius: 10px;
 }
 
-.navbar .navbar-nav .nav-link:active {
-    font-weight: bold;
+.navbar {
+    box-shadow: 0px 0px 15px 2px black;
 }
+/*---------------------------------*/
 
-/*Home page*/
+
+/*Home page ----------------------*/
 #homepagecard {
     background-color: #ffffff;
     margin: 25px auto;
     padding: 10px;
     width: 80%;
     min-width: 300px;
-}
-
-#homepagecard2 {
-    background-color: #ffffff;
-    margin: 25px auto;
-    padding: 10px;
-    width: 80%;
-    min-width: 300px;
+    opacity: 85%;
 }
 
 #homepagecardtop {
@@ -66,6 +58,7 @@ body {
     padding: 10px;
     width: 60%;
     min-width: 300px;
+    opacity: 85%;
 }
 
 p.indent {
@@ -73,7 +66,7 @@ p.indent {
 }
 
 .blink {
-    animation: fadeIn 5s;
+    animation: fadeIn 3s;
 }
 
 @keyframes fadeIn {
@@ -82,6 +75,91 @@ p.indent {
     }
 
     100% {
-        opacity: 1;
+        opacity: 0.85;
+    }
+}
+/*---------------------------------*/
+
+
+/* ABOUT US PAGE -------------------*/
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+#aboutcard {
+    background-color: #ecedee;
+    margin: 25px auto;
+    padding: 10px;
+    width: 90%;
+    min-width: 300px;
+    opacity: 85%;
+    color: black;
+}
+/*---------------------------------*/
+
+
+/*Ghost-----------------------------*/
+ 
+.ghost {
+    animation: float 3s ease-out infinite;
+}
+
+@keyframes float {
+    50% {
+        transform: translate(0, 20px);
+    }
+}
+
+.shadowFrame {
+    width: 130px;
+    margin-top: 15px;
+}
+
+.shadow {
+    animation: shrink 3s ease-out infinite;
+    transform-origin: center center;
+    ellipse{
+        transform-origin: center center;
+            }
+}
+
+@keyframes shrink {
+    0% {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    50% {
+        width: 60%;
+        margin: 0 18%;
+    }
+
+    100% {
+        width: 90%;
+        margin: 0 5%;
+    }
+}
+/*---------------------------------*/
+
+.blink2 {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
     }
 }

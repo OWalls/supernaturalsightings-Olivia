@@ -832,3 +832,7 @@ C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-o
 C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\supernaturalsightings-olivia.pdb
 C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\supernaturalsightings-olivia.genruntimeconfig.cache
 C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\obj\Debug\net6.0\ref\supernaturalsightings-olivia.dll
+C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\jacqu\Desktop\GetW\supernaturalsightings-olivia\supernaturalsightings-olivia\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.Design.dll
