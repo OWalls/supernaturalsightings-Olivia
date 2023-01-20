@@ -1,12 +1,16 @@
-// Licensed to the .NET Foundation under one or more agreements.
-// The .NET Foundation licenses this file to you under the MIT license.
-
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using supernaturalsightings_olivia.Areas.Identity.Data;
-using System.Configuration;
-
 namespace supernaturalsightings_olivia
 {
     public class Program
@@ -14,19 +18,17 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            var connectionString = "server=localhost;userid=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
+            var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
 
             builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-               .AddEntityFrameworkStores<SightDbContext>();
-
+            //Changed RequireConfirmedEmail from true to false - Tanya
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedEmail = false)
+.AddEntityFrameworkStores<SightDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
-           
 
             var app = builder.Build();
 
@@ -49,10 +51,9 @@ namespace supernaturalsightings_olivia
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
-            app.MapRazorPages(); //added Identity register/login
+            app.MapRazorPages();
 
             app.Run();
         }
     }
 }
-

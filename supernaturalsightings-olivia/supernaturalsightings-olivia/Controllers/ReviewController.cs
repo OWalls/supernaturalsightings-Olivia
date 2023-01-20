@@ -1,12 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
 
 namespace supernaturalsightings_olivia.Controllers
 {
-    [Authorize]
+    
     public class ReviewController : Controller
     {
         private SightDbContext _context;
@@ -15,15 +16,19 @@ namespace supernaturalsightings_olivia.Controllers
         {
             _context = dbContext;
         }
-
+        // GET: /<controller>/
         public IActionResult Index()
         {
-            List<Review> reviews = new List<Review>();
-            return View(reviews);
+            List<Review> review = _context.Review
+                .Include(r => r.Category)
+                .ToList();
+
+            return View(review);
             
         }
 
-        [HttpGet("/Add")]
+        [HttpGet("/Review")]
+
         public IActionResult Add()
         {
             AddReviewViewModel addReviewViewModel = new AddReviewViewModel();
@@ -31,7 +36,10 @@ namespace supernaturalsightings_olivia.Controllers
             return View(addReviewViewModel);
         }
 
-        public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
+        [HttpPost]
+        [Route("Review/Add")]
+        public IActionResult Add(AddReviewViewModel addReviewViewModel)
+        //public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -39,9 +47,10 @@ namespace supernaturalsightings_olivia.Controllers
                 {
                     Username = addReviewViewModel.Username,
                     Description = addReviewViewModel.Description,
-                    ReviewId = addReviewViewModel.CategoryId
+                    ReviewId = addReviewViewModel.ReviewCategoryId
 
                 };
+
 
                 _context.Review.Add(newReview);
                 _context.SaveChanges();
@@ -50,7 +59,14 @@ namespace supernaturalsightings_olivia.Controllers
                 return Redirect("Index");
             }
 
-            return View("Add", addReviewViewModel);
+            return View("Review", addReviewViewModel);
         }
+
+        //public IActionResult Delete()
+        //{
+        //    ViewBag.reviews = Review.GetAll();
+
+        //    return View();
+        //}
     }
 }

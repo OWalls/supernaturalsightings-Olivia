@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "weEutkbmLmN4hA0j8kdzvuEUuQL4Rj+CA0kU1yhqhhxqEFvSLrWx4GwEwgaPOizPYj8cT9XKhH7tNewZ+rCf6w==",
+  "dgSpecHash": "axrJP0XlcegTnvQCYPIX6aDcs28NgpePoulRGBbOTozC+a4/aoYZoFyE7cKhBbHlwTjgmjCSl1DMvVzMs0Eiaw==",
   "success": true,
   "projectFilePath": "C:\\Users\\EmmaJ\\OneDrive\\Desktop\\WebDev\\LC Liftoff Supernatural Sightings-Cloned\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
   "expectedPackageFiles": [
@@ -189,10 +189,10 @@
     "C:\\Users\\EmmaJ\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\EmmaJ\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\EmmaJ\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512",
-    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
     "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.13\\microsoft.windowsdesktop.app.ref.6.0.13.nupkg.sha512",
-    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.13\\microsoft.netcore.app.ref.6.0.13.nupkg.sha512"
+    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.13\\microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
+    "C:\\Users\\EmmaJ\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.13\\microsoft.netcore.app.host.win-x64.6.0.13.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,62 +1,63 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using supernaturalsightings_olivia.Areas.Identity.Data;
-using supernaturalsightings_olivia.Models;
-using supernaturalsightings_olivia.ViewModels;
+﻿//using Microsoft.AspNetCore.Authorization;
+//using Microsoft.AspNetCore.Mvc;
+//using Microsoft.EntityFrameworkCore;
+//using supernaturalsightings_olivia.Areas.Identity.Data;
+//using supernaturalsightings_olivia.Models;
+//using supernaturalsightings_olivia.ViewModels;
 
-namespace supernaturalsightings_olivia.Controllers
-{
-    [Authorize]
-    public class ReviewCategoryController : Controller
-    {
-        private SightDbContext _dbContext;
+//namespace supernaturalsightings_olivia.Controllers
+//{
+//    [Authorize]
+//    public class ReviewCategoryController : Controller
+//    {
+//        //private SightDbContext _dbContext;
 
-        public ReviewCategoryController(SightDbContext dbContext)
-        {
-            _dbContext = dbContext;
-        }
+//        //public ReviewCategoryController(SightDbContext dbContext)
+//        //{
+//        //    _dbContext = dbContext;
+//        //          }
 
-        //GET: /<controller>/
+//            //        //GET: /<controller>/
 
-        public IActionResult Index()
-        {
-            List<ReviewCategory> categories = _dbContext.Categories.ToList();
+//            //        public IActionResult Index()
+//            //        {
+//            //            List<ReviewCategory> categories = _dbContext.Categories.ToList();
 
-            return View(categories);
-        }
+//            //            return View(categories);
+//            //        }
 
 
-        [HttpGet("/Review")]
-        [Route("/Review/")]
-        public IActionResult Create()
-        {
-            AddReviewCategoryViewModel addReviewCategoryViewModel = new AddReviewCategoryViewModel();
-            return View(addReviewCategoryViewModel);
-        }
+//            [HttpGet("/Review")]
+//            [Route("/Review/")]
+//            public IActionResult Create()
+//            {
+                
+//                return View();
+//            }
 
-        [HttpPost]
-        [Route("/review/")]
-        public IActionResult ProcessCreateReviewCategoryForm(AddReviewCategoryViewModel addReviewCategoryViewModel)
-        {
-            if (ModelState.IsValid)
-            {
-                ReviewCategory newCategory = new ReviewCategory
-                {
-                    Username = addReviewCategoryViewModel.Username
-                };
+//            [HttpPost]
+//            [Route("/Review/")]
+//            public IActionResult ProcessCreateReviewCategoryForm()
+//            {
+//                if (ModelState.IsValid)
+//                {
+//                    ReviewCategory newCategory = new ReviewCategory
+//                    {
+                       
+//                    };
 
-                _dbContext.Categories.Add(newCategory);
-                _dbContext.SaveChanges();
+//                  //  _dbContext.Categories.Add(newCategory);
+//                  //  _dbContext.SaveChanges();
 
-                return RedirectToAction("/ReviewCategory");
-            }
+//                    return RedirectToAction("/ReviewCategory");
+//                }
 
-            return View("Create", addReviewCategoryViewModel);
-        }
+//                return View("Create");
+//            }
 
-        private class ReviewDbContext
-        {
-        }
-    }
-}
+//            private class ReviewDbContext
+//            {
+//            }
+//                    }
+//                }
+

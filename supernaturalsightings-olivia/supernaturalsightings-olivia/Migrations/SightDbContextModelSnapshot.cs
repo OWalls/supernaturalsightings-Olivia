@@ -352,7 +352,7 @@ namespace supernaturalsightings_olivia.Migrations
             modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
                 {
                     b.HasOne("supernaturalsightings_olivia.Models.ReviewCategory", "Category")
-                        .WithMany("Reviews")
+                        .WithMany("Review")
                         .HasForeignKey("CategoryReviewCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -373,7 +373,7 @@ namespace supernaturalsightings_olivia.Migrations
 
             modelBuilder.Entity("supernaturalsightings_olivia.Models.ReviewCategory", b =>
                 {
-                    b.Navigation("Reviews");
+                    b.Navigation("Review");
                 });
 #pragma warning restore 612, 618
         }

@@ -11,7 +11,7 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia.Migrations
 {
     [DbContext(typeof(SightDbContext))]
-    [Migration("20230118023334_InitialMigration")]
+    [Migration("20230120005729_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -354,7 +354,7 @@ namespace supernaturalsightings_olivia.Migrations
             modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
                 {
                     b.HasOne("supernaturalsightings_olivia.Models.ReviewCategory", "Category")
-                        .WithMany("Reviews")
+                        .WithMany("Review")
                         .HasForeignKey("CategoryReviewCategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -375,7 +375,7 @@ namespace supernaturalsightings_olivia.Migrations
 
             modelBuilder.Entity("supernaturalsightings_olivia.Models.ReviewCategory", b =>
                 {
-                    b.Navigation("Reviews");
+                    b.Navigation("Review");
                 });
 #pragma warning restore 612, 618
         }
