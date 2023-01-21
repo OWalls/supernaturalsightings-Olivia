@@ -1,25 +1,37 @@
 ﻿<div class="container body-content">
 
-    <h1>@ViewBag.title</h1>
-
     <form action="/search/results" method="post">
-        <h2>Search by:</h2>
-
+        <h2>What are you on the hunt for?</h2>
         <p>
-            @foreach (var column in ViewBag.columns)
-            {
-                <span>
-                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
-                    <label for="@column.Key">@column.Value</label>
-                </span>
-            }
+            <span>
+                <input type="checkbox" name="type" id="ghost" value="ghost" />
+                <label for="ghost">Ghosts</label>
+                <input type="checkbox" name="type" id="alien" value="alien" />
+                <label for="alien">Aliens</label>
+                <input type="checkbox" name="type" id="bigfoot" value="bigfoot" />
+                <label for="bigfoot">Bigfoot</label>
+            </span>
+        </p>
+        <h2>Where are we looking?:</h2>
+        <p>
+            <span>
+                <input type="radio" name="searchType" id="city" value="city" />
+                <label for="city">City</label>
+                <input type="radio" name="searchType" id="state" value="state" />
+                <label for="state">State</label>
+                <input type="radio" name="searchType" id="description" value="description" />
+                <label for="description">Description</label>
+            </span>
         </p>
 
         <p>
-            <label for="searchTerm">Search for:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <label for="searchTerm">Search For:</label>
+            <input type="text" name="searchTerm" id="searchTerm" value=""/>
         </p>
         <input type="submit" value="Search" />
+        <br>
+        <br>
+        <input type="submit" name="searchType" id="all" value="Show me everything!" />
     </form>
 
     <hr />

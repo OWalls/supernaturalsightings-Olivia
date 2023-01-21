@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{FED136DB-3C10-4BB2-9791-F998F21ECAEC}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Controllers/SearchController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs">
     <Files>
-      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" />
-      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="34" Column="32" />
-      <File FileName="supernaturalsightings-olivia/Controllers/ResultsController.cs" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/States.cs" />
+      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="29" Column="73" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="73" Column="14" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs" Line="19" Column="59" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -25,6 +25,7 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
                 <Node name="Search" expanded="True" />
               </Node>
             </Node>
@@ -33,6 +34,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
