@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
+    "D:\\coding-and-programming-things\\LaunchCode\\LiftOff\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
+    "D:\\coding-and-programming-things\\LaunchCode\\LiftOff\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "projectUniqueName": "D:\\coding-and-programming-things\\LaunchCode\\LiftOff\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
         "projectName": "supernaturalsightings-olivia",
-        "projectPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
-        "packagesPath": "C:\\Users\\tanya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tanya\\source\\repos\\supernaturalsightings-Olivia-identity\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
+        "projectPath": "D:\\coding-and-programming-things\\LaunchCode\\LiftOff\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia.csproj",
+        "packagesPath": "C:\\Users\\labgf\\.nuget\\packages\\",
+        "outputPath": "D:\\coding-and-programming-things\\LaunchCode\\LiftOff\\supernaturalsightings-Olivia\\supernaturalsightings-olivia\\supernaturalsightings-olivia\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tanya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\labgf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,21 +47,21 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[6.0.12, )"
+              "version": "[6.0.13, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
