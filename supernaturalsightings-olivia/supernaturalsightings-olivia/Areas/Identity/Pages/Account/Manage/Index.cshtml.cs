@@ -93,7 +93,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             }*/
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Your display name has been updated";
             return RedirectToPage();
         }
     }
