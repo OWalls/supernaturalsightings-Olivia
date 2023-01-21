@@ -19,66 +19,66 @@ namespace supernaturalsightings_olivia.Controllers
             List<string> selected = new List<string>();
             string stateCode = "";
 
-            if(searchType == "Screw It. Just Show Me Everything!")
+            //Checks to see if someone has clicked the button to see everything.
+            if(searchType == "Show Me Everything!")
             {
-                Console.WriteLine("32: Find all entities.");
                 entityList = EntityData.FindAll();
             }
-
+            //Checks to see if they selected any of the checkboxes.
             else if (type.Length > 0)
             {
-                Console.WriteLine("38: Convert Array to List.");
                 foreach (string entityName in type)
                 {
                     selected.Add(entityName);
                 }
 
-                if (searchType == "state")
+                //Exectues if they selected checkboxes and tried to search by state with a search term.
+                if (searchType == "state" && searchTerm != null && searchTerm != "")
                 {
-                    Console.WriteLine("45: Search By State.");
                     stateCode = States.GetStateByName(searchTerm);
 
-                    entityList = EntityData.FindByColumnAndValue(searchType, stateCode, selected);
+                    entityList = EntityData.FindByColumnValueAndType(searchType, stateCode, selected);
                 }
-                else if (searchType != null && searchTerm != null && searchTerm != null)
+                //Exectutes if they selected checkboxes and search by city or description.
+                else if (searchType != null && searchTerm != null && searchTerm != "")
                 {
-                    Console.WriteLine("52: Search By Description or City.");
-                    entityList = EntityData.FindByColumnAndValue(searchType, searchTerm, selected);
+                    entityList = EntityData.FindByColumnValueAndType(searchType, searchTerm, selected);
                 }
+                //Executes if they selected checkboxes but did not enter a search term or select a radio button.
                 else if (searchType == null && searchTerm == "" || searchTerm == null)
                 {
-                    Console.WriteLine("57: Only check boxes selected.");
                     entityList = EntityData.FindByType(selected);
                 }
                 else
                 {
-                    Console.WriteLine("WTF?");
+                    ViewBag.entityList = null;
                 }
 
             }
+            //Checks to see if they selected a search type and search term but no check boxes.
             else if (type.Length == 0 && searchType != null && searchTerm != null)
             {
-                if (searchType == "state")
+                //Exectutes if they search by state and search term only.
+                if (searchType == "state" && searchTerm != null && searchTerm != "")
                 {
-                    Console.WriteLine("45: Search By State.");
                     stateCode = States.GetStateByName(searchTerm);
 
                     entityList = EntityData.FindByColumnAndValue(searchType, stateCode);
                 }
+                //Exectues if they search by city or description with a search term.
                 else
                 {
-                    Console.WriteLine("64: No Check Boxes Selected. Radio Button Selected.");
                     entityList = EntityData.FindByColumnAndValue(searchType, searchTerm);
                 }
             }
+            //Exectues if they don't select any buttons but input a search term in the search box.
             else if (type.Length == 0 && searchType == null && searchTerm != null)
             {
-                Console.WriteLine("69: Only the search box was used.");
                 entityList = EntityData.FindByValue(searchTerm);
             }
             else
             {
-                Console.WriteLine("WTF2: Electric Boogaloo");
+                ViewBag.entityList = null;
             }
 
             ViewBag.entityList = entityList;

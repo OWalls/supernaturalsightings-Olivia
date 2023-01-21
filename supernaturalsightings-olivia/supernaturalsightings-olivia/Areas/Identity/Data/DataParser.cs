@@ -12,10 +12,10 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
 
         static public List<Entity> AllEntities;
 
-        //loads data from the csv file
+        //Loads data from the file
         static public void LoadData()
         {
-            //check to make sure there's data
+            //Checks to make sure there's data
             if (AllEntities == null || AllEntities.Count == 0)
             {
                 IsDataLoaded = false;
@@ -26,7 +26,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
                 return;
             }
 
-            //grab all of the rows out of the spreadsheet
+            //Grab all of the rows out of the spreadsheet
             List<string[]> rows = new List<string[]>();
 
             using (StreamReader reader = File.OpenText(DATA_FILE))
@@ -42,13 +42,13 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
                 }
             }
 
-            //put the headers in their own array and out of the way
+            //Puts the headers in their own array and out of the way
             string[] headers = rows[0];
             rows.Remove(headers);
 
             AllEntities = new List<Entity>();
 
-            //loop through the rows of data, transforming them into Entities and add them to a list
+            //Loops through the rows of data, transforming them into Entities and adding them to a list
             for (int i = 0; i < rows.Count; i++)
             {
                 string[] row = rows[i];
@@ -58,25 +58,22 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
                 string aDescription = row[3];
                 string aType = row[4];
 
-                //Location newLocation = (Location)FindExistingObject(AllLocations, aCity, aState);
-
                 Entity newEntity = new Entity(aName, aCity, aState, aDescription, aType);
 
                 AllEntities.Add(newEntity);
             }
 
             IsDataLoaded = true;
-            Console.WriteLine("Loaded: " + AllEntities.Count);
         }
 
-        //transforms the rows in the csv into an array of strings - used in the LoadData function
+        //Transforms the rows in the CSV into an array of strings. Used in the LoadData function.
         private static string[] CSVRowToStringArray(string row, char fieldSeparator = ',', char stringSeparator = '\"')
         {
             bool isBetweenQuotes = false;
             StringBuilder valueBuilder = new StringBuilder();
             List<string> rowValues = new List<string>();
 
-            //loops through one char at a time looking for separators
+            //Loops through one char at a time looking for separators
             for (int i = 0; i < row.ToCharArray().Length; i++)
             {
                 char c = row.ToCharArray()[i];

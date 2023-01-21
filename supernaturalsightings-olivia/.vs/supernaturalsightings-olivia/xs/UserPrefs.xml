@@ -6,11 +6,12 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Views/Search/Index.cshtml">
     <Files>
-      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="29" Column="73" />
-      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="73" Column="14" />
-      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs" Line="19" Column="59" />
+      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="34" Column="73" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="23" Column="35" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" Line="75" Column="1" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs" Line="80" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,7 +20,9 @@
             <Node name="supernaturalsightings-olivia" expanded="True">
               <Node name="Areas" expanded="True">
                 <Node name="Identity" expanded="True">
-                  <Node name="Data" expanded="True" />
+                  <Node name="Data" expanded="True">
+                    <Node name="DataParser.cs" selected="True" />
+                  </Node>
                 </Node>
               </Node>
               <Node name="Controllers" expanded="True" />
