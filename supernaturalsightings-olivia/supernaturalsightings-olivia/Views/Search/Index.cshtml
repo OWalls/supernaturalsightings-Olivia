@@ -1,0 +1,71 @@
+﻿<div class="container body-content">
+
+    <form action="/search/results" method="post">
+        <h2>What are you on the hunt for?</h2>
+        <p>
+            <span>
+                <input type="checkbox" name="type" id="ghost" value="ghost" />
+                <label for="ghost">Ghosts</label>
+                <input type="checkbox" name="type" id="alien" value="alien" />
+                <label for="alien">Aliens</label>
+                <input type="checkbox" name="type" id="bigfoot" value="bigfoot" />
+                <label for="bigfoot">Bigfoot</label>
+            </span>
+        </p>
+        <h2>Where are we looking?:</h2>
+        <p>
+            <span>
+                <input type="radio" name="searchType" id="city" value="city" />
+                <label for="city">City</label>
+                <input type="radio" name="searchType" id="state" value="state" />
+                <label for="state">State</label>
+                <input type="radio" name="searchType" id="description" value="description" />
+                <label for="description">Description</label>
+            </span>
+        </p>
+
+        <p>
+            <label for="searchTerm">Search For:</label>
+            <input type="text" name="searchTerm" id="searchTerm" value=""/>
+        </p>
+        <input type="submit" value="Search" />
+        <br>
+        <br>
+        <input type="submit" name="searchType" id="all" value="Show Me Everything!" />
+    </form>
+
+    <hr />
+
+    <p>
+        @if (ViewBag.entityList != null)
+        {
+            foreach (var entity in ViewBag.entityList)
+            {
+                <table class="listOfEntities">
+                    <tr>
+                        <th>Name</th>
+                        <td>@entity.Name</td>
+                    </tr>
+                    <tr>
+                        <th>City/General Location</th>
+                        <td>@entity.City</td>
+                    </tr>
+                    <tr>
+                        <th>State</th>
+                        <td>@entity.State</td>
+                    </tr>
+                    <tr>
+                        <th>Type</th>
+                        <td>@entity.Type</td>
+                    </tr>
+                </table>
+            }
+        }
+        else
+        {
+            <div>No weirdness here!</div>
+        }
+    </p>
+
+
+</div>

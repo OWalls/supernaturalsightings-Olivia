@@ -19,4 +19,10 @@
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Search\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Search\" />
+  </ItemGroup>
 </Project>

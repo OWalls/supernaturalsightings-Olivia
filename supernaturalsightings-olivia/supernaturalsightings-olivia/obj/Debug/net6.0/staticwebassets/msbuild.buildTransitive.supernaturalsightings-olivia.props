@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\buildMultiTargeting\supernaturalsightings-olivia.props" />
+  <Import Project="../buildMultiTargeting/supernaturalsightings-olivia.props" />
 </Project>

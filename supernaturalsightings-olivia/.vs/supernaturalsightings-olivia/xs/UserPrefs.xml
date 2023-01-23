@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{FED136DB-3C10-4BB2-9791-F998F21ECAEC}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.supernaturalsightings-olivia PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="supernaturalsightings-olivia/Views/Search/Index.cshtml">
+    <Files>
+      <File FileName="supernaturalsightings-olivia/Views/Search/Index.cshtml" Line="34" Column="73" />
+      <File FileName="supernaturalsightings-olivia/Controllers/SearchController.cs" Line="23" Column="35" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/EntityData.cs" Line="75" Column="1" />
+      <File FileName="supernaturalsightings-olivia/Areas/Identity/Data/DataParser.cs" Line="80" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="supernaturalsightings-olivia" expanded="True">
+            <Node name="supernaturalsightings-olivia" expanded="True">
+              <Node name="Areas" expanded="True">
+                <Node name="Identity" expanded="True">
+                  <Node name="Data" expanded="True">
+                    <Node name="DataParser.cs" selected="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Search" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
