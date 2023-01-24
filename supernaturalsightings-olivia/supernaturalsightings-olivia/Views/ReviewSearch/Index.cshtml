@@ -1,0 +1,62 @@
+﻿<div class="container body-content">
+
+    <h1>@ViewBag.title</h1>
+
+    <form action="/search/results" method="post">
+        <h2>Search by:</h2>
+
+        <p>
+            @foreach (var column in ViewBag.columns)
+            {
+                <span>
+                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
+                    <label for="@column.Key">@column.Value</label>
+                </span>
+            }
+
+        </p>
+
+        <p>
+            <label for="searchTerm">Keyword:</label>
+            <input type="text" name="searchTerm" id="searchTerm" />
+        </p>
+
+        <input type="submit" value="Search" />
+    </form>
+
+    <hr />
+
+    @* TODO #4 - Loop over the search results to display all review fields. *@
+    <table class="table table-hover">
+
+        @if (ViewBag.reviews != null)
+        {
+            @foreach (var item in ViewBag.reviews)
+            {
+                <tr>
+                    <th scope="row">ID:</th>
+
+                    <td>@item.Id</td>
+                </tr>
+                <tr>
+                    <th scope="row">Username:</th>
+                    <td>@item.Username</td>
+                </tr>
+                <tr>
+                    <th scope="row">Location:</th>
+                    <td>@item.Location</td>
+                </tr>
+                <tr>
+                    <th scope="row">Encounter:</th>
+                    <td>@item.EncounterType</td>
+                </tr>
+                <tr>
+                    <th scope="row">Category:</th>
+                    <td>@item.ReviewCategory/td>
+                </tr>
+            }
+        }
+    </table>
+
+
+</div>

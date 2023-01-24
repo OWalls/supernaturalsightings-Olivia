@@ -1,0 +1,32 @@
+﻿<div class="container body-content">
+
+    <h1>@ViewBag.title</h1>
+
+    @foreach (var review in ViewBag.reviews)
+    {
+        <table class="review-listing">
+            <tr>
+                <th>ID</th>
+                <td>@review.Id</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>@review.Username</td>
+            </tr>
+            
+            <tr>
+                <th>Location</th>
+                <td>@review.Location</td>
+            </tr>
+            <tr>
+                <th>Encounter Type</th>
+                <td>@review.EnounterType</td>
+            </tr>
+            <tr>
+                <th>Review Category</th>
+                <td>@review.ReviewCategory</td>
+            </tr>
+        </table>
+    }
+
+</div>

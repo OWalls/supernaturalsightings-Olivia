@@ -1,1 +1,12 @@
-﻿
+﻿@model supernaturalsightings_olivia.Models.ReviewCategory
+
+<h1>Add Creepy Category</h1> @* drop down options for alien/big foot/ghost*@
+
+<form asp-controller="ReviewCategory" asp-action="ProcessCreateReviewCategoryForm" method="post">
+    <div class="form-group">
+        <label asp-for= "ReviewType" ></label>
+        <input asp-for="ReviewType" />
+        <span asp-validation-for="ReviewType"></span>
+    </div>
+    <input type ="submit" value="Add Category"/>
+</form>

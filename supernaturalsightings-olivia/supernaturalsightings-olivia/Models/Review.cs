@@ -1,57 +1,74 @@
-﻿namespace supernaturalsightings_olivia.Models;
+﻿using Microsoft.CodeAnalysis;
+using System.Xml.Linq;
+
+namespace supernaturalsightings_olivia.Models;
 
 public class Review
 {
-    public string Username { get; set; }
-    public string Description { get; set; }
-    public int ReviewId { get; set; }
-    public ReviewCategory Category { get; set; }
     public int Id { get; set; }
-    public Review(string userName, string description)
-    {
-        Username = userName;
-        Description = description;
+    static private int nextId = 1;
 
-    }
+    public string Username { get; set; } //name
+    public Location Location { get; set; }
+    public string Description { get; set; }
+    public EncounterType EncounterType { get; set; } //positionType
+    public int ReviewId { get; set; } //
+    public ReviewCategory ReviewCategory { get; set; } //coreCompetency
+
     public Review()
     {
+        Id = nextId;
+        nextId++;
+
+    }
+    public Review(string username, Location location, EncounterType encounterType, ReviewCategory reviewCategory) : this()
+    {
+        Username = username;
+        Location = location;
+        EncounterType = encounterType;
+        ReviewCategory = reviewCategory;
 
     }
 
     public override string ToString()
     {
-        return Username;
+        string output = " ";
+        if (Username.Equals(" "))
+        {
+            Username = "Data not available";
+        }
+        if (Location.Value.Equals("") || Location.Value == null)
+        {
+            Location.Value = "Data not available";
+
+        }
+        if (ReviewCategory.Value.Equals("") || ReviewCategory.Value == null)
+        {
+            ReviewCategory.Value = "Data not available";
+        }
+        if (EncounterType.Value.Equals("") || EncounterType.Value == null)
+        {
+            EncounterType.Value = "Data not available";
+        }
+
+        output = string.Format("\nID: %d\n" +
+                "Username: %s\n" +
+                "Entity: %s\n" +
+                "Location: %s\n" +
+                "Encounter Type: %s\n" +
+                "Review Category: %s\n", Id, Username, Location, EncounterType, ReviewCategory);
+        return output;
     }
 
     public override bool Equals(object? obj)
     {
-        return obj is Review @review &&
-            Id == review.Id;
+        return obj is Review review &&
+               Id == review.Id;
     }
+
     public override int GetHashCode()
     {
         return HashCode.Combine(Id);
     }
+
 }
-
-//    }*@
-
-//@*@*
-//    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-//*@
-//@{
-//}
-//@model supernaturalsightings_olivia.ViewModels.AddReviewCategoryViewModel
-
-//<h1>Add Creepy Category</h1> @* drop down options for alien/big foot/ghost*@
-
-//<form asp-controller= "ReviewCategory" asp-action= "ProcessCreateReviewCategoryForm" method= "post" >
-//    < div class= "form-group" >
-//        < label asp -for= "Category" ></ label >
-//        < input asp -for= "Category" />
-//        < span asp - validation -for= "Category" ></ span >
-//    </ div >
-//    < input type = "submit" value = "Add Category" />
-//</ form >
-//*@
-////}

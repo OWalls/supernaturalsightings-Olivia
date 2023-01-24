@@ -10,54 +10,54 @@
 //    [Authorize]
 //    public class ReviewCategoryController : Controller
 //    {
-//        //private SightDbContext _dbContext;
+//        private SightDbContext _dbContext;
 
-//        //public ReviewCategoryController(SightDbContext dbContext)
-//        //{
-//        //    _dbContext = dbContext;
-//        //          }
+//        public ReviewCategoryController(SightDbContext dbContext)
+//        {
+//            _dbContext = dbContext;
+//        }
 
-//            //        //GET: /<controller>/
+//        //GET: /<controller>/
 
-//            //        public IActionResult Index()
-//            //        {
-//            //            List<ReviewCategory> categories = _dbContext.Categories.ToList();
+//        public IActionResult Index()
+//        {
+//            List<ReviewCategory> categories = _dbContext.ReviewCategory.ToList();
 
-//            //            return View(categories);
-//            //        }
+//            return View(categories);
+//        }
 
 
-//            [HttpGet("/Review")]
-//            [Route("/Review/")]
-//            public IActionResult Create()
+//        [HttpGet("/Review")]
+//        [Route("/Review/")]
+//        public IActionResult Create()
+//        {
+
+//            return View();
+//        }
+
+//        [HttpPost]
+//        [Route("/Review/")]
+//        public IActionResult ProcessCreateReviewCategoryForm()
+//        {
+//            if (ModelState.IsValid)
 //            {
-                
-//                return View();
-//            }
-
-//            [HttpPost]
-//            [Route("/Review/")]
-//            public IActionResult ProcessCreateReviewCategoryForm()
-//            {
-//                if (ModelState.IsValid)
+//                ReviewCategory newCategory = new ReviewCategory
 //                {
-//                    ReviewCategory newCategory = new ReviewCategory
-//                    {
-                       
-//                    };
+                
+//                };
 
-//                  //  _dbContext.Categories.Add(newCategory);
-//                  //  _dbContext.SaveChanges();
+//                 //_dbContext.Category.Add(newCategory);
+//                 //_dbContext.SaveChanges();
 
-//                    return RedirectToAction("/ReviewCategory");
-//                }
-
-//                return View("Create");
+//                return RedirectToAction("/ReviewCategory");
 //            }
 
-//            private class ReviewDbContext
-//            {
-//            }
-//                    }
-//                }
+//            return View("Create");
+//        }
+
+//        private class ReviewDbContext
+//        {
+//        }
+//    }
+//}
 

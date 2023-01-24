@@ -2,29 +2,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using supernaturalsightings_olivia.Areas.Identity.Data;
+using supernaturalsightings_olivia.Controllers;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
+//using System.Web.Mvc;
 
 namespace supernaturalsightings_olivia.Controllers
 {
     
     public class ReviewController : Controller
     {
-        private SightDbContext _context;
+        private readonly SightDbContext _context;
 
         public ReviewController(SightDbContext dbContext)
         {
             _context = dbContext;
         }
         // GET: /<controller>/
+        [HttpGet("/Review")]
         public IActionResult Index()
         {
             List<Review> review = _context.Review
-                .Include(r => r.Category)
+                .Include(r => r.ReviewCategory)
                 .ToList();
 
             return View(review);
-            
+
+        }
+
+        private IActionResult View(AddReviewViewModel addReviewViewModel)
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet("/Review")]
@@ -38,8 +46,8 @@ namespace supernaturalsightings_olivia.Controllers
 
         [HttpPost]
         [Route("Review/Add")]
-        public IActionResult Add(AddReviewViewModel addReviewViewModel)
-        //public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
+        // public IActionResult Create(AddReviewViewModel addReviewViewModel)
+        public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -54,7 +62,7 @@ namespace supernaturalsightings_olivia.Controllers
 
                 _context.Review.Add(newReview);
                 _context.SaveChanges();
-               
+
 
                 return Redirect("Index");
             }
@@ -70,3 +78,32 @@ namespace supernaturalsightings_olivia.Controllers
         //}
     }
 }
+//GET: /< controller >/
+//        public IActionResult Index()
+//{
+//    ViewBag.columns = ReviewListController.ColumnChoices;
+//    return View();
+//}
+
+////ToDo Create an action method to process a search request and render the updated search views.
+//[HttpPost]
+//public IActionResult Results(string searchType, string searchTerm)
+//{
+//    List<Review> reviews;
+//    if (searchType == null)
+//    {
+//        reviews = ReviewData.FindAll();
+//        ViewBag.title = "All Reviews";
+//    }
+//    else
+//    {
+//        reviews = ReviewData.FindByColumnAndValue(searchType, searchTerm);
+//    }
+
+//    ViewBag.columns = ReviewListController.ColumnChoices;
+//    ViewBag.reviews = reviews;
+
+//    return View("Index");
+//}
+//            }
+//        }

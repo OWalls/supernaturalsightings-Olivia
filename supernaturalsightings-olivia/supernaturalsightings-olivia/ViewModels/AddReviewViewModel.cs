@@ -1,15 +1,13 @@
 ﻿// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
+//using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Linq;
 using supernaturalsightings_olivia.Models;
-using System.ComponentModel.DataAnnotations;
 
 namespace supernaturalsightings_olivia.ViewModels
 {
     public class AddReviewViewModel
     {
-
         //[Required(ErrorMessage = "Username is required!")]
         //[StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 15 characters long")]
         //[Display(Name = "Username")]
@@ -37,7 +35,7 @@ namespace supernaturalsightings_olivia.ViewModels
             ReviewId = theReview.ReviewId;
             Username = theReview.Username;
             Description = theReview.Description;
-            ReviewCategory = theReview.Category.ReviewType;
+            //ReviewCategories = theReview.ReviewCategories;
 
             TagText = "";
 
@@ -54,22 +52,23 @@ namespace supernaturalsightings_olivia.ViewModels
 
         public List<SelectListItem> ReviewCategories { get; set; }
 
-        public AddReviewViewModel(List<ReviewCategory> categories)
+        public AddReviewViewModel(List<ReviewCategory> categories, ReviewCategory category)
         {
             ReviewCategories = new List<SelectListItem>();
 
-            foreach (var category in categories)
+            for (int i = 0; i < categories.Count; i++)
             {
+                //ReviewCategory reviewCategory = categories[i];
                 ReviewCategories.Add(
                     new SelectListItem
                     {
-                        Value = category.Review.ToString(),
-                        Text = category.Username
+                        //Value = category.ReviewCategory.ToString(),
+                        //Text = category.Username.ToString(),
+                        // Group = category.Description
+                        //  Text = category.ReviewType
                     }
                     );
-               
             }
-
         }
 
         public AddReviewViewModel()
@@ -87,6 +86,4 @@ namespace supernaturalsightings_olivia.ViewModels
             return HashCode.Combine(Username);
         }
     }
-}        
-
-    
+}

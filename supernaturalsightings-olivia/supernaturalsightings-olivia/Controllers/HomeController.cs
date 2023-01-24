@@ -1,31 +1,61 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using System.Diagnostics;
-
+using supernaturalsightings_olivia.ViewModels;
+using supernaturalsightings_olivia.Areas.Identity.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 namespace supernaturalsightings_olivia.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        public List<Entity> entityList = new List<Entity>();
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
         }
-
         public IActionResult Index()
         {
-           
             return View();
         }
-
         public IActionResult Privacy()
         {
             return View();
         }
-
+        public IActionResult About()
+        {
+            return View();
+        }
+        //add sighting exp
+        //
+        [HttpGet("/Add")]
+        public IActionResult AddSighting()
+        {
+            AddSightingViewModel addSightingViewModel = new AddSightingViewModel();
+            return View(addSightingViewModel);
+        }
+        public IActionResult ProcessAddSightingForm(AddSightingViewModel addSightingViewModel)
+        {
+            //if (ModelState.IsValid)
+            //{
+            Entity newEntity = new Entity
+            {
+                Name = addSightingViewModel.Name,
+                City = addSightingViewModel.City,
+                State = addSightingViewModel.State,
+                Description = addSightingViewModel.Description,
+                Type = addSightingViewModel.Type,
+            };
+            EntityData.AddNewSighting(newEntity);
+            //context.SaveChanges();
+            return Redirect("Index");
+            //}
+            return View(addSightingViewModel);
+            /// end add sighting
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

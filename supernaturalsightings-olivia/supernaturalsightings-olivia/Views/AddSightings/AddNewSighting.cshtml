@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+ <h1>Add a New Sighting</h1>
+
+ <form asp-controller="Home" asp-action="ProcessAddReviewForm" method="post">
+
+     <div class="form-group">
+         <label asp-for="Name">Name</label>
+         <input asp-for="Name" class="form-control" />
+         <span asp-validation-for="Name"></span>
+     </div>
+
+    <div class="form-group">
+        <label asp-for="Location">Location</label>
+        <input asp-for="Location" class="form-control" />
+        <span asp-validation-for="Location"></span>
+        <p><a asp-controller="Location" asp-action="Add">Add New Location</a></p>
+    </div>
+
+    <div class="form-group">
+        <label for="selectedEntity">Entity</label>
+        @if (Model.Entity == null) {
+                <p>Spookity Things</p>
+        }
+        else
+        {
+            @foreach (var entity in Model.Entity){
+                <input type="checkbox" id="selectedEntity" name="selectedEntity" value="@entity.Id" />
+                <label>@entity.Name</label>
+            }
+        }
+
+        <p><a asp-controller="Entity" asp-action="Add">Add Eerie Entity</a></p>
+    </div>
+
+    <input type="submit" value="Add Entity" />
+
+ </form>
