@@ -11,6 +11,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using supernaturalsightings_olivia.Areas.Identity.Data;
+using supernaturalsightings_olivia.Models;
+
 namespace supernaturalsightings_olivia
 {
     public class Program
@@ -23,9 +25,10 @@ namespace supernaturalsightings_olivia
             builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0, 29))));
 
+            //Changed IdentityUser to ApplicationUser - Leslie
             //Changed RequireConfirmedEmail from true to false - Tanya
-                                                builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedEmail = false)
-                .AddEntityFrameworkStores<SightDbContext>();
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedEmail = false)
+            .AddEntityFrameworkStores<SightDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();

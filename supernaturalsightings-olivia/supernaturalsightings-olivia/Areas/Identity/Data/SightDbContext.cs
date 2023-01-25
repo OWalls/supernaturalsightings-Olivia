@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
-public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
+// changed IdentityUser to ApplicationUser -- Leslie
+public class SightDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {
     public SightDbContext(DbContextOptions<SightDbContext> options)
         : base(options)
