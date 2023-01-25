@@ -18,6 +18,12 @@ body {
 }
 
 /*Results View - Bootstrap*/
+
+body {
+    background: #f2f3f8;
+    margin-top: 20px;
+}
+
 .page.has-sidebar.bordered .page-header {
     margin-bottom: 0;
 }

@@ -36,36 +36,4 @@
 
     <hr />
 
-    <p>
-        @if (ViewBag.entityList != null)
-        {
-            foreach (var entity in ViewBag.entityList)
-            {
-                <table class="listOfEntities">
-                    <tr>
-                        <th>Name</th>
-                        <td>@entity.Name</td>
-                    </tr>
-                    <tr>
-                        <th>City/General Location</th>
-                        <td>@entity.City</td>
-                    </tr>
-                    <tr>
-                        <th>State</th>
-                        <td>@entity.State</td>
-                    </tr>
-                    <tr>
-                        <th>Type</th>
-                        <td>@entity.Type</td>
-                    </tr>
-                </table>
-            }
-        }
-        else
-        {
-            <div>No weirdness here!</div>
-        }
-    </p>
-
-
 </div>
