@@ -1,0 +1,76 @@
+﻿<h1 style="text-align:center">Weird Results</h1>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<p>
+    @if (ViewBag.entityList != null)
+    {
+        foreach (var entity in ViewBag.entityList)
+        {
+            <div class="clearfix mt-40">
+                <div class="xsearch-items">
+                    <div class="search-item">
+                        <div class="search-item-img">
+                            @if (@entity.Type == "Alien")
+                            {
+                                <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
+                            }
+                            else if (@entity.Type == "Ghost")
+                            {
+                                <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
+                            }
+                            else if (@entity.Type == "Bigfoot")
+                            {
+                                <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
+                            }
+                        </div>
+                        <div class="search-item-content">
+                            <h3 class="search-item-caption"><a href="#">@entity.Name</a></h3>
+                            <div class="search-item-meta mb-15">
+                                <ul class="list-inline">
+                                    <li>@entity.Type - @entity.City, @entity.State</li>
+                                </ul>
+                            </div>
+                            <div class="search-item-meta mb-15">
+                                <ul class="list-inline">
+                                    <li><a href="#">Ratings/Reviews</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                @entity.Description
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div>No weirdness here!</div>
+    }
+    </tr>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="clearfix pl-90">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-left"></i> </a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">..</a></li>
+                    <li class="page-item"><a class="page-link" href="#">20</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="fa fa-angle-double-right"></i> </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="clearfix pull-right">
+                <span class="o-7">Page 1 of 8</span>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

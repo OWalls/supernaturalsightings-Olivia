@@ -22,7 +22,4 @@
   <ItemGroup>
     <None Remove="Views\Search\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Search\" />
-  </ItemGroup>
 </Project>
