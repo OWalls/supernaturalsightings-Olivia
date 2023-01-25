@@ -6,7 +6,7 @@ namespace supernaturalsightings_olivia.Models
     public class ApplicationUser : IdentityUser
     {
         //[Column("DisplayName")]
-        public string? DisplayName { get; set; }
+        public string DisplayName { get; set; } = "";
         
     }
 }

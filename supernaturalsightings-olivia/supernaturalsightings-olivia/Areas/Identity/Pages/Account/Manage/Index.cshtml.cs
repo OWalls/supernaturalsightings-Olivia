@@ -38,21 +38,21 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            /*[Phone]
-            [Display(Name = "Phone number")]
-            public string PhoneNumber { get; set; }*/
+            [Required]
+            [Display(Name = "Display Name")]
+            public string DisplayName { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
-            //var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
+            var displayName = user.DisplayName;
 
             Username = userName;
 
             Input = new InputModel
             {
-                //PhoneNumber = phoneNumber
+                DisplayName = displayName
             };
         }
 
@@ -82,18 +82,12 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
                 return Page();
             }
 
-            //remove phone number input
-            /*var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
+            if (Input.DisplayName != user.DisplayName)
             {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
-                {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
-                }
-            }*/
+                user.DisplayName = Input.DisplayName;
+            }
 
+            await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
             StatusMessage = "Your display name has been updated";
             return RedirectToPage();
