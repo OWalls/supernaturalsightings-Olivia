@@ -4,7 +4,7 @@
     ViewData["Title"] = "Profile";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
-
+<div id="genericcard" class="card">
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
 <div class="row">
@@ -24,7 +24,18 @@
         </form>
     </div>
 </div>
+<br />
+<br />
+<div>
+    @Html.ActionLink("My Favorites List", "ViewAll", "UserSightFavorite")
+</div>
+
+<a class="nav-link text-dark" asp-area="" asp-controller="UserSightFavorite" asp-action="ViewAll">
+        <button>My Favorites List</button>
+    </a>
+
 
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+</div>

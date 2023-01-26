@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
+/*ALL-----------------------------*/
 html {
     font-size: 14px;
 }
@@ -21,6 +22,31 @@ body {
     background-attachment: fixed;
     background-size: cover;
 }
+
+#genericcard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
+}
+
+.blink2 {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
+/*---------------------------------*/
+
 
 /*Navigation Bar --------------------*/
 .navbar .navbar-nav .nav-link:hover {
@@ -83,16 +109,13 @@ p.indent {
 
 /* ABOUT US PAGE -------------------*/
 .social-link {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #ddd;
+    width: 25px;
+    height: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #666;
-    border-radius: 50%;
+    border-radius: 70%;
     transition: all 0.3s;
-    font-size: 0.9rem;
 }
 
 #aboutcard {
@@ -104,11 +127,20 @@ p.indent {
     opacity: 85%;
     color: black;
 }
+
+#circlepic:hover {
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+#teamsquare {
+    box-shadow: 0 6px 10px rgba(0,0,0,.08);
+  
+}
 /*---------------------------------*/
 
 
 /*Ghost-----------------------------*/
- 
 .ghost {
     animation: float 3s ease-out infinite;
 }
@@ -119,47 +151,193 @@ p.indent {
     }
 }
 
-.shadowFrame {
-    width: 130px;
-    margin-top: 15px;
+/*---------------------------------*/
+
+
+/*Search page ----------------------*/
+#searchcard {
+    background-color: white;
+    margin: 25px auto;
+    padding: 10px;
+    width: 90%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-.shadow {
-    animation: shrink 3s ease-out infinite;
-    transform-origin: center center;
-    ellipse{
-        transform-origin: center center;
-            }
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
 }
 
-@keyframes shrink {
-    0% {
-        width: 90%;
-        margin: 0 5%;
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid dodgerblue;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+    .searchTerm:focus {
+        color: dodgerblue;
+        border: 3px solid dodgerblue;
+        box-shadow: 5px 10px 20px gray;
     }
 
-    50% {
-        width: 60%;
-        margin: 0 18%;
-    }
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
 
-    100% {
-        width: 90%;
-        margin: 0 5%;
-    }
+.wrap {
+    width: 30%;
+    position: absolute;
+}
+
+.radiooptions label {
+    display: inline-block;
+    position: relative;
+    padding-right: 8px;
+}
+
+.checkboxoptions label {
+    display: inline-block;
+    position: relative;
+    padding-right: 8px;
 }
 /*---------------------------------*/
 
-.blink2 {
-    animation: fadeIn 3s;
+
+/*Favorites List-------------------*/
+#favoritecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+.alien {
+    position: center;
+    background-color: #252525;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 200px;
+    -webkit-box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+    .alien:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 66px;
+        left: 33px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 
-    100% {
-        opacity: 0.85;
+    .alien:after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 33px;
+        left: 66px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
+
+    .alien:hover {
+        background: radial-gradient(circle, #a2f793, #58f03e);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+    }
+
+.smallalien {
+    position: center;
+    background-color: #252525;
+    width: 80px;
+    height: 80px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 200px;
+    -webkit-box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
+
+    .smallalien:before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 53px;
+        left: 26px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .smallalien:after {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 26px;
+        left: 53px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .smallalien:hover {
+        background: radial-gradient(circle, #a2f793, #58f03e);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+    }
+
+/*---------------------------------*/
+
+/* ALIEN IMAGE ON FAVORITES PAGE
+Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+GHOST IMAGE ON SEARCH PAGE
+Copyright (c) 2023 by Beep (https://codepen.io/scoooooooby/pen/DLqWYP)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/

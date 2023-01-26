@@ -1,0 +1,72 @@
+﻿@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<h1>Weird Results:</h1>
+<br />
+
+<!--Bootstrap Styling-->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+@if (ViewBag.entityList != null)
+{
+    foreach (var entity in ViewBag.entityList)
+    {
+        <div class="clearfix mt-40">
+            <div class="xsearch-items">
+                <div class="search-item">
+
+                    <!--Displays images for the different entities-->
+                    <div class="search-item-img">
+                        @if (@entity.Type == "Alien")
+                        {
+                            <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
+                        }
+                        else if (@entity.Type == "Ghost")
+                        {
+                            <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
+                        }
+                        else if (@entity.Type == "Bigfoot")
+                        {
+                            <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
+                        }
+                    </div>
+
+                    <div class="search-item-content">
+                        <!--Displays Name-->
+                        <h2 class="search-item-caption">@entity.Name</h2>
+
+                        <!--Displays Type, City, State, Ratings/Reviews-->
+                        <div class="search-item-meta mb-15">
+                            <ul class="list-inline">
+                                <li>@entity.Type - @entity.City, @entity.State</li>
+                                <li><a href="#">Ratings/Reviews</a></li>
+                            </ul>
+                        </div>
+
+                        <!--Displays Description-->
+                        <div>
+                            @entity.Description
+                            <br>
+                        </div>
+                                <br/>
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+                            <form method="post" action="/UserSightFavorite/AddFavorite">
+                                <input type="hidden" name="formSightId" value="@entity.Id" />
+                            <input class="filter_btn" onclick="changeAddFavoritesButton(@entity.Id)" type="submit" value="Add to Favorites" id="filter_btn_@(entity.Id)" />
+                            </form>
+                        }
+                            <br />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}
+else
+{
+    <h3>No weirdness here!</h3>
+}

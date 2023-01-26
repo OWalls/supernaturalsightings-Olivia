@@ -1,12 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using supernaturalsightings_olivia.Models;
 using System.Diagnostics;
+using supernaturalsightings_olivia.ViewModels;
+using supernaturalsightings_olivia.Areas.Identity.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 
 namespace supernaturalsightings_olivia.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+
+        //added for ability to add new sightings
+        public List<Entity> entityList = new List<Entity>();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -28,11 +37,38 @@ namespace supernaturalsightings_olivia.Controllers
             return View();
         }
 
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        //add sighting to csv
+        [HttpGet("/Add")]
+        public IActionResult AddSighting()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+
+            AddSightingViewModel addSightingViewModel = new AddSightingViewModel();
+            return View(addSightingViewModel);
         }
-    }
+
+
+        public IActionResult ProcessAddSightingForm(AddSightingViewModel addSightingViewModel)
+        {
+            Entity newEntity = new Entity
+            {
+                Name = addSightingViewModel.Name,
+                City = addSightingViewModel.City,
+                State = addSightingViewModel.State,
+                Description = addSightingViewModel.Description,
+                Type = addSightingViewModel.Type,
+            };
+
+            EntityData.AddNewSighting(newEntity);
+
+            return Redirect("Index");
+            return View(addSightingViewModel);
+
+        }
+
+            [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+            public IActionResult Error()
+            {
+                return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            }
+        }
 }

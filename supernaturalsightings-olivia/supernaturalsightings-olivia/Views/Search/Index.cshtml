@@ -1,140 +1,121 @@
-﻿<div id="searchcard" class="card container body-content">
+﻿@using Microsoft.AspNetCore.Identity
 
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<div class="container body-content">
     <h1>@ViewBag.title</h1>
 
-    <form action="/search/results" method="post">
-        <h2>Search by:</h2>
-
-        <p>
-            @foreach (var column in ViewBag.columns)
-            {
-                <span>
-                    <input type="radio" name="searchType" id="@column.Key" value="@column.Key" checked="@column.Key == 'all'" />
-                    <label for="@column.Key">@column.Value</label>
-                </span>
-            }
-        </p>
-
-        <p>
-            <label for="searchTerm">Search for:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
-        </p>
-
-        <p>
-            <label for="stateChoices">Search by State:</label>
-            <select id="stateChoices" name="searchType">
-                <option value="AL">AL</option>
-                <option value="AK">AK</option>
-                <option value="AZ">AZ</option>
-                <option value="AS">AS</option>
-                <option value="CA">CA</option>
-                <option value="CO">CO</option>
-                <option value="CT">CT</option>
-                <option value="DE">DE</option>
-                <option value="FL">FL</option>
-                <option value="GA">GA</option>
-                <option value="HI">HI</option>
-                <option value="ID">ID</option>
-                <option value="IL">IL</option>
-                <option value="IN">IN</option>
-                <option value="IA">IA</option>
-                <option value="KS">KS</option>
-                <option value="KY">KY</option>
-                <option value="LA">LA</option>
-                <option value="ME">ME</option>
-                <option value="MA">MA</option>
-                <option value="MS">MS</option>
-                <option value="MI">MI</option>
-                <option value="MN">MN</option>
-                <option value="MS">MS</option>
-                <option value="MO">MO</option>
-                <option value="MT">MT</option>
-                <option value="NE">NE</option>
-                <option value="NV">NV</option>
-                <option value="NH">NH</option>
-                <option value="NJ">NJ</option>
-                <option value="NY">NY</option>
-                <option value="NC">NC</option>
-                <option value="ND">ND</option>
-                <option value="OH">OH</option>
-                <option value="OK">OK</option>
-                <option value="OR">OR</option>
-                <option value="PA">PA</option>
-                <option value="RI">RI</option>
-                <option value="SC">SC</option>
-                <option value="SD">SD</option>
-                <option value="TN">TN</option>
-                <option value="TX">TX</option>
-                <option value="UT">UT</option>
-                <option value="VT">VT</option>
-                <option value="VA">VA</option>
-                <option value="WA">WA</option>
-                <option value="WV">WV</option>
-                <option value="WI">WI</option>
-                <option value="WY">WY</option>
-            </select>
-        </p>
-
-        <input type="submit" value="Search" />
-    </form>
-
     <hr />
-
     <p>
-        @if (ViewBag.entityList != null)
-        {
-            foreach (var entity in ViewBag.entityList)
+    <div id="searchcard" class="card blink2 container body-content" style="border-radius: 6px;" >
+
+        <h1>@ViewBag.title</h1>
+
+        <form action="/search/results" method="post">
+                <h2 class ="display-6">What are you on the hunt for?</h2>
+            <p>
+                <div class="form-check checkboxoptions">
+                    <input type="checkbox" name="type" id="ghost" value="ghost" />
+                    <label for="ghost">Ghosts</label>
+                    <input type="checkbox" name="type" id="alien" value="alien" />
+                    <label for="alien">Aliens</label>
+                    <input type="checkbox" name="type" id="bigfoot" value="bigfoot" />
+                    <label for="bigfoot">Bigfoot</label>
+                </div>
+            </p>
+            <h2 class="display-6">Where are we looking?</h2>
+            <p>
+                <div class="form-check radiooptions">
+                    <input type="radio" name="searchType" id="city" value="city" />
+                    <label for="city">City</label>
+                    <input type="radio" name="searchType" id="state" value="state" />
+                    <label for="state">State</label>
+                    <input type="radio" name="searchType" id="description" value="description" />
+                    <label for="description">Description</label>
+                </div>
+            </p>
+            <div class="wrap">
+                <div class="search">
+                    <input type="text" name="searchTerm" id="searchTerm" class="searchTerm" placeholder="Enter search term.." />
+                    <button type="submit" value="Search" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            <br />
+            <br />
+            <p>
+
+            </p>
+            <br/>
+                <input type="submit" name="searchType" id="all" value="Show Me Everything!" />
+        </form>
+        <hr />
+
+        @*<p>
+            @if (ViewBag.entityList != null)
             {
-                <table class="listOfEntities">
-                    <tr>
-                        <th>Name</th>
-                        <td>@entity.Name</td>
-                    </tr>
-                    <tr>
-                        <th>City/General Location</th>
-                        <td>@entity.City</td>
-                    </tr>
-                    <tr>
-                        <th>State</th>
-                        <td>@entity.State</td>
-                    </tr>
-                    <tr>
-                        <th>Description</th>
-                        <td>@entity.Description</td>
-                    </tr>
-                    <tr>
-                        <th>Type</th>
-                        <td>@entity.Type</td>
-                    </tr>
+                foreach (var entity in ViewBag.entityList)
+                {
+                    <table class="listOfEntities">
+                        <tr>
+                            <th>Name</th>
+                            <td>@entity.Name</td>
+                        </tr>
+                        <tr>
+                            <th>City/General Location</th>
+                            <td>@entity.City</td>
+                        </tr>
+                        <tr>
+                            <th>State</th>
+                            <td>@entity.State</td>
+                        </tr>
+                        <tr>
+                            <th>Description</th>
+                            <td>@entity.Description</td>
+                        </tr>
+                        <tr>
+                            <th>Type</th>
+                            <td>@entity.Type</td>
+                        </tr>
+                        <tr>
+                        
+                        </tr>
                     
-                    @if (@entity.Type == "Alien")
-                    { 
-                        <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
-                    } else if (@entity.Type == "Ghost")
-                    {
-                        <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
-                    }
-                    else if (@entity.Type == "Bigfoot")
-                    {
-                        <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
-                    }
-                </table>
-                <br />
-                <br />
+                        @if (@entity.Type == "Alien")
+                        { 
+                            <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
+                        } else if (@entity.Type == "Ghost")
+                        {
+                            <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
+                        }
+                        else if (@entity.Type == "Bigfoot")
+                        {
+                            <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
+                        }
+                    </table>
+                            <br/>
+                            @if (SignInManager.IsSignedIn(User))
+                            {
+                                <form method="post" action="/UserSightFavorite/AddFavorite">
+                                    <input type="hidden" name="formSightId" value="@entity.Id" />
+                                <input class="filter_btn" onclick="changeAddFavoritesButton(@entity.Id)" type="submit" value="Add to Favorites" id="filter_btn_@(entity.Id)" />
+                            </form>
+                        }
+                    <br />
+                    <br />
+                }
             }
-        }
-        else
-        {
-            <div>No weirdness here!</div>
-        }
-    </p>
-
-
+            else
+            {
+                <div>No weirdness here!</div>
+            }
+    </p>*@
 </div>
+
 <br />
-
-
-<div id="ghostcard" class="container">
+<div id="ghostcard" class=" blink2 container d-flex justify-content-center">
     <svg class="ghost" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="127.433px" height="132.743px" viewBox="0 0 127.433 132.743" enable-background="new 0 0 127.433 132.743"
          xml:space="preserve">
@@ -171,11 +152,7 @@
 	    c1.564,0,2.833-1.269,2.833-2.833c0-1.355-0.954-2.485-2.226-2.764c4.419-1.285,9.269-2.074,14.437-2.074
 	    c7.636,0,15.336,1.684,22.887,5.004c26.766,11.771,29.011,39.047,29.027,39.251V121.405z" />
     </svg>
-    <p class="shadowFrame">
-        <svg version="1.1" class="shadow" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="61px" y="20px"
-             width="122.436px" height="39.744px" viewBox="0 0 122.436 39.744" enable-background="new 0 0 122.436 39.744"
-             xml:space="preserve">
-        <ellipse fill="#696969" cx="61.128" cy="19.872" rx="49.25" ry="8.916" />
-        </svg>
-    </p>
+</div>
+<br />
+<br />
 </div>

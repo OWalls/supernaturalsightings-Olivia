@@ -176,6 +176,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Home/AddSighting.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRTaWdodGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -188,6 +192,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Search/Results.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -198,6 +206,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/UserSightFavorite/_FavoritesList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclNpZ2h0RmF2b3JpdGVcX0Zhdm9yaXRlc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/jacqu/Desktop/GetW/supernaturalsightings-olivia/supernaturalsightings-olivia/Views/_ViewImports.cshtml]

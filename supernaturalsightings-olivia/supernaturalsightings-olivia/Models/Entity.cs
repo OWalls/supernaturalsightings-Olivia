@@ -30,16 +30,17 @@ namespace supernaturalsightings_olivia.Models
             Type = type;
         }
 
-        //Not sure if we really need these either, but I made them for good measure.
-        public override bool Equals(object obj)
+        public override string ToString()
         {
-            return obj is Entity entity &&
-                   Id == entity.Id;
-        }
+            string output = "";
 
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
+            output = string.Format("\nName: %d\n" +
+                "City: %s\n" +
+                "State: %s\n" +
+                "Description: %s\n" +
+                "Type: %s\n", Name, City, State, Description, Type);
+
+            return output;
         }
     }
 }
