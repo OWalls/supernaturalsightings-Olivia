@@ -24,4 +24,7 @@
     <None Include="wwwroot\Images\alien.png" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Search\" />
+  </ItemGroup>
 </Project>
