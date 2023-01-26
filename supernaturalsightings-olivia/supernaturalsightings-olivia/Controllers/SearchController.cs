@@ -82,7 +82,7 @@ namespace supernaturalsightings_olivia.Controllers
             }
 
             ViewBag.entityList = entityList;
-            return View("Index");
+            return View();
         }
     }
 }
