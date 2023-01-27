@@ -43,8 +43,13 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             [Display(Name = "Display Name")]
             public string DisplayName { get; set; }
 
+            [Required]
             [Display(Name = "Bio")]
             public string Bio { get; set; }
+
+            [Required]
+            [Display(Name = "Emoji")]
+            public string Emoji { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
@@ -52,6 +57,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             var userName = await _userManager.GetUserNameAsync(user);
             var displayName = user.DisplayName;
             var bio = user.Bio;
+            var emoji = user.Emoji;
 
             Username = userName;
 
@@ -59,6 +65,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             {
                 DisplayName = displayName,
                 Bio = bio,
+                Emoji = emoji,
             };
         }
 
@@ -96,6 +103,11 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             if (Input.Bio != user.Bio)
             {
                 user.Bio = Input.Bio;
+            }
+
+            if (Input.Emoji != user.Emoji)
+            {
+                user.Emoji = Input.Emoji;
             }
 
             await _userManager.UpdateAsync(user);
