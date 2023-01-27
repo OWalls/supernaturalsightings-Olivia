@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Display Name";
+    ViewData["Title"] = "Display Name & Bio";
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
@@ -9,17 +9,16 @@
 <partial name="_StatusMessage" for="StatusMessage" />
 <div class="row">
     <div class="col-md-6">
-    <div class="col-md-6">
         <form id="profile-form" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-floating">
-                <input asp-for="Username" class="form-control" />
-                <label asp-for="Username" class="form-label"></label>
-            </div>
                 <div class="form-group">
                     <label asp-for="Input.DisplayName" class="form-control"></label>
                     <input asp-for="Input.DisplayName" class="form-label" />
                 </div>
+                 <div class="form-group">
+                <label asp-for="Input.Bio" class="form-control"></label>
+                <input asp-for="Input.Bio" class="form-label" />
+                 </div>
             <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
         </form>
     </div>

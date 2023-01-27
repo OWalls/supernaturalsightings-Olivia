@@ -4,6 +4,7 @@
 
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.Net.NetworkInformation;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
@@ -41,18 +42,23 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
             [Required]
             [Display(Name = "Display Name")]
             public string DisplayName { get; set; }
+
+            [Display(Name = "Bio")]
+            public string Bio { get; set; }
         }
 
         private async Task LoadAsync(ApplicationUser user)
         {
             var userName = await _userManager.GetUserNameAsync(user);
             var displayName = user.DisplayName;
+            var bio = user.Bio;
 
             Username = userName;
 
             Input = new InputModel
             {
-                DisplayName = displayName
+                DisplayName = displayName,
+                Bio = bio,
             };
         }
 
@@ -87,9 +93,14 @@ namespace supernaturalsightings_olivia.Areas.Identity.Pages.Account.Manage
                 user.DisplayName = Input.DisplayName;
             }
 
+            if (Input.Bio != user.Bio)
+            {
+                user.Bio = Input.Bio;
+            }
+
             await _userManager.UpdateAsync(user);
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your display name has been updated";
+            StatusMessage = "Your profile has been updated";
             return RedirectToPage();
         }
     }

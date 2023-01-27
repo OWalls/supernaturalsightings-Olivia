@@ -5,8 +5,11 @@ namespace supernaturalsightings_olivia.Models
 {
     public class ApplicationUser : IdentityUser
     {
-        //[Column("DisplayName")]
+        [PersonalData]
         public string DisplayName { get; set; } = "";
+
+        [PersonalData]
+        public string Bio { get; set; } = "";
         
     }
 }
