@@ -9,11 +9,11 @@
 <!--Bootstrap Styling-->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
-@if (ViewBag.entityList != null)
+     @if (ViewBag.entityList != null)
 {
     foreach (var entity in ViewBag.entityList)
     {
-        <div class="clearfix mt-40">
+        <div class="clearfix mt-40" div id="searchcard" class="card blink2 container body-content" style="border-radius: 6px;">
             <div class="xsearch-items">
                 <div class="search-item">
 
@@ -70,3 +70,4 @@ else
 {
     <h3>No weirdness here!</h3>
 }
+

@@ -4,13 +4,14 @@
 @{
     ViewData["Title"] = "Log in";
 }
+<div class="card blink2 container body-content" style="border-radius: 6px;" >
 
-<h1>@ViewData["Title"]</h1>
+
 <div class="row">
+    <h1 class ="display-5">@ViewData["Title"]</h1>
     <div class="col-md-4">
         <section>
             <form id="account" method="post">
-                <h3>Use a local account to log in.</h3>
                 <hr />
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-floating">
@@ -39,10 +40,7 @@
                         <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
                     </p>
                     <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                    <p>
-                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Resend email confirmation</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Sign up as a new user</a>
                     </p>
                 </div>
             </form>
@@ -50,9 +48,9 @@
     </div>
     <div class="col-md-6 col-md-offset-2">
         <section>
-            <h2 style="text-align:center">Not a Weirdo yet?</h2>
+            <h2 class="display-6" style="text-align:center">Not a weirdo yet?</h2>
             <form action="./Register">
-                <input class="w-100 btn btn-lg btn-primary" type="submit" value="Sign Up" />
+                    <input type="submit" name="searchType" id="all" style="display: block; margin: 0 auto; width: 100px"value="Sign Up" />
             </form>
         </section>
     </div>
@@ -61,3 +59,4 @@
 @section Scripts {
     <partial name="_ValidationScriptsPartial" />
 }
+</div>
