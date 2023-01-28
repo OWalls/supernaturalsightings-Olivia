@@ -8,9 +8,9 @@ public class Review : Entity
     public int Id { get; set; }
    // static private int nextId = 1;
     //State from Entity
-    public string Username { get; set; } //name
-    public string ReviewTitle { get; set; }
-    public string ReviewComment { get; set;}
+    public string? Username { get; set; } //name
+    public string? ReviewTitle { get; set; }
+    public string? ReviewComment { get; set;}
    // public int ReviewId { get; set; } //
   //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
 
