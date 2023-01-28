@@ -3,8 +3,8 @@ using Microsoft.CodeAnalysis;
 
 namespace supernaturalsightings_olivia.Models
 {
-	public class Entity
-	{
+    public class Entity
+    {
         //I'm not sure if we NEED an I.D. field for each entity, but I made one just in case.
         public int Id { get; }
         static private int nextId = 1;
@@ -44,4 +44,3 @@ namespace supernaturalsightings_olivia.Models
         }
     }
 }
-

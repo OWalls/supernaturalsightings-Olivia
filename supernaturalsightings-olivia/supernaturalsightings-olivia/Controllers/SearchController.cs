@@ -20,7 +20,7 @@ namespace supernaturalsightings_olivia.Controllers
             string stateCode = "";
 
             //Checks to see if someone has clicked the button to see everything.
-            if(searchType == "Show Me Everything!")
+            if (searchType == "Show Me Everything!")
             {
                 entityList = EntityData.FindAll();
             }

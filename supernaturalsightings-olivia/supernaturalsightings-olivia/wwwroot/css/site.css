@@ -1,5 +1,8 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+/*ALL-----------------------------*/
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
@@ -12,294 +15,329 @@ html {
   position: relative;
   min-height: 100%;
 }
-
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: url(https://images.unsplash.com/photo-1534193708707-6be94c4f67d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-/*Results View - Bootstrap*/
-
-body {
-    background: #f2f3f8;
-    margin-top: 20px;
+#genericcard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-.page.has-sidebar.bordered .page-header {
-    margin-bottom: 0;
+.blink2 {
+    animation: fadeIn 3s;
 }
 
-.page.has-sidebar.bordered .page-inner {
-    padding-bottom: 0;
-    padding-top: 0px;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
+/*---------------------------------*/
+
+
+/*Navigation Bar --------------------*/
+.navbar .navbar-nav .nav-link:hover {
+    background-color: #d5d5d5;
+    border: solid #9d9999 1px;
 }
 
-.page.has-sidebar.bordered .left-side-sidebar {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.navbar .navbar-nav .nav-link {
+    padding: 0.6em;
+    font-size: 1em;
+    transition: all 1s;
+    border: solid #fff 1px;
+    border-radius: 10px;
 }
 
-.page.has-sidebar.bordered .right-side-sidebar {
-    padding-top: 50px;
-    padding-bottom: 50px;
+.navbar {
+    box-shadow: 0px 0px 15px 2px black;
+}
+/*---------------------------------*/
+
+
+/*Home page ----------------------*/
+#homepagecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-.has-sidebar.bordered.has-right-sidebar .left-side-sidebar {
-    border-right: 1px solid rgba(0,0,0,0.1) !important;
-    box-shadow: 1px 0px 0px 0px rgba(255,255,255,0.715) !important;
-    padding-right: 45px;
+#homepagecardtop {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 60%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-.has-sidebar.bordered.has-right-sidebar .right-side-sidebar {
-    padding-left: 40px;
+p.indent {
+    text-indent: 30px;
 }
 
-.has-sidebar.bordered.has-left-sidebar .right-side-sidebar {
-    padding-left: 45px;
+.blink {
+    animation: fadeIn 3s;
 }
 
-.has-sidebar.bordered.has-left-sidebar .left-side-sidebar {
-    border-right: 1px solid rgba(0,0,0,0.1) !important;
-    box-shadow: 1px 0px 0px 0px rgba(255,255,255,0.715) !important;
-    padding-right: 40px;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
+/*---------------------------------*/
+
+
+/* ABOUT US PAGE -------------------*/
+.social-link {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70%;
+    transition: all 0.3s;
 }
 
-.page.has-sidebar .left-side-sidebar {
-    padding-top: 50px;
-    padding-bottom: 50px;
+#aboutcard {
+    background-color: #ecedee;
+    margin: 25px auto;
+    padding: 10px;
+    width: 90%;
+    min-width: 300px;
+    opacity: 85%;
+    color: black;
 }
 
-.page.has-sidebar .page-inner {
-    padding-bottom: 0;
-    padding-top: 0px;
+#circlepic:hover {
+    transform: scale(1.1);
+    transition: 1s;
 }
 
-.page.has-sidebar .right-side-sidebar {
-    padding-top: 50px;
-    padding-bottom: 50px;
+#teamsquare {
+    box-shadow: 0 6px 10px rgba(0,0,0,.08);
+  
+}
+/*---------------------------------*/
+
+
+/*Ghost-----------------------------*/
+.ghost {
+    animation: float 3s ease-out infinite;
 }
 
-/* --------------------------------------------
-   SEARCH LIST
- -------------------------------------------- */
-
-.xsearch-items {
-    padding-left: 0px;
+@keyframes float {
+    50% {
+        transform: translate(0, 20px);
+    }
 }
 
+/*---------------------------------*/
 
-.search-item-img {
-    float: left;
+
+/*Search page ----------------------*/
+#searchcard {
+    background-color: white;
+    margin: 25px auto;
+    padding: 10px;
+    width: 90%;
+    min-width: 300px;
+    opacity: 85%;
+}
+
+.search {
+    width: 100%;
     position: relative;
+    display: flex;
 }
 
-    .search-item-img img, .search-item-img .img-holder {
-        height: 70px;
-        width: 70px;
-        display: block;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
-        border-radius: 50%;
-        box-shadow: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
-        border: 4px solid white;
+
+.searchTerm {
+    width: 100%;
+    border: 3px solid dodgerblue;
+    border-right: none;
+    padding: 5px;
+    height: 36px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+}
+
+    .searchTerm:focus {
+        color: dodgerblue;
+        border: 3px solid dodgerblue;
+        box-shadow: 5px 10px 20px gray;
     }
 
-    .search-item-img .img-holder {
-        border: 1px solid #e3e3e3;
-        line-height: 20px;
-        background: #f7f7f7;
-        border-color: rgba(207,215,223,.25);
-    }
-
-        .search-item-img .img-holder i {
-            display: inline-block;
-            padding: 28px 20px;
-            font-size: 28px;
-            opacity: 0.5;
-        }
-
-.search-item-content {
-    margin-left: 100px;
-    padding-bottom: 35px;
-    margin-bottom: 20px;
-    /*border-bottom: 1px solid rgb(231, 231, 231);*/
-}
-
-    .search-item-content.no-excerpt h3 {
-        margin-top: 8px;
-    }
-
-    .search-item-content .search-item-meta {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-.search-item-meta-down a,
-.search-item-meta a {
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-.xsearch-items a:hover {
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-}
-
-.search-item-content .time {
-    color: #999;
-    font-size: 11px;
-    text-transform: uppercase;
-}
-
-.search-item-content time,
-.search-item-content span {
-    color: #999999;
-}
-
-.xsearch-items h3.search-item-caption {
-    margin-bottom: 2px;
-    font-weight: 600;
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
     font-size: 20px;
 }
 
-.xsearch-items .search-item-meta-down {
-    margin-top: 5px;
-    color: #999;
-    font-size: 12px;
+.wrap {
+    width: 30%;
+    position: absolute;
 }
 
-.xsearch-items .star-vote li {
-    padding: 0;
-    font-size: 14px;
+.radiooptions label {
+    display: inline-block;
+    position: relative;
+    padding-right: 8px;
 }
 
-.xsearch-result-count {
-    color: #999;
-    margin-bottom: 30px;
+.checkboxoptions label {
+    display: inline-block;
+    position: relative;
+    padding-right: 8px;
+}
+/*---------------------------------*/
+
+
+/*Favorites List-------------------*/
+#favoritecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
 }
 
-
-ul.xsearch-items-2 {
-    padding-left: 0;
-    margin-left: 0;
+.alien {
+    position: center;
+    background-color: #252525;
+    width: 100px;
+    height: 100px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 200px;
+    -webkit-box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-.xsearch-items-2 li {
-    list-style: none;
-}
-
-
-.xsearch-info-meta:before, .xsearch-info-meta:after {
-    content: "";
-    display: table;
-}
-
-.xsearch-info-meta:after {
-    clear: both;
-}
-
-.xsearch-info-meta {
-    padding: 0;
-    margin: 0;
-    list-style-type: none;
-    margin-bottom: 5px;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-.xsearch-info-meta-item {
-    float: left;
-    margin-right: 10px;
-}
-
-.xsearch-item-title h3,
-.xsearch-item-title h4 {
-    margin-bottom: 5px;
-}
-
-.xsearch-desc {
-    margin-bottom: 2px;
-}
-
-.search-item-icon {
-    padding-right: 3px;
-}
-
-nav.xsearch-navbar {
-    padding-left: 0;
-}
-
-    nav.xsearch-navbar.navbar-light .navbar-nav .active > .nav-link {
-        border-bottom-width: 2px;
-        border-bottom-style: solid;
-        padding-bottom: 12px;
+    .alien:before {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 66px;
+        left: 33px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 
-.xsearch-item .xsearch-item-title strong {
-    font-weight: 600;
-}
-
-ul.xsearch-items-2 .xsearch-item {
-    margin-bottom: 40px;
-}
-
-.xsearch-item .xsearch-desc strong {
-    color: #111;
-}
-
-
-
-.search-result-wrap .search-result-item {
-    padding-bottom: 25px;
-    padding-top: 25px;
-    border-bottom: 1px solid rgba(207,215,223,.25);
-}
-
-    .search-result-wrap .search-result-item .title h4,
-    .search-result-wrap .search-result-item .title h3 {
-        margin-bottom: 5px;
+    .alien:after {
+        content: "";
+        position: absolute;
+        width: 26px;
+        height: 26px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 33px;
+        left: 66px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
     }
 
-.search-result-item-meta {
-    font-size: 14px;
-    margin-bottom: 10px;
-    margin-left: 25px;
-}
-
-    .search-result-item-meta li {
-        color: #999;
-        margin-right: 5px;
+    .alien:hover {
+        background: radial-gradient(circle, #a2f793, #58f03e);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
     }
 
-        .search-result-item-meta li i {
-            margin-right: 4px;
-        }
-
-        .search-result-item-meta li a {
-            /*border-bottom:1px dotted rgba(207,215,223,.25);
-    padding-bottom:2px;*/
-            color: #1a0dab;
-        }
-
-.search-result-item-link,
-.search-result-item-excerpt,
-.search-result-item-meta {
-    margin-left: 25px;
+.smallalien {
+    position: center;
+    background-color: #252525;
+    width: 80px;
+    height: 80px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 200px;
+    -webkit-box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5);
 }
 
-    .search-result-item-excerpt strong {
-        color: #444;
-        font-weight: 600;
+    .smallalien:before {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 53px;
+        left: 26px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
     }
 
-.search-result-item-excerpt {
-    margin-bottom: 5px;
-}
+    .smallalien:after {
+        content: "";
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        background-color: #0b0b0b;
+        border-top-left-radius: 200px;
+        border-bottom-right-radius: 200px;
+        top: 26px;
+        left: 53px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
 
-.search-result-item-meta li:first-child {
-    margin-left: 0;
-    padding-left: 0;
-}
+    .smallalien:hover {
+        background: radial-gradient(circle, #a2f793, #58f03e);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5), 0 0 20px 20px rgba(88, 240, 62, 0.4);
+    }
 
-ul {
-    list-style-type: none;
-}
+/*---------------------------------*/
+
+/* ALIEN IMAGE ON FAVORITES PAGE
+Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+GHOST IMAGE ON SEARCH PAGE
+Copyright (c) 2023 by Beep (https://codepen.io/scoooooooby/pen/DLqWYP)
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/

@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.ObjectPool;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
 public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
 {
-    public SightDbContext(DbContextOptions<SightDbContext> options)
-        : base(options)
-    {
-    }
+    public virtual DbSet<UserSightFavorite> UserSightFavorites { get; set; }
+
+    public SightDbContext(DbContextOptions<SightDbContext> options) : base(options)
+    { }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -18,4 +19,10 @@ public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, stri
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public override int SaveChanges()
+    {
+        return base.SaveChanges();
+    }
+
 }

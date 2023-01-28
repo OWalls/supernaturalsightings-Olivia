@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using supernaturalsightings_olivia.Areas.Identity.Data;
+
 namespace supernaturalsightings_olivia
 {
     public class Program
@@ -18,17 +19,18 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+    
             var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
-           
-            builder.Services.AddDbContext<SightDbContext>(options =>
-                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0, 29))));
 
-            //Changed RequireConfirmedEmail from true to false - Tanya
-                                                builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedEmail = false)
-                .AddEntityFrameworkStores<SightDbContext>();
+            builder.Services.AddDbContext<SightDbContext>(options =>
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
+
+            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+.AddEntityFrameworkStores<SightDbContext>();
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
 
             var app = builder.Build();
 
@@ -44,7 +46,7 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication();;
+            app.UseAuthentication(); ;
 
             app.UseAuthorization();
 

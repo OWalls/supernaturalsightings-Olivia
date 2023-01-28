@@ -1,8 +1,8 @@
 ﻿using System;
 namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
-	public class States
-	{
+    public class States
+    {
         static public string GetStateByName(string state)
         {
             switch (state.ToUpper())
@@ -163,4 +163,3 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
     }
 
 }
-
