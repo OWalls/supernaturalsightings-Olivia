@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿// Licensed to the .NET Foundation under one or more agreements.
+// The .NET Foundation licenses this file to you under the MIT license.
+using System.ComponentModel.DataAnnotations;
 
 namespace supernaturalsightings_olivia.ViewModels
 {
-    public class AddReviewViewModel
+    public class AddReviewViewModel //: IEquatable<AddReviewViewModel?>
     {
 
 
@@ -24,8 +26,25 @@ namespace supernaturalsightings_olivia.ViewModels
         public AddReviewViewModel()
         {
         }
-   
+
+        public override bool Equals(object? obj)
+        {
+            return Equals(obj as AddReviewViewModel);
         }
+
+        public bool Equals(AddReviewViewModel? other)
+        {
+            return other is not null &&
+                   Username == other.Username &&
+                   ReviewComment == other.ReviewComment &&
+                   ReviewTitle == other.ReviewTitle;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Username, ReviewComment, ReviewTitle);
+        }
+    }
         
     }
 
