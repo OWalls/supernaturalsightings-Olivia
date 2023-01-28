@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;  // [Route] , ControllerBase
 using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
@@ -15,7 +15,7 @@ namespace supernaturalsightings_olivia.Controllers
 
         //Get: /<controller>/
         [HttpGet("/Review")]
-        public IActionResult Add()
+        public IActionResult AddReview()
         {
             AddReviewViewModel viewModel = new AddReviewViewModel();
 
@@ -39,10 +39,10 @@ namespace supernaturalsightings_olivia.Controllers
                 _context.Add(newReview);
                 _context.SaveChanges();
 
-                return Redirect("Index");
+                return Redirect("Add");
             }
 
-            return View("Review", addReviewViewModel);
+            return View("AddReview", addReviewViewModel);
         }
 
     }
