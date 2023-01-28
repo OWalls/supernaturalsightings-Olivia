@@ -3,11 +3,12 @@
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-<h1>Weird Results:</h1>
+<div class="card blink2 container body-content" style="border-radius: 6px;">
+<h1 class="display-5" style="text-align: center">Weird Results</h1>
 <br />
 
 <!--Bootstrap Styling-->
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 
 @if (ViewBag.entityList != null)
 {
@@ -35,7 +36,7 @@
 
                     <div class="search-item-content">
                         <!--Displays Name-->
-                        <h2 class="search-item-caption">@entity.Name</h2>
+                            <h2 class="display-6" style="font-size: 25px">@entity.Name</h2>
 
                         <!--Displays Type, City, State, Ratings/Reviews-->
                         <div class="search-item-meta mb-15">
@@ -48,9 +49,9 @@
                         <!--Displays Description-->
                         <div>
                             @entity.Description
-                            <br>
+                            
                         </div>
-                                <br/>
+                                
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <form method="post" action="/UserSightFavorite/AddFavorite">
@@ -70,3 +71,4 @@ else
 {
     <h3>No weirdness here!</h3>
 }
+</div>
