@@ -1,11 +1,13 @@
 ﻿using Microsoft.CodeAnalysis;
 using System.Xml.Linq;
 
+
 namespace supernaturalsightings_olivia.Models;
 
 public class Review : Entity
 {
-    public int Id { get; set; }
+    //Changed Id to EntityId -Tanya
+    public int EntityId { get; set; }
    // static private int nextId = 1;
     //State from Entity
     public string? Username { get; set; } //name
