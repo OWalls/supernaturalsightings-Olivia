@@ -22,11 +22,19 @@ namespace supernaturalsightings_olivia
     
             var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
 
+            var configuration = builder.Configuration;
+
             builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
 
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
 .AddEntityFrameworkStores<SightDbContext>();
+
+            builder.Services.AddAuthentication().AddGoogle(googleOptions =>
+            {
+                googleOptions.ClientId = configuration["Authentication:Google:ClientId"];
+                googleOptions.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+            });
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
@@ -46,7 +54,7 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication(); ;
+            app.UseAuthentication(); 
 
             app.UseAuthorization();
 
