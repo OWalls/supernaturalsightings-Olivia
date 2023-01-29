@@ -11,8 +11,8 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia.Migrations
 {
     [DbContext(typeof(SightDbContext))]
-    [Migration("20230115162239_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230129021146_NoEntityMigration")]
+    partial class NoEntityMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -215,6 +215,29 @@ namespace supernaturalsightings_olivia.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReviewComment")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ReviewTitle")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

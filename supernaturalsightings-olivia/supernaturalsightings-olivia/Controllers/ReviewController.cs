@@ -14,7 +14,15 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         //Get: /<controller>/
-        [HttpGet("/Review")]
+        public IActionResult Index()
+        {
+            List<Review> reviews = _context.Reviews
+                .ToList();
+            return View(reviews);
+        }
+
+
+      //  [HttpGet("/Review")]
         public IActionResult AddReview()
         {
             AddReviewViewModel viewModel = new AddReviewViewModel();
@@ -23,7 +31,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         [HttpPost]
-        [Route("/Review/Add")]
+       // [Route("/Review/Add")]
         //[ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
@@ -39,7 +47,7 @@ namespace supernaturalsightings_olivia.Controllers
                 _context.Add(newReview);
                 _context.SaveChanges();
 
-                return Redirect("Add");
+                return Redirect("/Review");
             }
 
             return View("AddReview", addReviewViewModel);

@@ -3,12 +3,19 @@
 *@
 @{
 }
+
+@model List<supernaturalsightings_olivia.Models.Review>
 @using Microsoft.AspNetCore.Identity
 
 @inject SignInManager<IdentityUser> SignInManager
 @inject UserManager<IdentityUser> UserManager
 
-    <h2>@ViewData["Title"]</h2>
+<p>
+    <a asp-controller="Review" asp-action="AddReview">Add Review</a>
+</p>
+<h2>@ViewData["Title"]</h2>
+
+
     <table class="table">
         <thead>
             <tr>
@@ -25,6 +32,17 @@
                 {
                     <tr>
                         <td>
+                            @r.Username
+                        </td>
+                    <td>
+                        @r.ReviewTitle
+                    </td>
+                    <td>
+                        @r.ReviewComment
+                    </td>
+                    </tr>
+            @*        <tr>
+                        <td>
                             @Html.DisplayFor(modelItem => r.Username)
                         </td>
                         <td>
@@ -33,7 +51,7 @@
                     <td>
                         @Html.DisplayFor(modelItem => r.ReviewComment)
                     </td>
-                    </tr>
+                    </tr>*@
                 }
             }
         </tbody>

@@ -1,11 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
 public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
 {
+    public DbSet<Review> Reviews { get; set; }
+
+   
     public SightDbContext(DbContextOptions<SightDbContext> options)
         : base(options)
     {

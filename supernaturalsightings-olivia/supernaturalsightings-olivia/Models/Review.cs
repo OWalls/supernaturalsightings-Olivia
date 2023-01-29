@@ -4,15 +4,16 @@ using System.Xml.Linq;
 
 namespace supernaturalsightings_olivia.Models;
 
-public class Review : Entity
+public class Review //: Entity
 {
     //Changed Id to EntityId -Tanya
-    public int EntityId { get; set; }
-   // static private int nextId = 1;
+  //  public int EntityId { get; set; }
+    // static private int nextId = 1;
     //State from Entity
-    public string? Username { get; set; } //name
-    public string? ReviewTitle { get; set; }
-    public string? ReviewComment { get; set;}
+    public int Id { get; set; }
+    public string Username { get; set; } //name
+    public string ReviewTitle { get; set; }
+    public string ReviewComment { get; set;}
    // public int ReviewId { get; set; } //
   //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
 
