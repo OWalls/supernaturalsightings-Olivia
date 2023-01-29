@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace supernaturalsightings_olivia.ViewModels
 {
-    public class AddReviewViewModel //: IEquatable<AddReviewViewModel?>
+    public class AddReviewViewModel 
     {
 
 
@@ -17,7 +17,7 @@ namespace supernaturalsightings_olivia.ViewModels
         [StringLength(1000, MinimumLength = 3, ErrorMessage = "Review Comment must be longer than that")]
         public string ReviewComment { get; set; }
 
-        [Required(ErrorMessage = "")]
+        [Required()] //Removed ErrorMessage = "" -Tanya
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Pick a category")]
         [Display(Name = "ReviewTitle")]
         public string ReviewTitle { get; set; }
