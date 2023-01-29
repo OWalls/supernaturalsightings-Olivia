@@ -14,6 +14,8 @@ public class Review //: Entity
     public string Username { get; set; } //name
     public string ReviewTitle { get; set; }
     public string ReviewComment { get; set;}
+  //  public List<WeirdRating> WeirdRatings { get; set; }
+
    // public int ReviewId { get; set; } //
   //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
 
