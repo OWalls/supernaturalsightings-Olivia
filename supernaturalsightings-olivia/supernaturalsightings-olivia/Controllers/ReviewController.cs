@@ -1,16 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;  // [Route] , ControllerBase
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;  // [Route] , ControllerBase
+using Microsoft.EntityFrameworkCore;
 using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
+
 
 namespace supernaturalsightings_olivia.Controllers
 {
     public class ReviewController : Controller
     {
         private readonly SightDbContext _context;
-        public ReviewController(SightDbContext context)
+        private readonly UserManager<IdentityUser> _userManager;
+
+        public ReviewController(SightDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         //Get: /<controller>/
@@ -22,7 +28,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
 
-      //  [HttpGet("/Review")]
+        //  [HttpGet("/Review")]
         public IActionResult AddReview()
         {
             AddReviewViewModel viewModel = new AddReviewViewModel();
@@ -31,7 +37,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         [HttpPost]
-       // [Route("/Review/Add")]
+        // [Route("/Review/Add")]
         //[ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
@@ -53,6 +59,21 @@ namespace supernaturalsightings_olivia.Controllers
             return View("AddReview", addReviewViewModel);
         }
 
+        //Get: Review/Rating Details
+        //public IActionResult RemoveReviewComment(string formSightId)
+        //{
+        //    if (!int.TryParse(formSightId, out var sightid))
+        //        return BadRequest();
+
+        //    var userId = Guid.Parse(_userManager.GetUserId(User));
+        //    var reviews = _context.Reviews
+        //        .FirstOrDefault()
+
+        }
+
+
+        //delete a review 
+     
     }
 }
 

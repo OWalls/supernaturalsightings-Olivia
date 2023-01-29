@@ -40,6 +40,10 @@
                     <td>
                         @r.ReviewComment
                     </td>
+                    <td class="text-center">
+                        <a asp-action="Delete" asp-route-id="r.ReviewId"
+                            class="btn btn-sm btn-danger">Delete</a>
+                    </td>
                     </tr>
             @*        <tr>
                         <td>

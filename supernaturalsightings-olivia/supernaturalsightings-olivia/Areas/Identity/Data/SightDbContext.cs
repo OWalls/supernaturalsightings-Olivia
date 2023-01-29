@@ -9,6 +9,7 @@ public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, stri
 {
     public DbSet<Review> Reviews { get; set; }
 
+  //  public DbSet<WeirdRating> WeirdRatings { get; set; }
    
     public SightDbContext(DbContextOptions<SightDbContext> options)
         : base(options)
