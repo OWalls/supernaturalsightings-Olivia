@@ -9,7 +9,7 @@ namespace supernaturalsightings_olivia.Models
 
         public string Bio { get; set; } = "";
 
-        public string Emoji { get; set; }
+        public string Emoji { get; set; } = "";
         
     }
 }

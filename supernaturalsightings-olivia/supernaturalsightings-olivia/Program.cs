@@ -21,9 +21,9 @@ namespace supernaturalsightings_olivia
         {
             var builder = WebApplication.CreateBuilder(args);
             var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
-           
+
             builder.Services.AddDbContext<SightDbContext>(options =>
-                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8,0, 29))));
+                options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
 
             //Changed IdentityUser to ApplicationUser - Leslie
             //Changed RequireConfirmedEmail from true to false - Tanya
@@ -47,7 +47,7 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication();;
+            app.UseAuthentication(); ;
 
             app.UseAuthorization();
 
