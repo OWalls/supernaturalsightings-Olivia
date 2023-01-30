@@ -1,0 +1,72 @@
+﻿<div id="favoritecard" class="card"> 
+    <h1 class="display-4 text-center">My Favorite Supernatural Sightings</h1>
+    <p class="text-muted text-center">
+        Here is a list of your favorite sightings!
+    </p>
+    <br/>
+    <div class="container d-flex justify-content-center">
+        <div class="smallalien"></div>
+        <div class="alien m-1"></div>
+        <div class="smallalien"></div>
+
+    </div>
+
+    <br/>
+    <br/>
+
+    @if (ViewBag.UserFavorites != null)
+    {    
+        foreach (var favorite in ViewBag.UserFavorites)
+        {
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>@favorite.Name</td>
+                </tr>
+                <tr>
+                    <th>City/General Location</th>
+                    <td>@favorite.City</td>
+                </tr>
+                <tr>
+                    <th>State</th>
+                    <td>@favorite.State</td>
+                </tr>
+                <tr>
+                    <th>Description</th>
+                    <td>@favorite.Description</td>
+                </tr>
+                <tr>
+                    <th>Type</th>
+                    <td>@favorite.Type</td>
+                </tr>
+                <tr>
+                </tr>
+
+                @if (@favorite.Type == "Alien")
+                {
+                    <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
+                }
+                else if (@favorite.Type == "Ghost")
+                {
+                    <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
+                }
+                else if (@favorite.Type == "Bigfoot")
+                {
+                    <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
+                }
+
+            </table>
+            <br/>
+            <div >
+                <form method="post" action="/UserSightFavorite/RemoveFavorite">
+                <input type="hidden" name="formSightId" value="@favorite.Id" />
+                <input class="filter_btn" onclick="changeRemoveButton(@favorite.Id)" type="submit" value="Remove from Favorites" id="filter_btn_@(favorite.Id)" />
+            </form>
+            </div>
+            <br/>
+        }
+    }
+
+</div>
+    
+  

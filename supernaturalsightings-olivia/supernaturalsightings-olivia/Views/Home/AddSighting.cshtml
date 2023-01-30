@@ -1,0 +1,44 @@
+﻿@model supernaturalsightings_olivia.ViewModels.AddSightingViewModel
+@{
+    ViewData["Title"] = "AddSighting";
+}
+
+<h1>Add a Sighting</h1>
+
+<div class="card">
+<form asp-controller="Home" asp-action="ProcessAddSightingForm" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City">City</label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="State">State</label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Description</label>
+        <input asp-for="Description" class="form-control" />
+        <span asp-validation-for="Description"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Type">Type</label>
+        <input asp-for="Type" class="form-control" />
+        <span asp-validation-for="Type"></span>
+    </div>
+   
+   
+
+    <input type="submit" value="Add Sighting" />
+
+</form>
+</div>

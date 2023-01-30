@@ -4,8 +4,8 @@ using System.Text;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
-	public class DataParser
-	{
+    public class DataParser
+    {
         private static readonly string DATA_FILE = "Areas/Identity/Data/entities.csv";
 
         static bool IsDataLoaded;
@@ -102,6 +102,5 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             return rowValues.ToArray();
         }
 
-	}
+    }
 }
-

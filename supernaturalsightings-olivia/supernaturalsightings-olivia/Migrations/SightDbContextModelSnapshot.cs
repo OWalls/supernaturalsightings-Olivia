@@ -16,7 +16,7 @@ namespace supernaturalsightings_olivia.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.12")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -215,12 +215,17 @@ namespace supernaturalsightings_olivia.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
+=======
+            modelBuilder.Entity("supernaturalsightings_olivia.Areas.Identity.Data.UserSightFavorite", b =>
+>>>>>>> 323340206a6123306e7bc35bf1925ba2f529cd4f
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+<<<<<<< HEAD
                     b.Property<string>("ReviewComment")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -236,6 +241,17 @@ namespace supernaturalsightings_olivia.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Reviews");
+=======
+                    b.Property<int>("SightId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserSightFavorites");
+>>>>>>> 323340206a6123306e7bc35bf1925ba2f529cd4f
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

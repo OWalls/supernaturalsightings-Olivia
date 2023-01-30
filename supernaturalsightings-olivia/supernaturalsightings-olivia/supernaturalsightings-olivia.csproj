@@ -5,19 +5,34 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>supernaturalsightings_olivia</RootNamespace>
+    <UserSecretsId>559f41c5-9c10-4428-9404-380d9b3e89fc</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.9" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.12">
+=======
+    <PackageReference Include="Google.Apis.SecretManager.v1" Version="1.59.0.2794" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.13" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.13">
+>>>>>>> 323340206a6123306e7bc35bf1925ba2f529cd4f
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.11" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="6.0.2" />
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql.Design" Version="1.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\alien.png" />
   </ItemGroup>
 
   <ItemGroup>

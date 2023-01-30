@@ -3,9 +3,10 @@
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data
 {
-	public class EntityData
-	{
 
+    public class EntityData
+    {
+        private static readonly string DATA_FILE = "Areas/Identity/Data/entities.csv";
         //Returns all the data from the file
         static public List<Entity> FindAll()
         {
@@ -149,7 +150,27 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data
             }
             return theValue;
         }
+
+        // Jacque added for favorites list
+        static public Entity? FindEntityById(int id)
+        {
+            DataParser.LoadData();
+            if (DataParser.AllEntities.Count() < id) return null;
+
+            return DataParser.AllEntities[id - 1];
+        }
+
+        //Jacque added for adding sightings
+        static public void AddNewSighting(Entity newEntity)
+        {
+            DataParser.LoadData();
+            DataParser.AllEntities.Add(newEntity);
+            using (StreamWriter sw = File.AppendText(DATA_FILE))
+            {
+                sw.WriteLine();
+                sw.Write(String.Format("{0},{1},{2},{3},{4}", newEntity.Name, newEntity.City, newEntity.State, newEntity.Description, newEntity.Type));
+            }
+        }
+
     }
 }
-
-
