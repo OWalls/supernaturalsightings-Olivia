@@ -19,7 +19,7 @@ namespace supernaturalsightings_olivia
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-    
+
             var connectionString = "server=localhost;user id=supernaturalsightings-olivia;password=getweird;database=supernaturalsightings-olivia;";
 
             var configuration = builder.Configuration;
@@ -54,7 +54,7 @@ namespace supernaturalsightings_olivia
             app.UseStaticFiles();
 
             app.UseRouting();
-            app.UseAuthentication(); 
+            app.UseAuthentication();
 
             app.UseAuthorization();
 
