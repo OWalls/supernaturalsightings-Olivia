@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/supernaturalsightings-olivia/supernaturalsightings-olivia/obj/Debug/net6.0/supernaturalsightings-olivia.pdb
+/supernaturalsightings-olivia/supernaturalsightings-olivia/obj/Debug/net6.0/supernaturalsightings-olivia.dll
+/supernaturalsightings-olivia/supernaturalsightings-olivia/bin/Debug/net6.0/supernaturalsightings-olivia.pdb
+/supernaturalsightings-olivia/supernaturalsightings-olivia/bin/Debug/net6.0/supernaturalsightings-olivia.dll
+/supernaturalsightings-olivia/.vs/supernaturalsightings-olivia/FileContentIndex/d8b5257b-14bf-4d48-b5f2-176bb75a7623.vsidx
+/supernaturalsightings-olivia/.vs/supernaturalsightings-olivia/FileContentIndex/d00344dd-126c-47d3-90a1-f6800b673031.vsidx
+/supernaturalsightings-olivia/.vs/supernaturalsightings-olivia/DesignTimeBuild/.dtbcache.v2
