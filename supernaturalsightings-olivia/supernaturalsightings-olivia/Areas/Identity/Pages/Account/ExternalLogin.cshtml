@@ -1,16 +1,18 @@
 ﻿@page
 @model ExternalLoginModel
 @{
-    ViewData["Title"] = "Register";
+    ViewData["Title"] = "Sign Up";
 }
 
-<h1>@ViewData["Title"]</h1>
-<h2 id="external-login-title">Associate your @Model.ProviderDisplayName account.</h2>
+<div id="signup-logincard" class="card blink" style="border-radius: 6px;">
+
+    <h1 class="display-5">@ViewData["Title"]</h1>
+    <h2 id="external-login-title" class="display-6" style="font-size: 25px">Associate your @Model.ProviderDisplayName account.</h2>
 <hr />
 
 <p id="external-login-description" class="text-info">
-    You've successfully authenticated with <strong>@Model.ProviderDisplayName</strong>.
-    Please enter an email address for this site below and click the Register button to finish
+    You've successfully authenticated with <strong>@Model.ProviderDisplayName</strong>. <br />
+    Please enter an email address for this site below and click the Sign Up button to finish
     logging in.
 </p>
 
@@ -23,9 +25,10 @@
                 <label asp-for="Input.Email" class="form-label"></label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
-            <button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+            <button type="submit" class="w-100 btn btn-lg btn-primary">Sign Up</button>
         </form>
     </div>
+</div>
 </div>
 
 @section Scripts {

@@ -11,7 +11,7 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia.Migrations
 {
     [DbContext(typeof(SightDbContext))]
-    [Migration("20230128170150_InitialMigration")]
+    [Migration("20230130190552_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
