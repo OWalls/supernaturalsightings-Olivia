@@ -329,8 +329,77 @@ p.indent {
 
 /*---------------------------------*/
 
+/*Sign up and login pages ----------------------*/
+#signup-logincard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
+}
+
+p.indent {
+    text-indent: 30px;
+}
+
+.blink {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
+/*---------------------------------*/
+
 
 /*Results Page-------------------*/
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    padding: 40px;
+    font-size: 25px;
+    opacity: 85%;
+    padding: 10px;
+    margin: 25px auto;
+    width: 70%;
+    min-width: 300px;
+}
+
+#resultscard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 70%;
+    min-width: 300px;
+    opacity: 85%;
+}
+
+p.indent {
+    text-indent: 30px;
+}
+
+.blink {
+    animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.85;
+    }
+}
 
 .xsearch-items {
     padding-left: 0px;
@@ -349,7 +418,7 @@ p.indent {
         -webkit-border-radius: 50%;
         border-radius: 50%;
         box-shadow: 0 1px 3px rgba(50,50,93,.15), 0 1px 0 rgba(0,0,0,.02);
-        border: 4px solid white;
+        border: 2px solid darkgray;
     }
 
 .search-item-content {
