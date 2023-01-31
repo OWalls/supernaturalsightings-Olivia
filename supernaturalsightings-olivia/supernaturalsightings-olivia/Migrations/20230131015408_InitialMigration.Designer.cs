@@ -11,14 +11,14 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia.Migrations
 {
     [DbContext(typeof(SightDbContext))]
-    [Migration("20230127004130_UserBio")]
-    partial class UserBio
+    [Migration("20230131015408_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.12")
+                .HasAnnotation("ProductVersion", "6.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -179,6 +179,10 @@ namespace supernaturalsightings_olivia.Migrations
 
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("tinyint(1)");
+
+                    b.Property<string>("Emoji")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("tinyint(1)");
