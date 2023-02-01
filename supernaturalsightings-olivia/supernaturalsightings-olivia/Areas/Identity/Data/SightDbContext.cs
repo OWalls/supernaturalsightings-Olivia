@@ -2,10 +2,11 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.ObjectPool;
+using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
-public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
+public class SightDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {
     public virtual DbSet<UserSightFavorite> UserSightFavorites { get; set; }
 

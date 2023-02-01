@@ -30,4 +30,8 @@
   <ItemGroup>
     <None Remove="Views\Search\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
 </Project>
