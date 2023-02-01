@@ -430,6 +430,90 @@ p.indent {
 
 /*---------------------------------*/
 
+/*Edit Profile-------------------*/
+#profilecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
+    border-radius: 5px;
+    /*display: flex;*/
+}
+
+#profilecardtop {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 60%;
+    min-width: 300px;
+    opacity: 85%;
+    opacity: 85%;
+}
+
+.profileSaveButton {
+    width: 80px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.profileemailbutton {
+    width: 160px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.profilepwdbutton {
+    width: 180px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#bioTextArea {
+    width: 400px;
+    height: 180px;
+    text-align: left;
+}
+
+#profileLabel {
+    width: 200px;
+    border: hidden;
+}
+
+#profilenavcard {
+    display: flex;
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 20%;
+    min-width: 300px;
+    opacity: 85%;
+    border-radius: 5px;
+}
+
+#profilenavlink {
+    background-color: dodgerblue;
+}
+/*---------------------------------*/
 
     /* ALIEN IMAGE ON FAVORITES PAGE
 Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)
