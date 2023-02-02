@@ -1,43 +1,45 @@
 ﻿@model supernaturalsightings_olivia.ViewModels.AddSightingViewModel
 @{
-    ViewData["Title"] = "AddSighting";
+    ViewData["Title"] = "Add a Sighting";
 }
 
-<h1>Add a Sighting</h1>
 
-<div class="card">
+<div class="card blink2" id="genericcard">
 <form asp-controller="Home" asp-action="ProcessAddSightingForm" method="post">
-
+    <h1 class="display-6">Add a Sighting!</h1>
+    </br>
     <div class="form-group">
-        <label asp-for="Name">Name</label>
-        <input asp-for="Name" class="form-control" />
+        <label asp-for="Name" class="fw-bold">Name</label>
+            <input asp-for="Name" class="form-control" required/>
         <span asp-validation-for="Name"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="City">City</label>
-        <input asp-for="City" class="form-control" />
+            <label asp-for="City" class="fw-bold">City</label>
+        <input asp-for="City" class="form-control" required/>
         <span asp-validation-for="City"></span>
     </div>
     <div class="form-group">
-        <label asp-for="State">State</label>
-        <input asp-for="State" class="form-control" />
+            <label asp-for="State" class="fw-bold">State</label>
+        <input asp-for="State" class="form-control" required/>
         <span asp-validation-for="State"></span>
     </div>
 
     <div class="form-group">
-        <label asp-for="Description">Description</label>
-        <input asp-for="Description" class="form-control" />
+            <label asp-for="Description" class="fw-bold">Description</label>
+            <label class="text-muted">  (What happened?...)</label>
+        <textarea asp-for="Description" class="form-control" id="NewDescriptionText" required> </textarea>
         <span asp-validation-for="Description"></span>
     </div>
     <div class="form-group">
-        <label asp-for="Type">Type</label>
-        <input asp-for="Type" class="form-control" />
+        <label asp-for="Type" class="fw-bold">Type</label>
+            <label class="text-muted">  (e.g. Alien, Ghost, Bigfoot, Unknown...)</label>
+        <input asp-for="Type" class="form-control" required/>
         <span asp-validation-for="Type"></span>
     </div>
    
    
-
+    </br>
     <input type="submit" value="Add Sighting" />
 
 </form>

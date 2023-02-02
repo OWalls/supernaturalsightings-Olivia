@@ -229,6 +229,10 @@ p.indent {
     opacity: 85%;
 }
 
+#NewDescriptionText {
+    height: 100px;
+}
+
 .alien {
     position: center;
     background-color: #252525;

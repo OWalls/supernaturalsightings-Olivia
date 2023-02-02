@@ -60,8 +60,8 @@ namespace supernaturalsightings_olivia.Controllers
 
             EntityData.AddNewSighting(newEntity);
 
-            return Redirect("Index");
-            return View(addSightingViewModel);
+            return Redirect("/Add");
+            //return View(addSightingViewModel);
 
         }
 
