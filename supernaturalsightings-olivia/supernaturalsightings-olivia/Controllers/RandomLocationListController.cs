@@ -1,5 +1,6 @@
 ﻿using Google.Apis.SecretManager.v1.Data;
 using Microsoft.AspNetCore.Mvc;
+//using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia.Controllers
 {
@@ -28,7 +29,7 @@ namespace supernaturalsightings_olivia.Controllers
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(',');
-                    locations.Add(new Location { State = values[0], City = values[1] });
+                    locations.Add(new RandomLocationListModel { State = values[0], City = values[1] });
                 }
             }
 
