@@ -1,13 +1,81 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@{
-}
-@{
 
-    // = "AddReview";
-}
+<!-- -->
 @using Microsoft.AspNetCore.Identity
+
+<h2>@ViewData["Title"]</h2>
+<!--Changed Models.Review to ViewModel-Tanya -->
+@model supernaturalsightings_olivia.ViewModels.AddReviewViewModel
+
+<h1>Tell us your Weirdest Reviews</h1>
+<button class="collapsible">Add Review</button>
+
+<div class="collapsible-content">
+    <div class="card">
+        <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+            <div class="form-group">
+                <label asp-for="DisplayName">Username</label>
+                <input asp-for="DisplayName" class="form-control" />
+                <span asp-validation-for="DisplayName"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReviewTitle">Review Title</label>
+                <input asp-for="ReviewTitle" class="form-control" />
+                <span asp-validation-for="ReviewTitle"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReviewComment">Review Comment</label>
+                <input asp-for="ReviewComment" class="form-control" />
+                <span asp-validation-for="ReviewComment"></span>
+            </div>
+            <input type="submit" value="Add Review" />
+        </form>
+    </div>
+</div>
+
+<style>
+    .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .collapsible-content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+</style>
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+</script>
+
+<!--Original Ugly Format-->
+    
+
+@*@using Microsoft.AspNetCore.Identity
 
 <h2>@ViewData["Title"]</h2>
 
@@ -21,9 +89,9 @@
 
 
         <div class="form-group">
-            <label asp-for="Username">Username</label>
-            <input asp-for="Username" class="form-control" />
-            <span asp-validation-for="Username"></span>
+            <label asp-for="DisplayName">Username</label>
+            <input asp-for="DisplayName" class="form-control" />
+            <span asp-validation-for="DisplayName"></span>
         </div>
         <div class="form-group">
             <label asp-for="ReviewTitle">Review Title</label>
@@ -39,3 +107,116 @@
         <input type="submit" value="Add Review" />
     </form>
 </div>
+
+*@
+
+<!--Changed Models.Review to ViewModel-Tanya -->
+@*
+<div class="card">
+
+     <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+    <div class="card-header" id="headingOne">
+        <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                @Model.ReviewTitle
+            </button>
+        </h5>
+    </div>
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+            <p>@Model.ReviewComment</p>
+            <hr />
+            <div class="text-right">
+                <p>Username: @Model.DisplayName</p>
+                <p>
+                    Rating:
+                    @for (int i = 0; i < Model.Rating; i++)
+                    {
+                        <i class="~/images/bigfooticon.png"></i>
+                    }
+                </p>
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+*@
+
+
+<!--One Option-->
+@*<h1>Tell us your Weirdest Reviews</h1>
+
+<div class="card">
+    <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+
+
+        <div class="form-group">
+            <label asp-for="DisplayName">Username</label>
+            <input asp-for="DisplayName" class="form-control" />
+            <span asp-validation-for="DisplayName"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReviewTitle">Review Title</label>
+            <input asp-for="ReviewTitle" class="form-control" />
+            <span asp-validation-for="ReviewTitle"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ReviewComment">Review Comment</label>
+            <input asp-for="ReviewComment" class="form-control" />
+            <span asp-validation-for="ReviewComment"></span>
+        </div>
+
+        <input type="submit" value="Add Review" />
+    </form>
+</div>
+<div class="rating">
+    <img src="~/Images/bigfooticon.png" alt="Bigfoot rating icon">
+    <img src="~/Images/bigfooticon.png" alt="Bigfoot rating icon">
+    <img src="~/Images/bigfooticon.png" alt="Bigfoot rating icon">
+    <img src="~/Images/bigfooticon.png" alt="Bigfoot rating icon">
+    <img src="~/Images/bigfooticon.png" alt="Bigfoot rating icon">
+</div>*@
+
+
+
+
+<!--Second Option-->
+
+
+@*<div class="comment-box">
+     <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+
+    <div class="header">
+        <div class="username">Username</div>
+        <div class="rating">
+            <img src="bigfoot-rating-icon.png" alt="Bigfoot rating icon">
+            <img src="bigfoot-rating-icon.png" alt="Bigfoot rating icon">
+            <img src="bigfoot-rating-icon.png" alt="Bigfoot rating icon">
+            <img src="bigfoot-rating-icon.png" alt="Bigfoot rating icon">
+            <img src="bigfoot-rating-icon.png" alt="Bigfoot rating icon">
+        </div>
+    </div>
+    <div class="comment-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo malesuada est, vel aliquam quam.
+    </div>
+    <button class="read-more">Read more</button>
+    </form>
+</div>
+
+<script>
+    const commentBox = document.querySelectorAll('.comment-box');
+
+    commentBox.forEach(box => {
+        const readMoreButton = box.querySelector('.read-more');
+        const commentText = box.querySelector('.comment-text');
+
+        readMoreButton.addEventListener('click', function () {
+            commentText.classList.toggle('show');
+            if (commentText.classList.contains('show')) {
+                readMoreButton.innerHTML = 'Read less';
+            } else {
+                readMoreButton.innerHTML = 'Read more';
+            }
+        });
+    });
+</script>*@

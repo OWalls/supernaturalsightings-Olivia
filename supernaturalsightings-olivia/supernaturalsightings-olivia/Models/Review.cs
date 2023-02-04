@@ -7,13 +7,14 @@ namespace supernaturalsightings_olivia.Models;
 public class Review //: Entity
 {
     //Changed Id to EntityId -Tanya
-    //  public int EntityId { get; set; }
+    //public int EntityId { get; set; }
     // static private int nextId = 1;
     //State from Entity
     public int Id { get; set; }
-    public string Username { get; set; } //name
+    public string DisplayName { get; set; } //name
     public string ReviewTitle { get; set; }
     public string ReviewComment { get; set; }
+    public int Rating { get; set; }
     // public int ReviewId { get; set; } //
     //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
 
@@ -21,11 +22,12 @@ public class Review //: Entity
     {
 
     }
-    public Review(string username, string reviewTitle, string reviewComment) : this() //ReviewCategory newReviewCategory
+    public Review(string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
     {
-        Username = username;
+        DisplayName = displayName;
         ReviewTitle = reviewTitle;
         ReviewComment = reviewComment;
+        Rating = rating;
         //  ReviewCategory = newReviewCategory;
 
     }
@@ -37,9 +39,9 @@ public class Review //: Entity
     public override string ToString()
     {
         string output = " ";
-        if (Username.Equals(" "))
+        if (DisplayName.Equals(" "))
         {
-            Username = "Data not available";
+            DisplayName = "Data not available";
 
         }
         // if (ReviewCategory.Value.Equals("") || ReviewCategory.Value == null)
@@ -48,9 +50,10 @@ public class Review //: Entity
 
 
         output = string.Format("\nID: %d\n" +
-                "Username: %s\n" +
+                "Display Name: %s\n" +
                 "Review Title: %s\n" +
-                "Review Comment: %s\n" + Id, Username, ReviewTitle, ReviewComment);// ReviewCategory);
+                "Review Comment: %s\n" +
+                "Rating: %s\n" + Id, DisplayName, ReviewTitle, ReviewComment, Rating);// ReviewCategory);
         return output;
     }
 

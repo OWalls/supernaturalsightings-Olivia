@@ -6,10 +6,10 @@ namespace supernaturalsightings_olivia.ViewModels
     {
 
 
-        [Required(ErrorMessage = "Username is required!")]
-        [StringLength(20, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 15 characters long")]
-        [Display(Name = "Username")]
-        public string Username { get; set; }
+        [Required(ErrorMessage = "Display Name is required!")]
+        [StringLength(20, MinimumLength = 3, ErrorMessage = "Display Name must be between 3 and 15 characters long")]
+        [Display(Name = "DisplayName")]
+        public string DisplayName { get; set; }
 
         [Required(ErrorMessage = "Tell us your weird experience!")]
         [StringLength(1000, MinimumLength = 3, ErrorMessage = "Review Comment must be longer than that")]
@@ -19,6 +19,8 @@ namespace supernaturalsightings_olivia.ViewModels
         [StringLength(20, MinimumLength = 3, ErrorMessage = "Pick a category")]
         [Display(Name = "ReviewTitle")]
         public string ReviewTitle { get; set; }
+
+        public int Rating { get; set; }
 
 
         public AddReviewViewModel()
@@ -33,14 +35,14 @@ namespace supernaturalsightings_olivia.ViewModels
         public bool Equals(AddReviewViewModel? other)
         {
             return other is not null &&
-                   Username == other.Username &&
+                   DisplayName == other.DisplayName &&
                    ReviewComment == other.ReviewComment &&
                    ReviewTitle == other.ReviewTitle;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(Username, ReviewComment, ReviewTitle);
+            return HashCode.Combine(DisplayName, ReviewComment, ReviewTitle);
         }
     }
 

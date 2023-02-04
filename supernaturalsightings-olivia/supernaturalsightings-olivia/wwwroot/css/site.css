@@ -430,6 +430,51 @@ p.indent {
 
 /*---------------------------------*/
 
+/*Search/Reviews/Ratings-----------*/
+
+.review-box {
+    width: 500px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.rating{
+    display: flex;
+}
+
+.review-text {
+    padding: 10px;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.show {
+    max-height: none;
+}
+
+.read-more {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+/*----------------------------------*/
+
+
+
 
     /* ALIEN IMAGE ON FAVORITES PAGE
 Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)

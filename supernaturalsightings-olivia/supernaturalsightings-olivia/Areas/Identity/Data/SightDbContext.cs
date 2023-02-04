@@ -9,6 +9,7 @@ namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
 public class SightDbContext : IdentityDbContext<IdentityUser, IdentityRole, string>
 {
+    
     public DbSet<Review> Reviews { get; set; }
     public DbSet<UserSightFavorite> UserSightFavorites { get; set; }
 
