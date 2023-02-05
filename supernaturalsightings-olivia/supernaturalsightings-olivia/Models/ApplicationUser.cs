@@ -5,6 +5,7 @@ namespace supernaturalsightings_olivia.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        public int ApplicationUserId { get; set; }
         public string DisplayName { get; set; } = "";
 
         public string Bio { get; set; } = "";
