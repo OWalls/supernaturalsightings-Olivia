@@ -1,17 +1,29 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+<<<<<<< HEAD
+using supernaturalsightings_olivia.Models;
+
+
+=======
 using Microsoft.Extensions.ObjectPool;
 using supernaturalsightings_olivia.Models;
+>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
 public class SightDbContext : IdentityDbContext<ApplicationUser, IdentityRole, string>
 {
-    public virtual DbSet<UserSightFavorite> UserSightFavorites { get; set; }
+    
+    public DbSet<Review> Reviews { get; set; }
+    public DbSet<UserSightFavorite> UserSightFavorites { get; set; }
 
-    public SightDbContext(DbContextOptions<SightDbContext> options) : base(options)
-    { }
+    //  public DbSet<WeirdRating> WeirdRatings { get; set; }
+
+    public SightDbContext(DbContextOptions<SightDbContext> options)
+        : base(options)
+    {
+    }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -21,9 +33,6 @@ public class SightDbContext : IdentityDbContext<ApplicationUser, IdentityRole, s
         // Add your customizations after calling base.OnModelCreating(builder);
     }
 
-    public override int SaveChanges()
-    {
-        return base.SaveChanges();
-    }
-
 }
+
+

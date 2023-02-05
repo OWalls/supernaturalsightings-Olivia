@@ -434,6 +434,108 @@ p.indent {
 
 /*---------------------------------*/
 
+<<<<<<< HEAD
+/*Search/Reviews/Ratings-----------*/
+
+.review-box {
+    width: 500px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.display-name {
+    font-weight: bold;
+}
+
+.rating{
+    display: flex;
+}
+
+.review-text {
+    padding: 10px;
+    max-height: 60px;
+    overflow: hidden;
+}
+
+.show {
+    max-height: none;
+}
+
+.read-more {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+/*---------------------------------*/
+
+
+/*------- 5 Flying Saucer Ratings ---------*/
+div.flyingsaucer {
+    width: 270px;
+    display: inline-block;
+}
+
+input.flyingsaucer { display: none; }
+
+label.flyingsaucer {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer:before {
+    content: '\IF6F8';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer.before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer:before { color: #F62;}
+
+label.flyingsaucer:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.flyingsaucer:before {
+    content: '\IF6F8';
+}
+
+/*----------------------------------*/
+=======
 /*Edit Profile-------------------*/
 #profilecard {
     background-color: #ffffff;
@@ -539,6 +641,7 @@ p.indent {
     font-size: 20px;
 }
 /*---------------------------------*/
+>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
 
     /* ALIEN IMAGE ON FAVORITES PAGE
 Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)

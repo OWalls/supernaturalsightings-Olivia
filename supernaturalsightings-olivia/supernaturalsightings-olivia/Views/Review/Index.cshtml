@@ -1,0 +1,52 @@
+﻿@{
+}
+
+
+@model List<supernaturalsightings_olivia.Models.Review>
+@using Microsoft.AspNetCore.Identity
+
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+<p>
+    <a asp-controller="Review" asp-action="AddReview">Add Review</a>
+</p>
+<h2>@ViewData["Title"]</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Review Title</th>
+            <th>Review Comment</th>
+            <th>Ratings</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (Model is not null)
+        {
+            @foreach (Review r in Model)
+            {
+                <tr>
+                    <td>
+                        @r.DisplayName
+                    </td>
+                    <td>
+                        @r.ReviewTitle
+                    </td>
+                    <td>
+                        @r.ReviewComment
+                    </td>
+                    <td>
+                        @r.Rating
+                    </td>
+
+
+</tr>    
+ 
+ }
+        }
+    </tbody>
+</table>
