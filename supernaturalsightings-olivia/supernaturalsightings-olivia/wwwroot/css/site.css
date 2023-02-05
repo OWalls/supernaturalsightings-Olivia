@@ -444,7 +444,7 @@ p.indent {
     padding: 10px;
 }
 
-.username {
+.display-name {
     font-weight: bold;
 }
 
@@ -471,10 +471,65 @@ p.indent {
     margin: 10px;
 }
 
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.collapsible-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+/*---------------------------------*/
+
+
+/*------- 5 Flying Saucer Ratings ---------*/
+div.flyingsaucer {
+    width: 270px;
+    display: inline-block;
+}
+
+input.flyingsaucer { display: none; }
+
+label.flyingsaucer {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer:before {
+    content: '\IF6F8';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer.before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.flyingsaucer:checked ~ label.flyingsaucer:before { color: #F62;}
+
+label.flyingsaucer:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.flyingsaucer:before {
+    content: '\IF6F8';
+}
+
 /*----------------------------------*/
-
-
-
 
     /* ALIEN IMAGE ON FAVORITES PAGE
 Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)

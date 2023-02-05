@@ -21,6 +21,7 @@ namespace supernaturalsightings_olivia.Controllers
         public IActionResult Index()
         {
             List<Review> reviews = _context.Reviews
+                
                 .ToList();
             return View(reviews);
         }
@@ -44,10 +45,11 @@ namespace supernaturalsightings_olivia.Controllers
 
                 Review newReview = new Review
                 {
+                    //EntityId = addReviewViewModel.EntityId,
                     DisplayName = addReviewViewModel.DisplayName,
                     ReviewComment = addReviewViewModel.ReviewComment,
                     ReviewTitle = addReviewViewModel.ReviewTitle,
-                    //Rating = addReviewViewModel.Rating,
+                    Rating = addReviewViewModel.Rating,
                 };
 
                 _context.Reviews.Add(newReview);

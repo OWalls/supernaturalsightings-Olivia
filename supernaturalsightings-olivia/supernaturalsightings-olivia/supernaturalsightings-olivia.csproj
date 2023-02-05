@@ -9,6 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Randomizer\**" />
+    <Content Remove="Views\Randomizer\**" />
+    <EmbeddedResource Remove="Views\Randomizer\**" />
+    <None Remove="Views\Randomizer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\RandomLocationListController.cs" />
+    <Compile Remove="Models\RandomLocationListModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Google.Apis.SecretManager.v1" Version="1.59.0.2794" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.13" />

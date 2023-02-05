@@ -1,10 +1,7 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
 }
 
-<!--Original Ugly Format-->
+
 @model List<supernaturalsightings_olivia.Models.Review>
 @using Microsoft.AspNetCore.Identity
 
@@ -23,6 +20,7 @@
             <th>Username</th>
             <th>Review Title</th>
             <th>Review Comment</th>
+            <th>Ratings</th>
         </tr>
     </thead>
 
@@ -41,139 +39,14 @@
                     <td>
                         @r.ReviewComment
                     </td>
-                  @*  <td class="text-center">
-                        <a asp-action="Delete" asp-route-id="r.ReviewId"
-                   class="btn btn-sm btn-danger">Delete</a>
-                    </td>*@
-                </tr>
-                @*        <tr>
-        <td>
-        @Html.DisplayFor(modelItem => r.Username)
-        </td>
-        <td>
-        @Html.DisplayFor(modelItem => r.ReviewTitle)
-        </td>
-        <td>
-        @Html.DisplayFor(modelItem => r.ReviewComment)
-        </td>
-        </tr>*@
-            }
+                    <td>
+                        @r.Rating
+                    </td>
+
+
+</tr>    
+ 
+ }
         }
     </tbody>
 </table>
-
-
-@*@model List<supernaturalsightings_olivia.Models.Review>
-@using Microsoft.AspNetCore.Identity
-
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
-
-<p>
-    <a asp-controller="Review" asp-action="AddReview">Add Review</a>
-</p>
-<h2>@ViewData["Title"]</h2>
-
-<style>
-    .collapse {
-        display:none;
-    }
-
-    .read-more-btn {
-        cursor:pointer;
-        color: gray;
-        text-decoration: underline;
-
-    }
-</style>
-
-<div class="comment-section">
-   <h2>Reviews</h2>*@
-    
-
-<!--Collapsible Input Review Box-->
- @*   <div class="collapse" id="collapseReviewBox">
-        <form method="post">
-            @Html.AntiForgeryToken()
-
-            <!-- Auto Populated Username -->
-            <input type="text" name="displayName" value="DisplayName.Identity.Name" /> readonly>
-
-            <textarea name="reviewComment"></textarea>
-
-            <button type="submit">Submit</button>
-      </form> 
-    </div>*@
-
-    <!--- Read More Button --->
-@*
-    <p><a class="read-more-btn" data-toggle="collapse" href="#collapseReviewBox" role="button" aria-expanded="false" aria-controls="collapseReviewBox">Share your review</a></p>
-</div>*@
-
-
-
-<!--Bootstrap Toggle Expand/Collapse HTML Text-->
-
-@*<div class="row">
-    <div class="span4 collapse-group">
-        <h2>Leave a Weird Review</h2>
-
-        <p>Will need an input text box here <span class="collapse" id="reviewComment">
-            This should expand to read the rest of the review
-        </span>  <a data-toggle="collapse" data-target="reviewComment">More...&raquo;</a></p>
-    </div>
-</div>
-
-<table class="table">
-
-       <thead>
-        <tr>
-            <th>Username</th>
-            <th>Review Title</th>
-            <th>Review Comment</th>
-        </tr>
-    </thead>
-
-    <tbody>
-        @if (Model is not null)
-        {
-            @foreach (Review r in Model)
-            {
-                <tr>
-                    <td>
-                        @r.DisplayName
-                    </td>
-                    <td>
-                        @r.ReviewTitle
-                    </td>
-                    <td>
-                        @r.ReviewComment
-                    </td>*@
-                    
-                    <!--User Sight Fave Example-->
-                        @*<form method="post" action="/UserSightFavorite/RemoveFavorite">
-                            <input type="hidden" name="formSightId" value="@AddReviewView.Id" />
-                            <input class="filter_btn" onclick="changeRemoveButton(@favorite.Id)" type="submit" value="Remove from Favorites" id="filter_btn_@(favorite.Id)" />
-                        </form>
-                    *@
-                <!--  Delete Button -->   
-                   @* <td class="text-center">
-                        <a asp-action="Delete" asp-route-id="ReviewId"
-                   class="btn btn-sm btn-danger">Delete</a>
-                    </td>*@
-@*                </tr>
-                     <tr>
-        <td>
-        @Html.DisplayFor(modelItem => r.DisplayName)
-        </td>
-        <td>
-        @Html.DisplayFor(modelItem => r.ReviewTitle)
-        </td>
-        <td>
-        @Html.DisplayFor(modelItem => r.ReviewComment)
-        </td>
-        </tr>
-            }
-        }
-    </tbody>
-</table>*@

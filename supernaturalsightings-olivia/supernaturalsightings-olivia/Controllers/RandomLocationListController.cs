@@ -1,6 +1,6 @@
 ﻿using Google.Apis.SecretManager.v1.Data;
 using Microsoft.AspNetCore.Mvc;
-//using supernaturalsightings_olivia.Models;
+using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia.Controllers
 {

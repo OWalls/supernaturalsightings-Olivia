@@ -20,6 +20,7 @@ namespace supernaturalsightings_olivia.ViewModels
         [Display(Name = "ReviewTitle")]
         public string ReviewTitle { get; set; }
 
+        public string EntityId { get; set; }
         public int Rating { get; set; }
 
 
@@ -37,12 +38,13 @@ namespace supernaturalsightings_olivia.ViewModels
             return other is not null &&
                    DisplayName == other.DisplayName &&
                    ReviewComment == other.ReviewComment &&
-                   ReviewTitle == other.ReviewTitle;
+                   ReviewTitle == other.ReviewTitle &&
+                   Rating == other.Rating;
         }
 
         public override int GetHashCode()
         {
-            return HashCode.Combine(DisplayName, ReviewComment, ReviewTitle);
+            return HashCode.Combine(DisplayName, ReviewComment, ReviewTitle, Rating);
         }
     }
 

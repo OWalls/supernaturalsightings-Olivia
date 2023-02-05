@@ -1,4 +1,5 @@
-﻿using Google.Apis.SecretManager.v1.Data;
+﻿//using Google.Apis.SecretManager.v1.Data;
+using supernaturalsightings_olivia.Areas.Identity.Data;
 
 //namespace supernaturalsightings_olivia.Models
 //{
@@ -11,7 +12,7 @@
 
 namespace supernaturalsightings_olivia
 {
-    class RandomLocationListModel : Location
+    public class RandomLocationListModel : EntityData
     {
         public string State { get; set; }
         public string City { get; set; }
