@@ -1,7 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 
-@inject SignInManager<IdentityUser> SignInManager
-@inject UserManager<IdentityUser> UserManager
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
 
 <div class="container body-content">
     <h1>@ViewBag.title</h1>
@@ -53,65 +53,6 @@
         </form>
         <hr />
 
-        @*<p>
-            @if (ViewBag.entityList != null)
-            {
-                foreach (var entity in ViewBag.entityList)
-                {
-                    <table class="listOfEntities">
-                        <tr>
-                            <th>Name</th>
-                            <td>@entity.Name</td>
-                        </tr>
-                        <tr>
-                            <th>City/General Location</th>
-                            <td>@entity.City</td>
-                        </tr>
-                        <tr>
-                            <th>State</th>
-                            <td>@entity.State</td>
-                        </tr>
-                        <tr>
-                            <th>Description</th>
-                            <td>@entity.Description</td>
-                        </tr>
-                        <tr>
-                            <th>Type</th>
-                            <td>@entity.Type</td>
-                        </tr>
-                        <tr>
-                        
-                        </tr>
-                    
-                        @if (@entity.Type == "Alien")
-                        { 
-                            <img src="~/Images/alien.png" alt="alien" height="60px" width="60px">
-                        } else if (@entity.Type == "Ghost")
-                        {
-                            <img src="~/Images/ghost.png" alt="ghost" height="60px" width="60px">
-                        }
-                        else if (@entity.Type == "Bigfoot")
-                        {
-                            <img src="~/Images/foot.png" alt="feet" height="60px" width="60px">
-                        }
-                    </table>
-                            <br/>
-                            @if (SignInManager.IsSignedIn(User))
-                            {
-                                <form method="post" action="/UserSightFavorite/AddFavorite">
-                                    <input type="hidden" name="formSightId" value="@entity.Id" />
-                                <input class="filter_btn" onclick="changeAddFavoritesButton(@entity.Id)" type="submit" value="Add to Favorites" id="filter_btn_@(entity.Id)" />
-                            </form>
-                        }
-                    <br />
-                    <br />
-                }
-            }
-            else
-            {
-                <div>No weirdness here!</div>
-            }
-    </p>*@
 </div>
 
 <br />

@@ -224,9 +224,13 @@ p.indent {
     background-color: #ffffff;
     margin: 25px auto;
     padding: 10px;
-    width: 80%;
+    width: 70%;
     min-width: 300px;
     opacity: 85%;
+}
+
+#NewDescriptionText {
+    height: 100px;
 }
 
 .alien {
@@ -430,6 +434,7 @@ p.indent {
 
 /*---------------------------------*/
 
+<<<<<<< HEAD
 /*Search/Reviews/Ratings-----------*/
 
 .review-box {
@@ -530,6 +535,113 @@ label.flyingsaucer:before {
 }
 
 /*----------------------------------*/
+=======
+/*Edit Profile-------------------*/
+#profilecard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    opacity: 85%;
+    border-radius: 5px;
+    /*display: flex;*/
+}
+
+#profilecardtop {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 60%;
+    min-width: 300px;
+    opacity: 85%;
+    opacity: 85%;
+}
+
+.profileSaveButton {
+    width: 80px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.profileemailbutton {
+    width: 160px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.profilepwdbutton {
+    width: 180px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#bioTextArea {
+    width: 400px;
+    height: 180px;
+    text-align: left;
+}
+
+#profileLabel {
+    width: 200px;
+    border: hidden;
+}
+
+#profilenavcard {
+    display: flex;
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 20%;
+    min-width: 300px;
+    opacity: 85%;
+    border-radius: 5px;
+}
+
+#profilenavlink {
+    background-color: dodgerblue;
+}
+
+#deletedatacard {
+    background-color: #ffffff;
+    margin: 25px auto;
+    padding: 10px;
+    width: 80%;
+    min-width: 300px;
+    border-radius: 5px;
+}
+
+#profilefavbutton {
+    width: 80px;
+    height: 36px;
+    border: 1px solid dodgerblue;
+    background: dodgerblue;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+}
+/*---------------------------------*/
+>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
 
     /* ALIEN IMAGE ON FAVORITES PAGE
 Copyright (c) 2023 by Vedurumudi Priyanka (https://codepen.io/Vedurumudi-Priyanka/pen/oNxBmaV)

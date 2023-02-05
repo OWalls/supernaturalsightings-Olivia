@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using supernaturalsightings_olivia.Areas.Identity.Data;
+using supernaturalsightings_olivia.Models;
 
 namespace supernaturalsightings_olivia
 {
@@ -27,7 +28,7 @@ namespace supernaturalsightings_olivia
             builder.Services.AddDbContext<SightDbContext>(options =>
                 options.UseMySql(connectionString, new MySqlServerVersion(new Version(8, 0, 29))));
 
-            builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
 .AddEntityFrameworkStores<SightDbContext>();
 
             builder.Services.AddAuthentication().AddGoogle(googleOptions =>

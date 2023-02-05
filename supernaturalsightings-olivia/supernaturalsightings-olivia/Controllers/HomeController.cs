@@ -6,6 +6,10 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Google.Apis.SecretManager.v1.Data;
+
 
 
 namespace supernaturalsightings_olivia.Controllers
@@ -60,8 +64,8 @@ namespace supernaturalsightings_olivia.Controllers
 
             EntityData.AddNewSighting(newEntity);
 
-            return Redirect("Index");
-            return View(addSightingViewModel);
+            return Redirect("/Add");
+            //return View(addSightingViewModel);
 
         }
 

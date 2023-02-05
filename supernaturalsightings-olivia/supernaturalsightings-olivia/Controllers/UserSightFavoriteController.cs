@@ -10,12 +10,12 @@ namespace supernaturalsightings_olivia.Controllers
     [Authorize]
     public class UserSightFavoriteController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly SightDbContext _context;
 
         public UserSightFavoriteController(
             SightDbContext context,
-            UserManager<IdentityUser> userManager)
+            UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;

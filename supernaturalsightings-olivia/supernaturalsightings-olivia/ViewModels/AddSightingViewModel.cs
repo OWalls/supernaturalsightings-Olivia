@@ -14,7 +14,9 @@ namespace supernaturalsightings_olivia.ViewModels
         public string City { get; set; }
 
         public string State { get; set; }
+        [Required(ErrorMessage = "Description required.")]
         public string Description { get; set; }
+        [Required(ErrorMessage = "Type is required.")]
         public string Type { get; set; }
 
 
