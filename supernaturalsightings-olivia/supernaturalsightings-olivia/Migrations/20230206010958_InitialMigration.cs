@@ -38,6 +38,7 @@ namespace supernaturalsightings_olivia.Migrations
                 {
                     Id = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    ApplicationUserId = table.Column<int>(type: "int", nullable: false),
                     DisplayName = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Bio = table.Column<string>(type: "longtext", nullable: false)

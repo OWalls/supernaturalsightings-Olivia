@@ -52,6 +52,7 @@ namespace supernaturalsightings_olivia.Controllers
                     Rating = addReviewViewModel.Rating,
                 };
 
+                _context.Add(newReview);
                 _context.Reviews.Add(newReview);
                 _context.SaveChanges();
 

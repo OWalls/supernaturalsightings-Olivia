@@ -11,11 +11,7 @@ using supernaturalsightings_olivia.Areas.Identity.Data;
 namespace supernaturalsightings_olivia.Migrations
 {
     [DbContext(typeof(SightDbContext))]
-<<<<<<<< HEAD:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230204022550_InitialMigration.Designer.cs
-    [Migration("20230204022550_InitialMigration")]
-========
-    [Migration("20230201005035_InitialMigration")]
->>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230201005035_InitialMigration.Designer.cs
+    [Migration("20230206010958_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -174,20 +170,15 @@ namespace supernaturalsightings_olivia.Migrations
                     b.ToTable("UserSightFavorites");
                 });
 
-<<<<<<<< HEAD:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230204022550_InitialMigration.Designer.cs
-            modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-========
             modelBuilder.Entity("supernaturalsightings_olivia.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
 
                     b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApplicationUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("Bio")
@@ -198,27 +189,10 @@ namespace supernaturalsightings_olivia.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
->>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230201005035_InitialMigration.Designer.cs
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-<<<<<<<< HEAD:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230204022550_InitialMigration.Designer.cs
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ReviewComment")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ReviewTitle")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Reviews");
-========
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
@@ -273,7 +247,32 @@ namespace supernaturalsightings_olivia.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
->>>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c:supernaturalsightings-olivia/supernaturalsightings-olivia/Migrations/20230201005035_InitialMigration.Designer.cs
+                });
+
+            modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReviewComment")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ReviewTitle")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
