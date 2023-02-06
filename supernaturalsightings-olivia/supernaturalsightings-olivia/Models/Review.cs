@@ -7,7 +7,7 @@ namespace supernaturalsightings_olivia.Models;
 public class Review //: Entity
 {
     //Changed Id to EntityId -Tanya
-   // public int EntityId { get; set; }
+    public int EntityId { get; set; }
     // static private int nextId = 1;
     //State from Entity
     public int Id { get; set; }
@@ -22,9 +22,9 @@ public class Review //: Entity
     {
 
     }
-    public Review(string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
+    public Review(int entityId, string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
     {
-       // EntityId = entityId;
+        EntityId = entityId;
         DisplayName = displayName;
         ReviewTitle = reviewTitle;
         ReviewComment = reviewComment;
