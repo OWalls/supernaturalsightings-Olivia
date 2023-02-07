@@ -54,9 +54,11 @@
                                 <label asp-for="@review.ReviewComment">Comment</label>
                                 <input asp-for="@review.ReviewComment" class="form-control" />
                                 <span asp-validation-for="@review.ReviewComment"></span>
+                                
+                                <p class="text-muted mb-1">@ViewBag.review.ReviewComment</p>
                             </div>
 
-                            <input type="submit" value="Add Comment" />
+                            <input type="submit" value="Add Comment" method="get" />
                         </form>
                     </td>
                 </tr>

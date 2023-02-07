@@ -14,7 +14,7 @@
 
 <div class="collapsible-content">
     <div class="card">
-        <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+        <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post" >
             <div class="form-group">
                 <label asp-for="DisplayName">Username:</label>
                 <input asp-for="DisplayName" class="form-control" />
@@ -26,11 +26,13 @@
                 <span asp-validation-for="ReviewTitle"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReviewComment">Review Comment:</label>
-                <input asp-for="ReviewComment" class="form-control" />
+                <label asp-for="ReviewComment" class="fw-bold">Spooktacular Review</label>
+                <label class="text-muted">  (What happened?...)</label>
+                <textarea asp-for="ReviewComment" class="form-control" id="NewReviewText" required> </textarea>
+               
                 <span asp-validation-for="ReviewComment"></span>
             </div>
-            <input type="submit" value="Submit" class="btn btn-primary"/>
+            <input type="submit" value="Submit" class="btn btn-primary" />
         </form>
     </div>
 </div>

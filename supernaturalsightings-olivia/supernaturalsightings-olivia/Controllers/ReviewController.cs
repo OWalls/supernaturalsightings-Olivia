@@ -3,18 +3,23 @@ using Microsoft.CodeAnalysis.CSharp.Syntax;
 using supernaturalsightings_olivia.Areas.Identity.Data;
 using supernaturalsightings_olivia.Models;
 using supernaturalsightings_olivia.ViewModels;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace supernaturalsightings_olivia.Controllers
 {
     public class ReviewController : Controller
     {
         private readonly SightDbContext _context;
+        private readonly UserManager<ApplicationUser> _userManager;
 
         public IEnumerable<object> ratings { get; private set; }
 
-        public ReviewController(SightDbContext context)
+
+        public ReviewController(SightDbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         //Get: /<controller>/
@@ -35,7 +40,16 @@ namespace supernaturalsightings_olivia.Controllers
             return View(viewModel);
         }
 
-        [HttpPost]
+        [HttpGet]
+        public IActionResult AddReviewToViewBag()
+        {
+            //Retrieve current logged in users details
+            Review reviewList = _context.ReviewList;
+                ViewBag.reviewList = reviewList;
+                return View();
+        }
+
+            [HttpPost]
         [Route("/Add/Review")]
         [ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
