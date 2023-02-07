@@ -10,10 +10,14 @@
 	<li class="nav-item"><a class="nav-link @ManageNavPages.ChangePasswordNavClass(ViewContext)" id="change-password" asp-page="./ChangePassword">Password</a></li>
 	<li class="nav-item"><a class="nav-link @ManageNavPages.DeletePersonalDataNavClass(ViewContext)" id="delete-personal-data" asp-page="./deletepersonaldata">Delete personal data</a></li>
 </ul>
-<p>
-	<ul class="nav nav-pills flex-column" id="profilenavcard">
+
+<ul class="nav nav-pills flex-column" id="profilenavcard">
+	<li class="nav-item"><a class="nav-link" asp-area="" asp-controller="User" asp-action="Profile">View Profile</a></li>
+</ul>
+<ul class="nav nav-pills flex-column" id="profilenavcard">
 		<li class="nav-item"><a class="nav-link" asp-area="" asp-controller="UserSightFavorite" asp-action="ViewAll">My Favorites List</a></li>
 </ul>
+
 
 	@*<div>
 		@Html.ActionLink("My Favorites List", "ViewAll", "UserSightFavorite")
@@ -22,7 +26,7 @@
 		<button>My Favorites List</button>
 	</a>*@
 
-	<p></p>
+	
 	<div id="ghostcard" class=" blink2 container d-flex justify-content-center">
 		<svg class="ghost" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 			 width="127.433px" height="132.743px" viewBox="0 0 127.433 132.743" enable-background="new 0 0 127.433 132.743"
@@ -61,4 +65,3 @@
 	    c7.636,0,15.336,1.684,22.887,5.004c26.766,11.771,29.011,39.047,29.027,39.251V121.405z" />
 	</svg>
 	</div>
-</p>

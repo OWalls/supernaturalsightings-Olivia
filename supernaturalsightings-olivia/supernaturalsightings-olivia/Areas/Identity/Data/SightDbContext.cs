@@ -1,14 +1,9 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-<<<<<<< HEAD
-using supernaturalsightings_olivia.Models;
-
-
-=======
 using Microsoft.Extensions.ObjectPool;
 using supernaturalsightings_olivia.Models;
->>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
+
 
 namespace supernaturalsightings_olivia.Areas.Identity.Data;
 
