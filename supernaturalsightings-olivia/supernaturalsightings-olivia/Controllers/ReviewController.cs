@@ -36,7 +36,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         [HttpPost]
-        [Route("/Review")]
+        [Route("/Add/Review")]
         [ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
@@ -45,7 +45,7 @@ namespace supernaturalsightings_olivia.Controllers
 
                 Review newReview = new Review
                 {
-                    //EntityId = addReviewViewModel.EntityId,
+                   // EntityId = addReviewViewModel.EntityId,
                     DisplayName = addReviewViewModel.DisplayName,
                     ReviewComment = addReviewViewModel.ReviewComment,
                     ReviewTitle = addReviewViewModel.ReviewTitle,
