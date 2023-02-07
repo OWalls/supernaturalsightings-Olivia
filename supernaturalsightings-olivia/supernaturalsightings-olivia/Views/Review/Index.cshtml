@@ -21,39 +21,39 @@
     <tbody>
         @if (Model is not null)
         {
-            @foreach (Review r in Model)
+            @foreach (Review review in Model)
             {
                 <tr>
                     <td>
-                        @ViewBag.DisplayName
+                        @review.DisplayName
                     </td>
                     <td>
-                        @ViewBag.ReviewTitle
+                        @review.ReviewTitle
                     </td>
                     <td>
-                        @ViewBag.ReviewComment
+                        @review.ReviewComment
                     </td>
                     <td>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-@r.ReviewId" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-@review.ReviewId" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Add Comment
                         </a>
                     </td>
                 </tr>
-                <tr class="collapse" id="collapseExample-@ViewBag.ReviewId">
+                <tr class="collapse" id="collapseExample-@review.ReviewId">
                     <td colspan="4">
                         <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
-                            <input type="hidden" asp-for="@r.ReviewId" value="ReviewId" />
+                            <input type="hidden" asp-for="@review.ReviewId" value="ReviewId" />
 
                             <div class="form-group">
-                                <label asp-for="@r.DisplayName">Username</label>
-                                <input asp-for="@r.DisplayName" class="form-control" />
-                                <span asp-validation-for="@r.DisplayName"></span>
+                                <label asp-for="@review.DisplayName">Username</label>
+                                <input asp-for="@review.DisplayName" class="form-control" />
+                                <span asp-validation-for="@review.DisplayName"></span>
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="@r.ReviewComment">Comment</label>
-                                <input asp-for="@r.ReviewComment" class="form-control" />
-                                <span asp-validation-for="@r.ReviewComment"></span>
+                                <label asp-for="@review.ReviewComment">Comment</label>
+                                <input asp-for="@review.ReviewComment" class="form-control" />
+                                <span asp-validation-for="@review.ReviewComment"></span>
                             </div>
 
                             <input type="submit" value="Add Comment" />
