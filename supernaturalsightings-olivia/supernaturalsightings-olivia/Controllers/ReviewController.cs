@@ -36,7 +36,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         [HttpPost]
-        [Route("/Add/Review")]
+        [Route("/Review")]
         [ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
