@@ -20,7 +20,7 @@ namespace supernaturalsightings_olivia.ViewModels
         [Display(Name = "ReviewTitle")]
         public string ReviewTitle { get; set; }
 
-        public string EntityId { get; set; }
+        public string Id { get; set; }
         public int Rating { get; set; }
 
 

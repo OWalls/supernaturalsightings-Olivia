@@ -36,7 +36,7 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         [HttpPost]
-        [Route("/Add/Review")]
+        [Route("/Review")]
         [ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
         {
@@ -52,6 +52,7 @@ namespace supernaturalsightings_olivia.Controllers
                     Rating = addReviewViewModel.Rating,
                 };
 
+                
                 _context.Reviews.Add(newReview);
                 _context.SaveChanges();
 
@@ -62,19 +63,20 @@ namespace supernaturalsightings_olivia.Controllers
         }
 
         //[HttpPost]
+        //[Route("/AddReview/Review")]
         //public async Task<IActionResult> ProcessAddReviewForm(AddReviewViewModel model)
         //{
         //    if (ModelState.IsValid)
         //    {
         //        //Calculate the rating based on some logic
-        //        int rating = CalculateRating(model.ReviewComment);
+        //        //int rating = CalculateRating(model.ReviewComment);
 
         //        var review = new Review
         //        {
         //            DisplayName = model.DisplayName,
         //            ReviewTitle = model.ReviewTitle,
         //            ReviewComment = model.ReviewComment,
-        //            Rating = rating,
+        //            Rating = model.Rating,
         //        };
 
         //        _context.Add(review);

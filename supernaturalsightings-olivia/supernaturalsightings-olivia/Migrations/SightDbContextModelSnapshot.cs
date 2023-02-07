@@ -168,20 +168,15 @@ namespace supernaturalsightings_olivia.Migrations
                     b.ToTable("UserSightFavorites");
                 });
 
-<<<<<<< HEAD
-            modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-=======
             modelBuilder.Entity("supernaturalsightings_olivia.Models.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("varchar(255)");
 
                     b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ApplicationUserId")
                         .HasColumnType("int");
 
                     b.Property<string>("Bio")
@@ -192,27 +187,10 @@ namespace supernaturalsightings_olivia.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
->>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
                     b.Property<string>("DisplayName")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-<<<<<<< HEAD
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ReviewComment")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("ReviewTitle")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Reviews");
-=======
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
@@ -267,7 +245,35 @@ namespace supernaturalsightings_olivia.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
->>>>>>> 883647c67d6261398a7f991509fe650827fb1e5c
+                });
+
+            modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("EntityId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ReviewComment")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("ReviewTitle")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Reviews");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

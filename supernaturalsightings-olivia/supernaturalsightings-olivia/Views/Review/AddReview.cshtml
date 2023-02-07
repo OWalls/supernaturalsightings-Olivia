@@ -16,21 +16,21 @@
     <div class="card">
         <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
             <div class="form-group">
-                <label asp-for="DisplayName">Username</label>
+                <label asp-for="DisplayName">Username:</label>
                 <input asp-for="DisplayName" class="form-control" />
                 <span asp-validation-for="DisplayName"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReviewTitle">Review Title</label>
+                <label asp-for="ReviewTitle">Review Title:</label>
                 <input asp-for="ReviewTitle" class="form-control" />
                 <span asp-validation-for="ReviewTitle"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ReviewComment">Review Comment</label>
+                <label asp-for="ReviewComment">Review Comment:</label>
                 <input asp-for="ReviewComment" class="form-control" />
                 <span asp-validation-for="ReviewComment"></span>
             </div>
-            <input type="submit" value="Add Review" />
+            <input type="submit" value="Submit" class="btn btn-primary"/>
         </form>
     </div>
 </div>
@@ -86,8 +86,10 @@
 
 <div class="card">
     <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
+*@
 
-
+@*<div>
+    <form>
         <div class="form-group">
             <label asp-for="DisplayName">Username</label>
             <input asp-for="DisplayName" class="form-control" />
