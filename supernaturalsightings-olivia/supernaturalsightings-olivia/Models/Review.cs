@@ -4,16 +4,16 @@ using System.Xml.Linq;
 
 namespace supernaturalsightings_olivia.Models;
 
-public class Review //: Entity
+public class Review : Entity
 {
     //Changed Id to EntityId -Tanya
     public int EntityId { get; set; }
     // static private int nextId = 1;
     //State from Entity
-    public int Id { get; set; }
-    public string DisplayName { get; set; } //name
-    public string ReviewTitle { get; set; }
-    public string ReviewComment { get; set; }
+    public int ReviewId { get; set; } 
+    public string DisplayName { get; set; } = "";
+    public string ReviewTitle { get; set; } = "";
+    public string ReviewComment { get; set; } = "";
     public int Rating { get; set; }
     // public int ReviewId { get; set; } //
     //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
@@ -22,9 +22,9 @@ public class Review //: Entity
     {
 
     }
-    public Review(int entityId, string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
+    public Review(int id, string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
     {
-        EntityId = entityId;
+        ReviewId = id;
         DisplayName = displayName;
         ReviewTitle = reviewTitle;
         ReviewComment = reviewComment;
@@ -32,10 +32,6 @@ public class Review //: Entity
         //  ReviewCategory = newReviewCategory;
 
     }
-
-    //public Review(string aUsername, Location newLocation, EncounterType newEncounterType, ReviewCategory newReviewCategory)
-    //{
-    //}
 
     public override string ToString()
     {
@@ -54,19 +50,19 @@ public class Review //: Entity
                 "Display Name: %s\n" +
                 "Review Title: %s\n" +
                 "Review Comment: %s\n" +
-                "Rating: %s\n" + Id, DisplayName, ReviewTitle, ReviewComment, Rating);// ReviewCategory);
+                "Rating: %s\n" + ReviewId, DisplayName, ReviewTitle, ReviewComment, Rating);// ReviewCategory);
         return output;
     }
 
     public override bool Equals(object? obj)
     {
         return obj is Review review &&
-               Id == review.Id;
+               ReviewId == review.ReviewId;
     }
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Id);
+        return HashCode.Combine(ReviewId);
     }
 
 }
