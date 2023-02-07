@@ -41,20 +41,23 @@
                         <!--Displays Name-->
                             <h2 class="display-6" style="font-size: 25px">@entity.Name</h2>
 
-                        <!--Displays Type, City, State, Ratings/Reviews-->
+                        <!--Displays Type, City, State-->
                         <div class="search-item-meta mb-15">
                             <ul class="list-inline">
                                 <li>@entity.Type - @entity.City, @entity.State</li>
-                                <li><a href="#">Ratings/Reviews</a></li>
                             </ul>
                         </div>
 
-                        <!--Displays Description-->
-                        <div>
-                            @entity.Description
-                            
-                        </div>
-                                
+                        <!--Collapsible Menu for Description and Review-->
+                            <button type="button" class="collapsible">Description</button>
+                            <div class="content">
+                                <p>
+                                    @entity.Description
+
+                                    </p>
+                                    </div>
+
+
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <form method="post" action="/UserSightFavorite/AddFavorite">
