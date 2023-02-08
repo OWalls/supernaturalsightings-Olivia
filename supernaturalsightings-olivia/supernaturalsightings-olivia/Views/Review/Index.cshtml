@@ -11,38 +11,41 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Username</th>
+            @*<th>Username</th>*@
             <th>Review Title</th>
             <th>Review Comment</th>
-            <th>Add Comment</th>
+            @*<th>Add Comment</th>*@
         </tr>
     </thead>
 
     <tbody>
         @if (Model is not null)
         {
-            @foreach (Review review in Model)
+            @foreach (Review r in Model)
             {
                 <tr>
-                    <td>
+                   @* <td>
                         @review.DisplayName
+                    </td>*@
+                    <td>
+                        @ViewBag.ReviewList.ReviewTitle
                     </td>
                     <td>
-                        @review.ReviewTitle
+                        @ViewBag.ReviewList.ReviewComment
                     </td>
+                   @* <td>
+                        @review.Ratings
+                    </td>*@
                     <td>
-                        @review.ReviewComment
-                    </td>
-                    <td>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-@review.ReviewId" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample-@ViewBag.ReviewList.ReviewId" role="button" aria-expanded="false" aria-controls="collapseExample">
                             Add Comment
                         </a>
                     </td>
                 </tr>
-                <tr class="collapse" id="collapseExample-@review.ReviewId">
+  @*              <tr class="collapse" id="collapseExample-@ViewBag.ReviewList.ReviewId">
                     <td colspan="4">
                         <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post">
-                            <input type="hidden" asp-for="@review.ReviewId" value="ReviewId" />
+                            <input type="hidden" asp-for="@ViewBag.ReviewList.ReviewId" value="ReviewId" />
 
                             <div class="form-group">
                                 <label asp-for="@review.DisplayName">Username</label>
@@ -51,18 +54,24 @@
                             </div>
 
                             <div class="form-group">
-                                <label asp-for="@review.ReviewComment">Comment</label>
+                                <label asp-for="@ViewBag.ReviewList.ReviewComment">Comment</label>
                                 <input asp-for="@review.ReviewComment" class="form-control" />
                                 <span asp-validation-for="@review.ReviewComment"></span>
                                 
-                                <p class="text-muted mb-1">@ViewBag.review.ReviewComment</p>
+                                <p class="text-muted mb-1">@ViewBag.ReviewComment</p>
                             </div>
+                            <div class="form-group">
+                                <label asp-for="@review.Ratings">Ratings</label>
+                                <input asp-for="@review.Ratings" class="form-control" />
+                                <span asp-validation-for="@review.Ratings"></span>
 
-                            <input type="submit" value="Add Comment" method="get" />
+                                <p class="text-muted mb-1">@ViewBag.Ratings</p>
+        </div>
+        <input type="submit" value="Add Comment" method="get" />
                         </form>
                     </td>
-                </tr>
+        </tr>*@
             }
         }
-    </tbody>
+        </tbody>
 </table>

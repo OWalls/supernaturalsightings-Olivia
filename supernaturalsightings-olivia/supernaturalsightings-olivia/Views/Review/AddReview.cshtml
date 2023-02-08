@@ -15,11 +15,11 @@
 <div class="collapsible-content">
     <div class="card">
         <form asp-controller="Review" asp-action="ProcessAddReviewForm" method="post" >
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="DisplayName">Username:</label>
                 <input asp-for="DisplayName" class="form-control" />
                 <span asp-validation-for="DisplayName"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="ReviewTitle">Review Title:</label>
                 <input asp-for="ReviewTitle" class="form-control" />
@@ -32,6 +32,12 @@
                
                 <span asp-validation-for="ReviewComment"></span>
             </div>
+            @*    <div>
+                    <label asp-for="Rating">Rating:</label>
+                    <input asp-for="Rating" type="number" class="form-control" />
+               
+
+            </div>*@
             <input type="submit" value="Submit" class="btn btn-primary" />
         </form>
     </div>
@@ -75,7 +81,6 @@
 </script>
 
 
-    
 
 @*@using Microsoft.AspNetCore.Identity
 

@@ -11,15 +11,15 @@ namespace supernaturalsightings_olivia.Controllers
     public class ReviewController : Controller
     {
         private readonly SightDbContext _context;
-        private readonly UserManager<ApplicationUser> _userManager;
+        public List<Review> reviewList = new List<Review>();     //    private readonly UserManager<ApplicationUser> _userManager;
 
-        public IEnumerable<object> ratings { get; private set; }
+       // public IEnumerable<object> ratings { get; private set; }
 
 
-        public ReviewController(SightDbContext context, UserManager<ApplicationUser> userManager)
+        public ReviewController(SightDbContext context)// , UserManager<ApplicationUser> userManager)
         {
             _context = context;
-            _userManager = userManager;
+           // _userManager = userManager;
         }
 
         //Get: /<controller>/
@@ -40,16 +40,20 @@ namespace supernaturalsightings_olivia.Controllers
             return View(viewModel);
         }
 
-        [HttpGet]
-        public IActionResult AddReviewToViewBag()
-        {
-            //Retrieve current logged in users details
-            Review reviewList = _context.ReviewList;
-                ViewBag.reviewList = reviewList;
-                return View();
-        }
 
-            [HttpPost]
+        //--- Filling up the ViewBag ---//
+        //[HttpGet]
+        //public IActionResult AddReviewToViewBag()
+        //{
+        //    //Retrieve current logged in users details
+        //    Review reviewList = _userManager.ReviewList;
+        //    ViewBag.reviewList = reviewList;
+        //    return View();
+        //}
+
+
+
+        [HttpPost]
         [Route("/Add/Review")]
         [ValidateAntiForgeryToken]
         public IActionResult ProcessAddReviewForm(AddReviewViewModel addReviewViewModel)
@@ -59,20 +63,24 @@ namespace supernaturalsightings_olivia.Controllers
 
                 Review newReview = new Review
                 {
-                   // EntityId = addReviewViewModel.EntityId,
-                    DisplayName = addReviewViewModel.DisplayName,
+                   
                     ReviewComment = addReviewViewModel.ReviewComment,
                     ReviewTitle = addReviewViewModel.ReviewTitle,
-                    Rating = addReviewViewModel.Rating,
+
+
+                    // EntityId = addReviewViewModel.EntityId,
+                    // DisplayName = addReviewViewModel.DisplayName,
+                    // Rating = addReviewViewModel.Rating,
                 };
 
-                
+                reviewList.Add(newReview);
                 _context.Reviews.Add(newReview);
                 _context.SaveChanges();
 
                 return Redirect("/Review");
             }
 
+            ViewBag.ReviewList = reviewList;
             return View("AddReview", addReviewViewModel);
         }
 

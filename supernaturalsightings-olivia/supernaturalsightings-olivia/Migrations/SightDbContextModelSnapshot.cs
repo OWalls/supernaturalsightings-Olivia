@@ -249,18 +249,8 @@ namespace supernaturalsightings_olivia.Migrations
 
             modelBuilder.Entity("supernaturalsightings_olivia.Models.Review", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("DisplayName")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("EntityId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Rating")
                         .HasColumnType("int");
 
                     b.Property<string>("ReviewComment")
@@ -271,7 +261,7 @@ namespace supernaturalsightings_olivia.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.HasKey("Id");
+                    b.HasKey("ReviewId");
 
                     b.ToTable("Reviews");
                 });

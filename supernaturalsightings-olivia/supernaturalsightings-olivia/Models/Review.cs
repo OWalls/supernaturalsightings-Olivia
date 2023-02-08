@@ -4,17 +4,17 @@ using System.Xml.Linq;
 
 namespace supernaturalsightings_olivia.Models;
 
-public class Review : Entity
+public class Review //: Entity
 {
     //Changed Id to EntityId -Tanya
-    public int EntityId { get; set; }
+   // public int EntityId { get; set; }
     // static private int nextId = 1;
     //State from Entity
     public int ReviewId { get; set; } 
-    public string DisplayName { get; set; } = "";
+   // public string DisplayName { get; set; } = "";
     public string ReviewTitle { get; set; } = "";
     public string ReviewComment { get; set; } = "";
-    public int Rating { get; set; }
+   // public int Rating { get; set; }
     // public int ReviewId { get; set; } //
     //  public ReviewCategory ReviewCategory { get; set; } //coreCompetency
 
@@ -22,37 +22,39 @@ public class Review : Entity
     {
 
     }
-    public Review(int id, string displayName, string reviewTitle, string reviewComment, int rating) : this() //ReviewCategory newReviewCategory
+    public Review(int id,  string reviewTitle, string reviewComment) : this() //ReviewCategory newReviewCategory string displayName,
     {
         ReviewId = id;
-        DisplayName = displayName;
         ReviewTitle = reviewTitle;
         ReviewComment = reviewComment;
-        Rating = rating;
+
+
+        //  DisplayName = displayName;
+        //  Rating = rating;
         //  ReviewCategory = newReviewCategory;
 
     }
 
-    public override string ToString()
-    {
-        string output = " ";
-        if (DisplayName.Equals(" "))
-        {
-            DisplayName = "Data not available";
+    //public override string ToString()
+    //{
+    //    string output = " ";
+    //    if (ReviewId.Equals(" "))
+    //    {
+    //        ReviewId = "Data not available";
 
-        }
-        // if (ReviewCategory.Value.Equals("") || ReviewCategory.Value == null)
-        // {
-        //     ReviewCategory.Value = "Data not available";
+    //    }
+    //    // if (ReviewCategory.Value.Equals("") || ReviewCategory.Value == null)
+    //    // {
+    //    //     ReviewCategory.Value = "Data not available";
 
 
-        output = string.Format("\nID: %d\n" +
-                "Display Name: %s\n" +
-                "Review Title: %s\n" +
-                "Review Comment: %s\n" +
-                "Rating: %s\n" + ReviewId, DisplayName, ReviewTitle, ReviewComment, Rating);// ReviewCategory);
-        return output;
-    }
+    //    output = string.Format("\nID: %d\n" +
+    //            "Display Name: %s\n" +
+    //            "Review Title: %s\n" +
+    //            "Review Comment: %s\n" + ReviewId,  ReviewTitle, ReviewComment);// Rating, ReviewCategory DisplayName,);
+    //    return output;
+    //          //  "Rating: %s\n" 
+    //}
 
     public override bool Equals(object? obj)
     {
